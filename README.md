@@ -93,11 +93,11 @@ Itt lehet részletezni pl. a tagok szakmai tapasztalatait, vagy akár a releván
 
 A projekt a következő emberekből áll:
 
-| Név          | Pozíció          |   E-mail cím (stud-os)        |
-|--------------|------------------|-------------------------------|
-| `Teszt Elek` | Projektmenedzser | `h123456@stud.u-szeged.hu`    |
-| `Remek Elek` | Projekt tag      | `h654321@stud.u-szeged.hu`    |
-| `Lev Elek`   | Projekt tag      | `h000000@stud.u-szeged.hu`    |
+| Név            | Pozíció          |   E-mail cím (stud-os)        |
+|----------------|------------------|-------------------------------|
+| `Rózsa István` | Projektmenedzser | `h123456@stud.u-szeged.hu`    |
+| `Remek Elek`   | Projekt tag      | `h654321@stud.u-szeged.hu`    |
+| `Lev Elek`     | Projekt tag      | `h000000@stud.u-szeged.hu`    |
 
 ```
 Betölthető pozíciók: projektmenedzser, projekt tag.
