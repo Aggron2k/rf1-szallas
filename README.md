@@ -31,6 +31,8 @@
 - `Reszponzív és modern megjelenés`
 - `Az érzékeny adatokat biztonságosan tároljuk`
 - `A legfrissebb technológiákat használja a rendszer`
+- `Egyszerűen használhatónak és felhasználóbarátnak kell lennie.`
+
 
 ## 3. Költség- és erőforrás-szükségletek
 
