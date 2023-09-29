@@ -615,10 +615,7 @@ Ide kell berakni a Gantt diagramot, amely a 9. fejezetben található részfelad
 ## 10. Projekt költségvetés
 
 ```
-Az egyes leadások alkalmával rögzített erőforrásigényt, az elvállalt feladatok számát 
-és az adott mérföldkőben végzett munkáért szerezhető pontszámot kell beírni minden emberre külön-külön.
-Figyeljünk arra, hogy mivel mindenkinek minden mérföldkövön dolgoznia kell, ezért a 10.3-as táblázat
-minden módosítható oszlopában legalább 1 pontnak szerepelni kell.
+A projekt költségterv elkészítése során rögzítjük az egyes feladatokhoz szükséges erőforrások és költségek összegét, valamint az elvállalt feladatok számát. Az alábbi táblázatok segítenek a költségvetés kialakításában, és minden csapattag számára részletes információkat tartalmaznak.
 ```
 
 ### 10.1. Részletes erőforrásigény (személynap)
