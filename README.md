@@ -336,17 +336,17 @@ Ennek a feladatnak az a célja, hogy `egy működő prototípust hozzunk létre,
 
 Részfeladatai a következők:
 
-#### `8.3.1. Felhasználók kezelése (admin, raktáros, sofőr) (CR)`
+#### `8.3.1. Felhasználók kezelése (admin, szállásadó, szállás foglaló) (CR)`
 
-Felelős: `Teszt Elek`
+Felelős: ``
 
 Tartam:  `5 nap`
 
 Erőforrásigény:  `2 személynap`
 
-#### `8.3.2. Felhasználók kezelése (admin, raktáros, sofőr) (UD)`
+#### `8.3.2. Felhasználók kezelése (admin, szállásadó, szállás foglaló) (UD)`
 
-Felelős: `Remek Elek`
+Felelős: ``
 
 Tartam:  `4 nap`
 
@@ -354,7 +354,7 @@ Erőforrásigény:  `2 személynap`
 
 #### `8.3.3. Felhasználók kezeléséhez szükséges adatok létrehozása az adatbázisban`
 
-Felelős: `Lev Elek`
+Felelős: ``
 
 Tartam:  `3 nap`
 
@@ -362,31 +362,31 @@ Erőforrásigény:  `1 személynap`
 
 #### `8.3.4. Felhasználói munkamenet megvalósítása több jogosultsági szinttel`
 
-Felelős: `Teszt Elek `
+Felelős: ``
 
 Tartam:  `10 nap`
 
 Erőforrásigény:  `2 személynap`
 
-#### `8.3.5. Raktárak kezelése (CRUD)`
+#### `8.3.5. Szállások kezelése (CRUD)`
 
-Felelős: `Teszt Elek`
+Felelős: ``
 
 Tartam:  `3 nap`
 
 Erőforrásigény:  `1 személynap`
 
-#### `8.3.6. Raktárkezeléshez szükséges adatok létrehozása az adatbázisban`
+#### `8.3.6. Szálláskezeléshez szükséges adatok létrehozása az adatbázisban`
 
-Felelős: `Remek Elek`
+Felelős: ``
 
 Tartam:  `4 nap`
 
 Erőforrásigény:  `2 személynap`
 
-#### `8.3.7. Árukészletek kezelése (C)`
+#### `8.3.7. Szállás kezelése (C)`
 
-Felelős: `Remek Elek `
+Felelős: ``
 
 Tartam:  `4 nap`
 
@@ -394,7 +394,7 @@ Erőforrásigény:  `2 személynap`
 
 #### `8.3.8. Árukészletek kezelése (R)`
 
-Felelős: `Lev Elek`
+Felelős: ``
 
 Tartam:  `3 nap`
 
@@ -402,7 +402,7 @@ Erőforrásigény:  `1 személynap`
 
 #### `8.3.9. Árukészletek kezelése (UD)`
 
-Felelős: `Lev Elek`
+Felelős: ``
 
 Tartam:  `5 nap`
 
@@ -410,7 +410,7 @@ Erőforrásigény:  `2 személynap`
 
 #### `8.3.10. Árukészletek kezeléséhez szükséges adatok létrehozása az adatbázisban`
 
-Felelős: `Lev Elek`
+Felelős: ``
 
 Tartam:  `5 nap`
 
@@ -418,7 +418,7 @@ Erőforrásigény:  `2 személynap`
 
 #### `8.3.11. Járművek kezelése (CRUD) és a szükséges adatok létrehozása az adatbázisban`
 
-Felelős: `Lev Elek`
+Felelős: ``
 
 Tartam:  `3 nap`
 
@@ -426,7 +426,7 @@ Erőforrásigény:  `2 személynap`
 
 #### `8.3.12. Fuvarok/szállítmányok kezelése (CR)`
 
-Felelős: `Teszt Elek`
+Felelős: ``
 
 Tartam:  `4 nap`
 
@@ -434,7 +434,7 @@ Erőforrásigény:  `2 személynap`
 
 #### `8.3.13. Fuvarok/szállítmányok kezelése (UD)`
 
-Felelős: `Teszt Elek `
+Felelős: ``
 
 Tartam:  `5 nap`
 
@@ -442,7 +442,7 @@ Erőforrásigény:  `2 személynap`
 
 #### `8.3.14. Fuvarok/szállítmányok szükséges adatok létrehozása az adatbázisban`
 
-Felelős: `Remek Elek `
+Felelős: ``
 
 Tartam:  `3 nap`
 
@@ -450,7 +450,7 @@ Erőforrásigény:  `1 személynap`
 
 #### `8.3.15. Email-es kiértesítés új szállítmány esetén az adott raktárosnak és sofőrnek`
 
-Felelős: `Remek Elek`
+Felelős: ``
 
 Tartam:  `4 nap`
 
