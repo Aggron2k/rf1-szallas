@@ -546,35 +546,45 @@ Ide kell berakni a Gantt diagramot, amely a 9. fejezetben található részfelad
 ## 10. Projekt költségvetés
 
 ```
-Az egyes leadások alkalmával rögzített erőforrásigényt, az elvállalt feladatok számát
-és az adott mérföldkőben végzett munkáért szerezhető pontszámot kell beírni minden emberre külön-külön.
-Figyeljünk arra, hogy mivel mindenkinek minden mérföldkövön dolgoznia kell, ezért a 10.3-as táblázat
-minden módosítható oszlopában legalább 1 pontnak szerepelni kell.
+A projekt költségterv elkészítése során rögzítjük az egyes feladatokhoz szükséges erőforrások és költségek összegét, valamint az elvállalt feladatok számát. Az alábbi táblázatok segítenek a költségvetés kialakításában, és minden csapattag számára részletes információkat tartalmaznak.
 ```
 
 ### 10.1. Részletes erőforrásigény (személynap)
 
-| Név          | M1    | M2    | M3   | M4    | Összesen |
-| ------------ | ----- | ----- | ---- | ----- | -------- |
-| `Teszt Elek` | `1.5` | `1.5` | `11` | `5`   | `19`     |
-| `Remek Elek` | `1`   | `4`   | `13` | `3`   | `21`     |
-| `Lev Elek`   | `1`   | `2.5` | `10` | `3.5` | `17`     |
+
+| Név          |   M1  |   M2  |   M3 |   M4  | Összesen |
+|--------------|-------|-------|------|-------|----------|
+| `Kele Dominik Norbert` | `1` | `0` | `0` | `0`   | `0`     |
+| `Rózsa István` | `1.5`   | `0`   | `0` | `0`   | `0`     |
+| `Horváth Krisztián`   | `1`   | `0` | `0` | `0` | `0`     |
+| `Hörömpö Márk`   | `1`   | `0` | `0` | `0` | `0`     |
+| `Kvak Barnabás`   | `1`   | `0` | `0` | `0` | `0`     |
+| `Horváth Richárd Soma`   | `1`   | `0` | `0` | `0` | `0`     |
+| `Hajas Attila István`   | `1`   | `0` | `0` | `0` | `0`     |
 
 ### 10.2. Részletes feladatszámok
 
-| Név          | M1  | M2  | M3  | M4  | Összesen |
-| ------------ | --- | --- | --- | --- | -------- |
-| `Teszt Elek` | `2` | `2` | `7` | `4` | `15`     |
-| `Remek Elek` | `1` | `2` | `7` | `4` | `14`     |
-| `Lev Elek`   | `1` | `2` | `7` | `4` | `14`     |
+| Név          |   M1  |   M2  |   M3 |   M4 | Összesen |
+|--------------|-------|-------|------|------|----------|
+| `Kele Dominik Norbert` | `1`   | `0`   | `0`  | `0`  | `0`     |
+| `Rózsa István` | `2`   | `0`   | `0`  | `0`  | `0`     |
+| `Horváth Krisztián`   | `1`   | `0` | `0` | `0` | `0`     |
+| `Hörömpö Márk`   | `1`   | `0`   | `0`  | `0`  | `0`     |
+| `Kvak Barnabás`   | `1`   | `0`   | `0`  | `0`  | `0`     |
+| `Horváth Richárd Soma`   | `1`   | `0`   | `0`  | `0`  | `0`     |
+| `Hajas Attila István`   | `1`   | `0`   | `0`  | `0`  | `0`     |
 
 ### 10.3. Részletes költségvetés
 
-| Név                                | M1  | M2   | M3   | M4   | Összesen  |
-| ---------------------------------- | --- | ---- | ---- | ---- | --------- |
-| Maximálisan megszerezhető pontszám | (7) | (20) | (35) | (28) | 100% (70) |
-| `Teszt Elek`                       | `7` | `10` | `28` | `25` | 70        |
-| `Remek Elek`                       | `4` | `15` | `35` | `16` | 70        |
-| `Lev Elek`                         | `4` | `12` | `30` | `24` | 70        |
+| Név                                 | M1      | M2       | M3       | M4       | Összesen  |
+|-------------------------------------|---------|----------|----------|----------|-----------|
+| Maximálisan megszerezhető pontszám  |  (7)    | (20)     | (35)     |  (28)    | 100% (70) |
+| `Kele Dominik Norbert`                        | `0`     | `0`     | `0`     |  `0`    | 0        |
+| `Rózsa István`                        | `0`     | `0`     | `0`     |  `0`    | 0        |
+| `Horváth Krisztián`                          | `0`     | `0`     | `0`     |  `0`    | 0        |
+| `Hörömpö Márk`                          | `0`     | `0`     | `0`     |  `0`    | 0        |
+| `Kvak Barnabás`                          | `0`     | `0`     | `0`     |  `0`    | 0        |
+| `Horváth Richárd Soma`                          | `0`     | `0`     | `0`     |  `0`    | 0        |
+| `Hajas Attila István`                          | `0`     | `0`     | `0`     |  `0`    | 0        |
 
 Szeged, `2021-10-25`.
