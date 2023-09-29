@@ -70,83 +70,47 @@ A projekt a következő emberekből áll:
 
 ### 5.1. Munkakörnyezet
 
-A projekt a következő munkaállomásokat fogja használni a munka során:
+A projekt során mindenki a saját munkaállomását fogja használni a munka során:
 
-- `Munkaállomások: 3 db, Windows 10-es operációs rendszerrel`
-- `Dell Inspiron 5558 laptop (CPU: i5 5200U, RAM: 8 GB, GPU: Nvidia 920M)`
-- `Acer Aspire 573g laptop (CPU: i3 5005U, RAM: 4 GB, GPU: Nvidia 920M)`
-- `Asztali számítógép (CPU: i7 7700k, RAM: 16GB, GPU: Nvidia GTX1070)`
+- `Munkaállomások: 5 db, Windows 10-es operációs rendszerrel, 2db, Ubuntum opercáiós rendszerrel felruházott`
+- `Asztali számítógép (CPU: Ryzen 5 5600G, RAM: 8GB, GPU: Radeon Graphics(beépített grafikus vezérlő))`
+- `Asztali számítógép (CPU: Ryzen 5 3500X, RAM: 16GB, GPU: Nvidia RTX3070)`
+- `Asztali számítógép (CPU: i5 11400, RAM: 8GB, GPU: Intel UHD Graphics 730)`
+- `Asztali számítógép (CPU: i5 1135G7, RAM: 16GB, GPU: Intel Iris Xe)`
+- `Laptop (CPU: i3-10100, RAM: 8GB, GPU: Intel UHD Graphics 630)`
+- `Asztali számítógép (CPU: Ryzen 3 3300X, RAM: 8GB, GPU: Integrált AMD Radeon Vega Graphics)`
+- `Asztali számítógép (CPU: Ryzen 5 3600, RAM: 16GB, GPU: Radeon RX 5600 XT)`
 
 A projekt a következő technológiákat/szoftvereket fogja használni a munka során:
 
-- `Heroku platformszolgáltatás a webalkalmazás hosztolásához`
-- `Heroku által biztosított PostgreSQL adatbázisszerver`
-- `Spring Boot keretrendszer`
-- `Thymeleaf dinamikus tartalom megjelenítés a felhasználói felületen`
-- `Maven szoftverprojekt menedzselő szoftver`
-- `Eclipse IDE fejlesztőkörnyezet`
+- `Visual Studio Code kódszerkesztő`
 - `Git verziókövető (GitLab)`
-
-```
-Milyen gépet használnak a projekttagok, milyen operációs rendszeren fejlesztenek, milyen szoftverkörnyezetben, stb.
-```
 
 ### 5.2. Rizikómenedzsment
 
-| Kockázat                                    | Leírás                                                                                                                                                                                     | Valószínűség | Hatás  |
-| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ | ------ |
-| `Betegség`                                  | `Súlyosságtól függően hátráltatja vagy bizonyos esetekben teljes mértékben korlátozza a munkavégzőt, így az egész projektre kihatással van. Megoldás: a feladatok átcsoportosítása`        | `nagy`       | `erős` |
-| `Kommunikációs fennakadás a csapattagokkal` | `A csapattagok között nem elégséges az információ áramlás, nem pontosan, esetleg késve vagy nem egyértelműen tájékoztatjuk egymást. Megoldás: még gyakoribb megbeszélések és ellenőrzések` | `kis`        | `erős` |
-
-```
-A rizikótényezők bemutatása, amely hátráltathatja a projekt befejezését.
-Minden rizikót érdemes megemlíteni, részletezve, hogy mit jelent,
-milyen valószínűséggel következhet be (kis, közepes és nagy),
-mekkora a várható hatása (gyenge, közepes és erős)
-és hogy milyen tervvel készültök, amennyiben egy ilyen esemény bekövetkezik.
-Pl.: betegség, szoftver-hardver probléma, tag kiesése, extrém ZH időszak, pandémia, stb.
-```
+| Kockázat                                    | Leírás                                                                                                                                                                                                                  | Valószínűség | Hatás  |
+| ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ------ |
+| `Betegség`                                  | `Előfordulhat hogy egy vagy több csapattagunk beteglesz, ilyenkor személyes csoportgyűlések nem megoldható és lassítja vagy teljesen hátráltatja a fejlesztést. Megoldás: a feladatok átcsoportosítása`                 | `nagy`       | `erős` |
+| `Kommunikációs fennakadás a csapattagokkal` | `Ha a feladatok és azok kezelése nem megfelelően kommunikálódik a csapatban, az vezethet a félreértésekhez vagy a kezelés elmulasztásához. Megoldás: még gyakoribb megbeszélések és ellenőrzések`                       | `kis`        | `erős` |
+| `Rossz internet kapcsolat`                  | `Fejlesztés közben fontos a folytonos jól működő internet kapcsolat, ennek hiánya hátráltatja a fejlesztést, megnehezíti a kommunikációt, fejlesztés során végzett kutatásokat, gitlabon keresztül végzett műveleteket` | `közepes`    | `erős` |
+| `Munkakörnyezet hiánya`                     | `Előfordulhat a csapattagok között hogy valaki elutazik és nincs hordozható eszköze amin tudna fejleszteni. Megoldás: a feladatok átcsoportosítása vagy határidő kitolása`                                              | `erős`       | `erős` |
 
 ## 6. Jelentések
 
 ### 6.1. Munka menedzsment
 
-A munkát `Teszt Elek` koordinálja. `Fő feladata, hogy folyamatosan egyeztessen a csapattagokkal az előrehaladásról és a fellépő problémákról, esetlegesen a megoldásban is segítséget nyújhat a projekt csúszásának elkerülése végett. További feladata a heti szinten tartandó csoportgyűlések időpontjának és helyszínének leszervezése, erről email-ben tájékoztatja a projektcsapatot.`
-
-```
-Írd le, hogy ki menedzseli a munkát (tipikusan a projekt menedzser), mik a feladatai, és azokat hogyan hajtja végre.
-```
+A munkát `Rózsa István` koordinálja. `Fő feladata, a csapat és munkájuk felügyelése, fellépő problémák kezelése. Tovibbái feladata a csoportgyűlések szervezése Messengeren, csapatgyűlés levezényelése Discordon.`
 
 ### 6.2. Csoportgyűlések
 
-`A projekt hetente ülésezik, hogy megvitassák az azt megelőző hét problémáit, illetve hogy megbeszéljék a következő hét feladatait. A megbeszélésről minden esetben memó készül.`
+`A csoport hetente ülésezik tervezetten minden pénteken, hogy megvitassák az azt megelőző hét problémáit, illetve hogy megbeszéljék a következő hét feladatait. A megbeszélésről minden esetben memó készül.`
 
 `1. megbeszélés:`
 
-- `Időpont: 2021.09.15.`
-- `Hely: SZTE Irinyi épület - Szeged, Tisza Lajos krt. 103`
-- `Résztvevők: Teszt Elek, Remek Elek, Lev Elek`
-- `Érintett témák: Ismerkedés, projekttéma kiválasztása`
-
-`2. megbeszélés:`
-
 - `Időpont: 2021.09.22.`
-- `Hely: Pivovár - Szeged, Vitéz utca 26.`
-- `Résztvevők: Teszt Elek, Remek Elek, Lev Elek`
-- `Érintett témák: A projektben használt technológiák rögzítése, a projektterv áttekintése, szerepkörök és vállalások kiosztása`
-
-`3. Megbeszélés:`
-
-- `Időpont: 2021.09.29.`
-- `Hely: TIK – Szeged, Ady tér 10.`
-- `Résztvevők: Teszt Elek, Remek Elek`
-- `Érintett témák: Egyeztetés az UML diagramokról, illetve az adatbázis táblák és kapcsolatok meghatározása`
-
-```
-A memókat a teljes projekt során vezetni kell, amely tartalmazza a következőket:
-jelenlévők listája, megbeszélés helye és ideje, megbeszélt tevékenységek, felmerült kérdések és igények.
-Lényege, hogy betekintést kapjunk hogyan szerveződnek, zajlanak a csoportgyűlések, milyen problémák, kérdések merültek fel.
-```
+- `Hely: Discord`
+- `Résztvevők: Rózsa István, Hörömpő Márk, Horváth Krisztián, Horváth Richárd, Kvak Barnabás, Attila hajas, Dominik Kele`
+- `Érintett témák: Ismerkedés, projekttéma kiválasztása, GitLab beüzemelése, kisebb feladatok kiosztása`
 
 ### 6.3. Minőségbiztosítás
 
@@ -160,7 +124,7 @@ Az alábbi lehetőségek vannak a szoftver megfelelő minőségének biztosítá
 
 ### 6.4. Átadás, eredmények elfogadása
 
-A projekt eredményeit a megrendelő, `Dr. Márkus András` fogja elfogadni. A projektterven változásokat csak a megrendelő írásos engedélyével lehet tenni. A projekt eredményesnek bizonyul, ha specifikáció helyes és határidőn belül készül el. Az esetleges késések pontlevonást eredményeznek.
+A projekt eredményeit a megrendelő, `Dr. Pflanzner Tamás` fogja elfogadni. A projektterven változásokat csak a megrendelő írásos engedélyével lehet tenni. A projekt eredményesnek bizonyul, ha specifikáció helyes és határidőn belül készül el. Az esetleges késések pontlevonást eredményeznek.
 Az elfogadás feltételeire és beadás formájára vonatkozó részletes leírás a következő honlapon olvasható: https://okt.inf.szte.hu/rf1/
 
 ### 6.5. Státuszjelentés
