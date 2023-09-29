@@ -184,7 +184,7 @@ Erőforrásigény: `1 személynap/fő`
 
 #### 8.1.2. Bemutató elkészítése
 
-Felelős: `Teszt Elek`
+Felelős: `Kvak Barnabás Máté`
 
 Tartam: `2 nap`
 
@@ -202,7 +202,7 @@ Részfeladatai a következők:
 
 #### 8.2.1. Use Case diagram
 
-Felelős: `Teszt Elek`
+Felelős: `Hajas Attila István`
 
 Tartam: `3 nap`
 
@@ -210,7 +210,7 @@ Erőforrásigény: `1 személynap`
 
 #### 8.2.2. Class diagram
 
-Felelős: `Lev Elek`
+Felelős: `Rózsa István Ferenc`
 
 Tartam: `4 nap`
 
@@ -218,7 +218,7 @@ Erőforrásigény: `2 személynap`
 
 #### 8.2.3. Sequence diagram
 
-Felelős: `Remek Elek`
+Felelős: `Kvak Barnabás`
 
 Tartam: `3 nap`
 
@@ -226,7 +226,7 @@ Erőforrásigény: `2 személynap`
 
 #### 8.2.4. Egyed-kapcsolat diagram adatbázishoz
 
-Felelős: `Remek Elek`
+Felelős: `Kele Dominik`
 
 Tartam: `4 nap`
 
@@ -234,7 +234,7 @@ Erőforrásigény: `2 személynap`
 
 #### 8.2.5. Package diagram
 
-Felelős: `Teszt Elek`
+Felelős: `Horváth Richárd Soma`
 
 Tartam: `3 nap`
 
@@ -242,7 +242,7 @@ Erőforrásigény: `0.5 személynap`
 
 #### 8.2.6. Képernyőtervek
 
-Felelős: `Teszt Elek`
+Felelős: `Hörömpő Márk`
 
 Tartam: `3 nap`
 
@@ -250,7 +250,7 @@ Erőforrásigény: `1 személynap`
 
 #### 8.2.7. Bemutató elkészítése
 
-Felelős: `Lev Elek`
+Felelős: `Kvak Barnabás`
 
 Tartam: `1 nap`
 
