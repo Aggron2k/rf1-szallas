@@ -1,37 +1,18 @@
 Rf1 szállás foglalás
 ---------------------------
-Login (szállás adó és szállás foglaló user)
-Regisztráció (szállás adó és szállás foglaló user)
-
-Szállás keresés
-Szálláshelyek értékelése:
-	Csillagos ertekeles
-	Szoveges ertekeles
-Foglalás
-Felkapott úti célok
-Legolcsóbb szálláshelyek
-Legutóbb keresett szálláshelyek
+Login, Regisztráció: Kele Dominik
+Szállás keresés, Szállások megjelenítése: Hörömpő Márk
+Szállás adatai oldal: Rózsa István
+Foglalás: Hajas Attila
+Szálláshelyek értékelése: Hajas Attila
 
 Szállás adó oldal:
-Szállás (CRUD)
-Kepek feltoltese
-Helyszin megjelolese:
-	Terkepes megjelenites
-Leiras kezelese:
-	*Megkozelites /melyik utcarol/
-	Felszereltseg
-	Akadalymentesitettseg
-	Ferohely
-	Szolgaltatasok /wi-fi, etkezes, parkolohely/
+Szállás (CRUD): Kvak Barnabás
+Képfeltöltés a szálláshoz: Rózsa István
+Térképes helyszínmegjelölés: Horváth Richárd
+Szállás részletes keresése: Horváth Richárd
+Szállás leírás kezelése(Megközelítés, Felszereltség, Férőhely ..stb): Kvab Barnabás
 
 Szállás foglaló: 
-Felhasználó foglalásainak kezelése (CRUD):
-	Csak szallas lemondasa /penzert/
-	"Keresse a szallasadot" update
-Bankkártya adatok kezelése (CRUD)
-Személyes adatok (CRUD)
-
-Adatbazis:
-Szallasok kezelese
-Felhasznalok kezelese
-Foglalasok kezelese
+Felhasználó foglalásainak kezelése (CRUD): Horváth Krisztián
+Személyes adatok (CRUD): Horváth Krisztián
