@@ -80,9 +80,9 @@ A projekt megrendelője `Szegedi Tudományegyetem`. A `Szállásfoglalás` proje
 - `Rózsa István (3 év PHP fullstack tapasztalat, magánvállalkozóként)`
 - `Kele Dominik (1 év Angular, TypeScript, Drupal a DataStepSolution-nél)`
 - `Hörömpő Márk (Különböző frontend és dizájn téren freelancer tapasztalat /Figma, Adobe Illustrator, CSS/)`
-- `Horváth Richárd`
-- `Horváth Krisztián`
-- `Kvak Barnabás`
+- `Horváth Richárd (Nincs korábbi tapasztalat)`
+- `Horváth Krisztián (PHP alapú weboldal tervezése, UX dizájn - Figma, CSS, JavaScript, Adatbázis kezelés - MySQL)`
+- `Kvak Barnabás (Foster Media)`
 - `Hajas Attila (Logiscool: javascript, python, python ML, Uj dimenzio butor kft weboldala: php, tailwind)`
 
 ### 4.1 Projektcsapat
