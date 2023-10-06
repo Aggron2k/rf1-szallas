@@ -14,7 +14,7 @@
 
 ### 2.2. Funkcionális követelmények
 
-- `Felhasználók kezelése (admin, szállás adó, szállás foglaló) (CRUD)`
+- `Felhasználók kezelése ( szállás adó, szállás foglaló) (CRUD)`
 - `Felhasználói munkamenet megvalósítása több jogosultsági szinttel `
 - `Szállás keresés`
 - `Szálláshelyek értékelése`
@@ -144,7 +144,7 @@ Minden mérföldkő leadásnál a projekten dolgozók jelentést tesznek a mérf
 
 `A szoftver fejlesztése során az agilis fejlesztési modellt alkalmazzuk, mivel a fejlesztés során nagy hangsúlyt fektetünk a folyamatos kommunikcióra. A fejlesztés során a szoftver specifikációi rugalmasan vátozhatnak, és ezzel a módszertannal tudunk a leggyorsabban alkalmazkodni az új elvárásokhoz.`
 
-`A webalkalmazás az MVC (modell-view-controller) felépítést követi, a szerver és a kliens függetlenek, csupán API végpontok segítségével kommunikálnak.`
+`A webalkalmazás az MVC (modell-view-controller) felépítést követi.`
 
 ```
 Milyen szoftverfolyamat modellt követve állítja elő a csapat a specifikációnak megfelelő prototípusokat? Miért ezt választja?
@@ -157,10 +157,10 @@ A főbb átadandók és határidők a projekt időtartama alatt a következők:
 
 | Szállítandó |                                 Neve                                  |  Határideje  |
 | :---------: | :-------------------------------------------------------------------: | :----------: |
-|     D1      |       Projektterv és Gantt chart, prezentáció, egyéni jelentés        | `2021-10-04` |
-|    P1+D2    |    UML, adatbázis- és képernyőtervek, prezentáció, egyéni jelentés    | `2021-10-18` |
-|    P1+D3    |       Prototípus I. és tesztelési dokumentáció, egyéni jelentés       | `2021-11-08` |
-|    P2+D4    | Prototípus II. és frissített tesztelési dokumentáció, egyéni jelentés | `2021-11-27` |
+|     D1      |       Projektterv és Gantt chart, prezentáció, egyéni jelentés        | `2023-10-16` |
+|    P1+D2    |    UML, adatbázis- és képernyőtervek, prezentáció, egyéni jelentés    | `2023-10-30` |
+|    P1+D3    |       Prototípus I. és tesztelési dokumentáció, egyéni jelentés       | `2023-11-20` |
+|    P2+D4    | Prototípus II. és frissített tesztelési dokumentáció, egyéni jelentés | `2023-12-04` |
 
 ```
 D - dokumentáció, P - prototípus
@@ -169,11 +169,6 @@ D - dokumentáció, P - prototípus
 ## 8. Feladatlista
 
 A következőkben a tervezett feladatok részletes összefoglalása található.
-
-```
-Alapvetően egy feladatnak 1 felelőse lehet, de kivételt képez pl. a 9.1.1. részfeladat, mivel az első mérföldkőben
-2 kötelező feladat van, ezt nem bontjuk részfeladatokra.
-```
 
 ### 8.1. Projektterv (1. mérföldkő)
 
@@ -273,7 +268,7 @@ Ennek a feladatnak az a célja, hogy `egy működő prototípust hozzunk létre,
 
 Részfeladatai a következők:
 
-#### `8.3.1. Felhasználók kezelése (admin, szállásadó, szállás foglaló) (CR)`
+#### `8.3.1. Felhasználók kezelése (szállásadó, szállás foglaló) (CR)`
 
 Felelős: `Kele Dominik`
 
@@ -281,7 +276,7 @@ Tartam: `5 nap`
 
 Erőforrásigény: `2 személynap`
 
-#### `8.3.2. Felhasználók kezelése (admin, szállásadó, szállás foglaló) (UD)`
+#### `8.3.2. Felhasználók kezelése (szállásadó, szállás foglaló) (UD)`
 
 Felelős: `Kele Dominik`
 
@@ -417,9 +412,6 @@ Tartam: `7 nap`
 
 Erőforrásigény: `1 személynap/fő`
 
-```
-Itt csak a könnyebb áttekinthetőség végett szerepel mindenki felelősként, azonban ezt a feladatot is részfeladatokra kell bontani.
-```
 
 #### `8.3.19. A prototípus kitelepítése éles környezetbe`
 
@@ -429,11 +421,6 @@ Tartam: `1 nap`
 
 Erőforrásigény: `1 személynap`
 
-```
-A feladatokat a 2.2-es és a 2.3-as pont alapján kell meghatározni és lehető legrészletesebben definiálni.
-Lehetőség szerint az összetett feladatokat bontsuk fel részfeladatokra.
-A bemutató során a prototípus aktuális állását kell prezentálni.
-```
 
 ### 8.4. Prototípus II. (4. mérföldkő)
 
@@ -594,4 +581,4 @@ A projekt költségterv elkészítése során rögzítjük az egyes feladatokhoz
 | `Horváth Richárd Soma`                          | `0`     | `0`     | `0`     |  `0`    | 0        |
 | `Hajas Attila István`                          | `0`     | `0`     | `0`     |  `0`    | 0        |
 
-Szeged, `2021-10-25`.
+Szeged, `2023-10-25`.
