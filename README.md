@@ -338,7 +338,7 @@ Részfeladatai a következők:
 
 #### `8.3.1. Felhasználók kezelése (admin, szállásadó, szállás foglaló) (CR)`
 
-Felelős: ``
+Felelős: `Kele Dominik`
 
 Tartam:  `5 nap`
 
@@ -346,7 +346,7 @@ Erőforrásigény:  `2 személynap`
 
 #### `8.3.2. Felhasználók kezelése (admin, szállásadó, szállás foglaló) (UD)`
 
-Felelős: ``
+Felelős: `Kele Dominik`
 
 Tartam:  `4 nap`
 
@@ -354,7 +354,7 @@ Erőforrásigény:  `2 személynap`
 
 #### `8.3.3. Felhasználók kezeléséhez szükséges adatok létrehozása az adatbázisban`
 
-Felelős: ``
+Felelős: `Kele Dominik`
 
 Tartam:  `3 nap`
 
@@ -362,15 +362,15 @@ Erőforrásigény:  `1 személynap`
 
 #### `8.3.4. Felhasználói munkamenet megvalósítása több jogosultsági szinttel`
 
-Felelős: ``
+Felelős: `Kele Dominik`
 
 Tartam:  `10 nap`
 
 Erőforrásigény:  `2 személynap`
 
-#### `8.3.5. Szállások kezelése (CRUD)`
+#### `8.3.5. Szállások keresése`
 
-Felelős: ``
+Felelős: `Hörömpő Márk`
 
 Tartam:  `3 nap`
 
@@ -378,47 +378,47 @@ Erőforrásigény:  `1 személynap`
 
 #### `8.3.6. Szálláskezeléshez szükséges adatok létrehozása az adatbázisban`
 
-Felelős: ``
+Felelős: `Hörömpő Márk`
 
 Tartam:  `4 nap`
 
 Erőforrásigény:  `2 személynap`
 
-#### `8.3.7. Szállás kezelése (C)`
+#### `8.3.7. Szállások megjelenítése`
 
-Felelős: ``
+Felelős: `Hörömpő Márk`
 
 Tartam:  `4 nap`
 
 Erőforrásigény:  `2 személynap`
 
-#### `8.3.8. Árukészletek kezelése (R)`
+#### `8.3.8. Szállások adatlapja`
 
-Felelős: ``
+Felelős: `Rózsa István`
 
 Tartam:  `3 nap`
 
 Erőforrásigény:  `1 személynap`
 
-#### `8.3.9. Árukészletek kezelése (UD)`
+#### `8.3.9. Foglalás`
 
-Felelős: ``
-
-Tartam:  `5 nap`
-
-Erőforrásigény:  `2 személynap`
-
-#### `8.3.10. Árukészletek kezeléséhez szükséges adatok létrehozása az adatbázisban`
-
-Felelős: ``
+Felelős: `Hajas Attila`
 
 Tartam:  `5 nap`
 
 Erőforrásigény:  `2 személynap`
 
-#### `8.3.11. Járművek kezelése (CRUD) és a szükséges adatok létrehozása az adatbázisban`
+#### `8.3.10. Szálláshelyek értékelése`
 
-Felelős: ``
+Felelős: `Hajas Attila`
+
+Tartam:  `5 nap`
+
+Erőforrásigény:  `2 személynap`
+
+#### `8.3.11. Szállások (CRUD)`
+
+Felelős: `Kvak Barnabás`
 
 Tartam:  `3 nap`
 
