@@ -268,7 +268,7 @@ Részfeladatai a következők:
 
 #### `8.3.1. Felhasználók kezelése (admin, szállásadó, szállás foglaló) (CR)`
 
-Felelős: ``
+Felelős: `Kele Dominik`
 
 Tartam: `5 nap`
 
@@ -276,7 +276,7 @@ Erőforrásigény: `2 személynap`
 
 #### `8.3.2. Felhasználók kezelése (admin, szállásadó, szállás foglaló) (UD)`
 
-Felelős: ``
+Felelős: `Kele Dominik`
 
 Tartam: `4 nap`
 
@@ -284,7 +284,7 @@ Erőforrásigény: `2 személynap`
 
 #### `8.3.3. Felhasználók kezeléséhez szükséges adatok létrehozása az adatbázisban`
 
-Felelős: ``
+Felelős: `Kele Dominik`
 
 Tartam: `3 nap`
 
@@ -292,15 +292,15 @@ Erőforrásigény: `1 személynap`
 
 #### `8.3.4. Felhasználói munkamenet megvalósítása több jogosultsági szinttel`
 
-Felelős: ``
+Felelős: `Kele Dominik`
 
 Tartam: `10 nap`
 
 Erőforrásigény: `2 személynap`
 
-#### `8.3.5. Szállások kezelése (CRUD)`
+#### `8.3.5. Szállások keresése`
 
-Felelős: ``
+Felelős: `Hörömpő Márk`
 
 Tartam: `3 nap`
 
@@ -308,95 +308,95 @@ Erőforrásigény: `1 személynap`
 
 #### `8.3.6. Szálláskezeléshez szükséges adatok létrehozása az adatbázisban`
 
-Felelős: ``
+Felelős: `Hörömpő Márk`
 
 Tartam: `4 nap`
 
 Erőforrásigény: `2 személynap`
 
-#### `8.3.7. Szállás kezelése (C)`
+#### `8.3.7. Szállások megjelenítése`
 
-Felelős: ``
+Felelős: `Hörömpő Márk`
 
 Tartam: `4 nap`
 
 Erőforrásigény: `2 személynap`
 
-#### `8.3.8. Árukészletek kezelése (R)`
+#### `8.3.8. Szállások adatlapja`
 
-Felelős: ``
+Felelős: `Rózsa István`
 
 Tartam: `3 nap`
 
 Erőforrásigény: `1 személynap`
 
-#### `8.3.9. Árukészletek kezelése (UD)`
+#### `8.3.9. Foglalás`
 
-Felelős: ``
-
-Tartam: `5 nap`
-
-Erőforrásigény: `2 személynap`
-
-#### `8.3.10. Árukészletek kezeléséhez szükséges adatok létrehozása az adatbázisban`
-
-Felelős: ``
+Felelős: `Hajas Attila`
 
 Tartam: `5 nap`
 
 Erőforrásigény: `2 személynap`
 
-#### `8.3.11. Járművek kezelése (CRUD) és a szükséges adatok létrehozása az adatbázisban`
+#### `8.3.10. Szálláshelyek értékelése`
 
-Felelős: ``
+Felelős: `Hajas Attila`
+
+Tartam: `5 nap`
+
+Erőforrásigény: `2 személynap`
+
+#### `8.3.11. Szállások (CRUD)`
+
+Felelős: `Kvak Barnabás`
 
 Tartam: `3 nap`
 
 Erőforrásigény: `2 személynap`
 
-#### `8.3.12. Fuvarok/szállítmányok kezelése (CR)`
+#### `8.3.12. Képfeltöltés a szálláshoz`
 
-Felelős: ``
+Felelős: `Rózsa István`
 
 Tartam: `4 nap`
 
 Erőforrásigény: `2 személynap`
 
-#### `8.3.13. Fuvarok/szállítmányok kezelése (UD)`
+#### `8.3.13. Térképes helyszínmegjelölés`
 
-Felelős: ``
+Felelős: `Horváth Richárd Soma`
 
 Tartam: `5 nap`
 
 Erőforrásigény: `2 személynap`
 
-#### `8.3.14. Fuvarok/szállítmányok szükséges adatok létrehozása az adatbázisban`
+#### `8.3.14. Szállás részletes keresése`
 
-Felelős: ``
+Felelős: `Horváth Richárd Soma`
 
 Tartam: `3 nap`
 
 Erőforrásigény: `1 személynap`
 
-#### `8.3.15. Email-es kiértesítés új szállítmány esetén az adott raktárosnak és sofőrnek`
+#### `8.3.15. Szállás leírás kezelése(Megközelítés, Felszereltség, Férőhely ..stb)`
 
-Felelős: ``
+Felelős: `Kvak Barnabás`
 
 Tartam: `4 nap`
 
 Erőforrásigény: `2 személynap`
 
-#### `8.3.16. Fuvar útvonalának megjelenítése térképen a kezdő és a végponttal együtt`
+#### `8.3.16. Felhasználó foglalásainak kezelése (CRUD)`
 
-Felelős: `Remek Elek`
+Felelős: `Horváth Krisztián`
 
 Tartam: `5 nap`
 
 Erőforrásigény: `3 személynap`
 
-#### `8.3.17. Biztonsági mentés automatikus létrehozása`
+#### `8.3.17. Személyes adatok (CRUD)`
 
-Felelős: `Lev Elek`
+Felelős: `Horváth Krisztián`
 
 Tartam: `3 nap`
 
@@ -416,7 +416,7 @@ Itt csak a könnyebb áttekinthetőség végett szerepel mindenki felelősként,
 
 #### `8.3.19. A prototípus kitelepítése éles környezetbe`
 
-Felelős: `Teszt Elek`
+Felelős: `Mindenki`
 
 Tartam: `1 nap`
 
