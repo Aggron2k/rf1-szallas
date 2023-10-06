@@ -424,49 +424,49 @@ Tartam:  `3 nap`
 
 Erőforrásigény:  `2 személynap`
 
-#### `8.3.12. Fuvarok/szállítmányok kezelése (CR)`
+#### `8.3.12. Képfeltöltés a szálláshoz`
 
-Felelős: ``
+Felelős: `Rózsa István`
 
 Tartam:  `4 nap`
 
 Erőforrásigény:  `2 személynap`
 
-#### `8.3.13. Fuvarok/szállítmányok kezelése (UD)`
+#### `8.3.13. Térképes helyszínmegjelölés`
 
-Felelős: ``
+Felelős: `Horváth Richárd Soma`
 
 Tartam:  `5 nap`
 
 Erőforrásigény:  `2 személynap`
 
-#### `8.3.14. Fuvarok/szállítmányok szükséges adatok létrehozása az adatbázisban`
+#### `8.3.14. Szállás részletes keresése`
 
-Felelős: ``
+Felelős: `Horváth Richárd Soma`
 
 Tartam:  `3 nap`
 
 Erőforrásigény:  `1 személynap`
 
-#### `8.3.15. Email-es kiértesítés új szállítmány esetén az adott raktárosnak és sofőrnek`
+#### `8.3.15. Szállás leírás kezelése(Megközelítés, Felszereltség, Férőhely ..stb)`
 
-Felelős: ``
+Felelős: `Kvak Barnabás`
 
 Tartam:  `4 nap`
 
 Erőforrásigény:  `2 személynap`
 
-#### `8.3.16. Fuvar útvonalának megjelenítése térképen a kezdő és a végponttal együtt`
+#### `8.3.16. Felhasználó foglalásainak kezelése (CRUD)`
 
-Felelős: `Remek Elek`
+Felelős: `Horváth Krisztián`
 
 Tartam:  `5 nap`
 
 Erőforrásigény:  `3 személynap`
 
-#### `8.3.17. Biztonsági mentés automatikus létrehozása`
+#### `8.3.17. Személyes adatok (CRUD)`
 
-Felelős: `Lev Elek`
+Felelős: `Horváth Krisztián`
 
 Tartam:  `3 nap`
 
@@ -486,7 +486,7 @@ Itt csak a könnyebb áttekinthetőség végett szerepel mindenki felelősként,
 
 #### `8.3.19. A prototípus kitelepítése éles környezetbe`
 
-Felelős: `Teszt Elek`
+Felelős: `Mindenki`
 
 Tartam:  `1 nap`
 
