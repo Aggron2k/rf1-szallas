@@ -531,11 +531,8 @@ Működő végleges program, a frissített tesztelési dokumentációval. A 3. m
 
 ## 9. Részletes időbeosztás
 
-![image](./MINTA-gantt-diagram.png)
+![image](./gantt-diagram.PNG)
 
-```
-Ide kell berakni a Gantt diagramot, amely a 9. fejezetben található részfeladatokat tartalmazza felelős/tartam bontásban.
-```
 
 ## 10. Projekt költségvetés
 
