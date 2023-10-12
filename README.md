@@ -47,9 +47,9 @@ A projekt megrendelője `Szegedi Tudományegyetem`. A `Szállásfoglalás` proje
 - `Rózsa István (3 év PHP fullstack tapasztalat, magánvállalkozóként)`
 - `Kele Dominik (1 év Angular, TypeScript, Drupal a DataStepSolution-nél)`
 - `Hörömpő Márk (Különböző frontend és dizájn téren freelancer tapasztalat /Figma, Adobe Illustrator, CSS/)`
-- `Horváth Richárd`
-- `Horváth Krisztián`
-- `Kvak Barnabás`
+- `Horváth Richárd (Nincs korábbi tapasztalat)`
+- `Horváth Krisztián (PHP alapú weboldal tervezése, UX dizájn - Figma, CSS, JavaScript, Adatbázis kezelés - MySQL)`
+- `Kvak Barnabás (Foster Media)`
 - `Hajas Attila (Logiscool: javascript, python, python ML, Uj dimenzio butor kft weboldala: php, tailwind)`
 
 ### 4.1 Projektcsapat
@@ -118,6 +118,13 @@ A munkát `Rózsa István` koordinálja. `Fő feladata, a csapat és munkájuk f
 - `Hely: Discord`
 - `Résztvevők: Rózsa István, Hörömpő Márk, Horváth Krisztián, Horváth Richárd, Kvak Barnabás, Attila hajas, Dominik Kele`
 - `Érintett témák: Tovibbái mérföldkövek átbeszélése, feladatok és issuek kiosztása, keretrendszer megbeszélése`
+
+`3. megbeszélés:`
+
+- `Időpont: 2021.10.06.`
+- `Hely: Discord`
+- `Résztvevők: Rózsa István, Hörömpő Márk, Horváth Krisztián, Horváth Richárd, Kvak Barnabás, Attila hajas, Dominik Kele`
+- `Érintett témák: Projekt terv átbeszélése, módosítások, issuek rendezése, feladatok kiosztása`
 
 ### 6.3. Minőségbiztosítás
 
@@ -531,11 +538,8 @@ Működő végleges program, a frissített tesztelési dokumentációval. A 3. m
 
 ## 9. Részletes időbeosztás
 
-![image](./MINTA-gantt-diagram.png)
+![image](./gantt-diagram.PNG)
 
-```
-Ide kell berakni a Gantt diagramot, amely a 9. fejezetben található részfeladatokat tartalmazza felelős/tartam bontásban.
-```
 
 ## 10. Projekt költségvetés
 
@@ -548,25 +552,25 @@ A projekt költségterv elkészítése során rögzítjük az egyes feladatokhoz
 
 | Név          |   M1  |   M2  |   M3 |   M4  | Összesen |
 |--------------|-------|-------|------|-------|----------|
-| `Kele Dominik Norbert` | `1` | `0` | `0` | `0`   | `0`     |
-| `Rózsa István` | `1.5`   | `0`   | `0` | `0`   | `0`     |
-| `Horváth Krisztián`   | `1`   | `0` | `0` | `0` | `0`     |
-| `Hörömpö Márk`   | `1`   | `0` | `0` | `0` | `0`     |
-| `Kvak Barnabás`   | `1.5`   | `0` | `0` | `0` | `0`     |
-| `Horváth Richárd Soma`   | `1`   | `0` | `0` | `0` | `0`     |
-| `Hajas Attila István`   | `1`   | `0` | `0` | `0` | `0`     |
+| `Kele Dominik Norbert` | `1` | `2` | `9` | `0`   | `12`     |
+| `Rózsa István` | `1.5`   | `2`   | `5` | `0`   | `8.5`     |
+| `Horváth Krisztián`   | `1`   | `1` | `6` | `0` | `8`     |
+| `Hörömpö Márk`   | `1`   | `1` | `6` | `0` | `8`     |
+| `Kvak Barnabás`   | `1.5`   | `2.5` | `6` | `0` | `10`     |
+| `Horváth Richárd Soma`   | `1`   | `0.5` | `5` | `0` | `6.5`     |
+| `Hajas Attila István`   | `1`   | `1` | `6` | `0` | `8`     |
 
 ### 10.2. Részletes feladatszámok
 
 | Név          |   M1  |   M2  |   M3 |   M4 | Összesen |
 |--------------|-------|-------|------|------|----------|
-| `Kele Dominik Norbert` | `1`   | `1`   | `0`  | `0`  | `2`     |
-| `Rózsa István` | `2`   | `1`   | `0`  | `0`  | `3`     |
-| `Horváth Krisztián`   | `1`   | `1` | `0` | `0` | `2`     |
-| `Hörömpö Márk`   | `1`   | `1`   | `0`  | `0`  | `2`     |
-| `Kvak Barnabás`   | `1`   | `1`   | `0`  | `0`  | `2`     |
-| `Horváth Richárd Soma`   | `1`   | `1`   | `0`  | `0`  | `2`     |
-| `Hajas Attila István`   | `1`   | `1`   | `0`  | `0`  | `2`     |
+| `Kele Dominik Norbert` | `1`   | `1`   | `4`  | `0`  | `6`     |
+| `Rózsa István` | `2`   | `1`   | `4`  | `0`  | `7`     |
+| `Horváth Krisztián`   | `1`   | `1` | `4` | `0` | `6`     |
+| `Hörömpö Márk`   | `1`   | `1`   | `4`  | `0`  | `6`     |
+| `Kvak Barnabás`   | `1`   | `1`   | `4`  | `0`  | `6`     |
+| `Horváth Richárd Soma`   | `1`   | `1`   | `4`  | `0`  | `6`     |
+| `Hajas Attila István`   | `1`   | `1`   | `4`  | `0`  | `6`     |
 
 ### 10.3. Részletes költségvetés
 
