@@ -561,25 +561,25 @@ A projekt költségterv elkészítése során rögzítjük az egyes feladatokhoz
 
 | Név          |   M1  |   M2  |   M3 |   M4  | Összesen |
 |--------------|-------|-------|------|-------|----------|
-| `Kele Dominik Norbert` | `1` | `0` | `0` | `0`   | `0`     |
-| `Rózsa István` | `1.5`   | `0`   | `0` | `0`   | `0`     |
-| `Horváth Krisztián`   | `1`   | `0` | `0` | `0` | `0`     |
-| `Hörömpö Márk`   | `1`   | `0` | `0` | `0` | `0`     |
-| `Kvak Barnabás`   | `1`   | `0` | `0` | `0` | `0`     |
-| `Horváth Richárd Soma`   | `1`   | `0` | `0` | `0` | `0`     |
-| `Hajas Attila István`   | `1`   | `0` | `0` | `0` | `0`     |
+| `Kele Dominik Norbert` | `1` | `2` | `9` | `0`   | `12`     |
+| `Rózsa István` | `1.5`   | `2`   | `5` | `0`   | `8.5`     |
+| `Horváth Krisztián`   | `1`   | `1` | `6` | `0` | `8`     |
+| `Hörömpö Márk`   | `1`   | `1` | `6` | `0` | `8`     |
+| `Kvak Barnabás`   | `1.5`   | `2.5` | `6` | `0` | `10`     |
+| `Horváth Richárd Soma`   | `1`   | `0.5` | `5` | `0` | `6.5`     |
+| `Hajas Attila István`   | `1`   | `1` | `6` | `0` | `8`     |
 
 ### 10.2. Részletes feladatszámok
 
 | Név          |   M1  |   M2  |   M3 |   M4 | Összesen |
 |--------------|-------|-------|------|------|----------|
-| `Kele Dominik Norbert` | `1`   | `0`   | `0`  | `0`  | `0`     |
-| `Rózsa István` | `2`   | `0`   | `0`  | `0`  | `0`     |
-| `Horváth Krisztián`   | `1`   | `0` | `0` | `0` | `0`     |
-| `Hörömpö Márk`   | `1`   | `0`   | `0`  | `0`  | `0`     |
-| `Kvak Barnabás`   | `1`   | `0`   | `0`  | `0`  | `0`     |
-| `Horváth Richárd Soma`   | `1`   | `0`   | `0`  | `0`  | `0`     |
-| `Hajas Attila István`   | `1`   | `0`   | `0`  | `0`  | `0`     |
+| `Kele Dominik Norbert` | `1`   | `1`   | `4`  | `0`  | `6`     |
+| `Rózsa István` | `2`   | `1`   | `4`  | `0`  | `7`     |
+| `Horváth Krisztián`   | `1`   | `1` | `4` | `0` | `6`     |
+| `Hörömpö Márk`   | `1`   | `1`   | `4`  | `0`  | `6`     |
+| `Kvak Barnabás`   | `1`   | `1`   | `4`  | `0`  | `6`     |
+| `Horváth Richárd Soma`   | `1`   | `1`   | `4`  | `0`  | `6`     |
+| `Hajas Attila István`   | `1`   | `1`   | `4`  | `0`  | `6`     |
 
 ### 10.3. Részletes költségvetés
 
