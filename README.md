@@ -128,7 +128,7 @@ A munkát `Rózsa István` koordinálja. `Fő feladata, a csapat és munkájuk f
 
 `4. megbeszélés:`
 
-- `Időpont: 2023.10.06.`
+- `Időpont: 2023.10.13.`
 - `Hely: Discord`
 - `Résztvevők: Rózsa István, Hörömpő Márk, Horváth Krisztián, Horváth Richárd, Kvak Barnabás, Attila hajas, Dominik Kele`
 - `Érintett témák: Első mérföldkő véglegesítése, PowerPoint bemutató áttekintése, egyéni jelentések létrehozása`
