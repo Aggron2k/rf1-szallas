@@ -444,97 +444,113 @@ Ennek a feladatnak az a célja, hogy `az előző mérföldkő hiányzó funkció
 
 Részfeladatai a következők:
 
-#### 8.4.1. Javított minőségű prototípus új funkciókkal
+#### 8.4.1. Regisztráció tesztelése
 
-Felelős: `Teszt Elek`
+Felelős: `Kele Dominik`
 
 Tartam: `5 nap`
 
 Erőforrásigény: `2.5 személynap`
 
-#### 8.4.2. Javított minőségű prototípus javított funkciókkal
+#### 8.4.2. Bejelentkezés tesztelése
 
-Felelős: `Lev Elek`
+Felelős: `Kele Dominik`
 
 Tartam: `5 nap`
 
 Erőforrásigény: `2 személynap`
 
-#### 8.4.3. Javított minőségű prototípus a korábbi hiányzó funkciókkal
+#### 8.4.3. Szállás (CRUD) tesztelése
 
-Felelős: `Remek Elek`
+Felelős: `Kvak Barnabás Máté`
 
 Tartam: `5 nap`
 
 Erőforrásigény: `1.5 személynap`
 
-#### `8.4.4. Felhasználói munkamenet tesztelése (TR)`
+#### `8.4.4. Képfeltöltés tesztelése`
 
-Felelős: `Teszt Elek`
-
-Tartam: `1 nap`
-
-Erőforrásigény: `1 személynap`
-
-#### `8.4.5. Raktárak kezelésének tesztelése (TR)`
-
-Felelős: `Remek Elek`
-
-Tartam: `1 nap`
-
-Erőforrásigény: `0.5 személynap`
-
-#### `8.4.6. Árukészletek kezelésének tesztelése (TR)`
-
-Felelős: `Teszt Elek`
+Felelős: `Rózsa István`
 
 Tartam: `1 nap`
 
 Erőforrásigény: `1 személynap`
 
-#### `8.4.7. Járművek kezelésének tesztelése (TR)`
+#### `8.4.5. Térképes szállásmegjelölés tesztelése`
 
-Felelős: `Remek Elek`
-
-Tartam: `1 nap`
-
-Erőforrásigény: `0.5 személynap`
-
-#### `8.4.8. Fuvarok kezelésének tesztelése (TR)`
-
-Felelős: `Lev Elek`
+Felelős: `Horváth Richárd`
 
 Tartam: `1 nap`
 
 Erőforrásigény: `0.5 személynap`
 
-#### `8.4.9. Email-es funkciók tesztelése (TR)`
+#### `8.4.6. Szállás leírás kezelésének tesztelése`
 
-Felelős: `Remek Elek`
+Felelős: `Kvak Barnabás Máté`
+
+Tartam: `1 nap`
+
+Erőforrásigény: `1 személynap`
+
+#### `8.4.7. Szállás keresés tesztelése
+
+Felelős: `Hörömpő Márk`
 
 Tartam: `1 nap`
 
 Erőforrásigény: `0.5 személynap`
 
-#### `8.4.10. Térképes funkciók tesztelése (TR)`
+#### `8.4.8. Szállás megjelenítés tesztelése`
 
-Felelős: `Lev Elek`
-
-Tartam: `1 nap`
-
-Erőforrásigény: `0.5 személynap`
-
-#### `8.4.11. Biztonsági mentés tesztelése (TR)`
-
-Felelős: `Lev Elek`
+Felelős: `Hörömpő Márk`
 
 Tartam: `1 nap`
 
 Erőforrásigény: `0.5 személynap`
 
-#### `8.4.12. A prototípus kitelepítésének frissítése`
+#### `8.4.9. Szállás részletes keresésének tesztelése`
 
-Felelős: `Teszt Elek`
+Felelős: `Horváth Richárd`
+
+Tartam: `1 nap`
+
+Erőforrásigény: `0.5 személynap`
+
+#### `8.4.10. Szállás adatainak tesztelése
+
+Felelős: `Rózsa István`
+
+Tartam: `1 nap`
+
+Erőforrásigény: `0.5 személynap`
+
+#### `8.4.11. Foglalás tesztelése
+
+Felelős: `Hajas Attila`
+
+Tartam: `1 nap`
+
+Erőforrásigény: `0.5 személynap`
+
+#### `8.4.12. Felhasználó foglalásainak kezelésének (CRUD) tesztelése
+
+Felelős: `Horvát Krisztián`
+
+Tartam:  `1 nap`
+
+Erőforrásigény:  `0.5 személynap`
+
+#### `8.4.13. Személyes adatok tesztelése
+
+Felelős: `Horváth Krisztián`
+
+Tartam:  `1 nap`
+
+Erőforrásigény:  `0.5 személynap`
+
+#### `8.4.14. Szálláshely értékelésének tesztelése
+
+Felelős: `Hajas Attila`
 
 Tartam: `1 nap`
 
