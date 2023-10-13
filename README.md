@@ -107,24 +107,33 @@ A munkát `Rózsa István` koordinálja. `Fő feladata, a csapat és munkájuk f
 
 `1. megbeszélés:`
 
-- `Időpont: 2021.09.22.`
+- `Időpont: 2023.09.22.`
 - `Hely: Discord`
 - `Résztvevők: Rózsa István, Hörömpő Márk, Horváth Krisztián, Horváth Richárd, Kvak Barnabás, Attila hajas, Dominik Kele`
 - `Érintett témák: Ismerkedés, projekttéma kiválasztása, GitLab beüzemelése, kisebb feladatok kiosztása`
 
 `2. megbeszélés:`
 
-- `Időpont: 2021.09.29.`
+- `Időpont: 2023.09.29.`
 - `Hely: Discord`
 - `Résztvevők: Rózsa István, Hörömpő Márk, Horváth Krisztián, Horváth Richárd, Kvak Barnabás, Attila hajas, Dominik Kele`
 - `Érintett témák: Tovibbái mérföldkövek átbeszélése, feladatok és issuek kiosztása, keretrendszer megbeszélése`
 
 `3. megbeszélés:`
 
-- `Időpont: 2021.10.06.`
+- `Időpont: 2023.10.06.`
 - `Hely: Discord`
 - `Résztvevők: Rózsa István, Hörömpő Márk, Horváth Krisztián, Horváth Richárd, Kvak Barnabás, Attila hajas, Dominik Kele`
 - `Érintett témák: Projekt terv átbeszélése, módosítások, issuek rendezése, feladatok kiosztása`
+
+`4. megbeszélés:`
+
+- `Időpont: 2023.10.13.`
+- `Hely: Discord`
+- `Résztvevők: Rózsa István, Hörömpő Márk, Horváth Krisztián, Horváth Richárd, Kvak Barnabás, Attila hajas, Dominik Kele`
+- `Érintett témák: Első mérföldkő véglegesítése, PowerPoint bemutató áttekintése, egyéni jelentések létrehozása`
+
+
 
 ### 6.3. Minőségbiztosítás
 
