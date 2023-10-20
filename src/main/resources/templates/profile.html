@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" xmlns:th="http://www.thymeleaf.org/" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{index}">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+</head>
+<body>
+<div layout:fragment="content">
+  <div sec:authorize="isAuthenticated()">Ez a tartalom csak akor látszódik ha be van lépve</div>
+  <div sec:authorize="hasAuthority('GUEST')">Csak GUEST content</div>
+  <div sec:authorize="hasAuthority('ACCOMODATION')">Ez a tartalom csak szállás adónak</div>
+
+  Logged user: <span sec:authentication="name">Bob</span>
+  Roles: <span sec:authentication="principal.authorities">[GUEST, ACCOMODATION]</span>
+</div>
+</body>
+</html>

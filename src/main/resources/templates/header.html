@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment="header" class="header">
+    <div class="row">
+        <div class="col-lg-6 d-flex justify-content-center align-items-center" style="height: 100vh">
+            <h1>Foglald le álmaid szállását</h1>
+        </div>
+        <div class="col-lg-6 d-flex justify-content-center align-items-center" style="height: 100vh">
+            <div class="card border-0 shadow rounded-3 my-5 search-card">
+                <div class="card-body p-4">
+                    <h5 class="card-title text-center mb-5 fw-light fs-5">Keresés</h5>
+                    <form>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" placeholder="Balaton">
+                            <label>Hova</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="date" class="form-control" >
+                            <label>Mettől</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="date" class="form-control" >
+                            <label>Meddig</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" placeholder="Balaton">
+                            <label>Felnőtt száma </label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" placeholder="Balaton">
+                            <label>Gyerekek száma</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" placeholder="Balaton">
+                            <label>Szobák száma</label>
+                        </div>
+                        <div class="d-grid">
+                            <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">Keresés</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
