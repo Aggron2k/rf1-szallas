@@ -592,37 +592,37 @@ A projekt költségterv elkészítése során rögzítjük az egyes feladatokhoz
 
 | Név          |   M1  |   M2  |   M3 |   M4  | Összesen |
 |--------------|-------|-------|------|-------|----------|
-| `Kele Dominik Norbert` | `1` | `2` | `9` | `0`   | `12`     |
-| `Rózsa István` | `1.5`   | `2`   | `5` | `0`   | `8.5`     |
-| `Horváth Krisztián`   | `1`   | `1` | `6` | `0` | `8`     |
-| `Hörömpö Márk`   | `1`   | `1` | `6` | `0` | `8`     |
-| `Kvak Barnabás`   | `1.5`   | `2.5` | `6` | `0` | `10`     |
-| `Horváth Richárd Soma`   | `1`   | `0.5` | `5` | `0` | `6.5`     |
-| `Hajas Attila István`   | `1`   | `1` | `6` | `0` | `8`     |
+| `Kele Dominik Norbert` | `1` | `2` | `5` | `3.5`   | `11.5`     |
+| `Rózsa István` | `1.5`   | `2`   | `5` | `2`   | `10.5`     |
+| `Horváth Krisztián`   | `1`   | `1` | `6` | `2` | `10`     |
+| `Hörömpö Márk`   | `1`   | `1` | `6` | `2` | `10`     |
+| `Kvak Barnabás`   | `1.5`   | `2.5` | `6` | `2.5` | `12.5`     |
+| `Horváth Richárd Soma`   | `1`   | `1` | `6.5` | `1.5` | `10`     |s
+| `Hajas Attila István`   | `1`   | `1` | `6` | `2` | `10`     |
 
 ### 10.2. Részletes feladatszámok
 
 | Név          |   M1  |   M2  |   M3 |   M4 | Összesen |
 |--------------|-------|-------|------|------|----------|
-| `Kele Dominik Norbert` | `1`   | `1`   | `4`  | `0`  | `6`     |
-| `Rózsa István` | `2`   | `1`   | `4`  | `0`  | `7`     |
-| `Horváth Krisztián`   | `1`   | `1` | `4` | `0` | `6`     |
-| `Hörömpö Márk`   | `1`   | `1`   | `4`  | `0`  | `6`     |
-| `Kvak Barnabás`   | `1`   | `1`   | `4`  | `0`  | `6`     |
-| `Horváth Richárd Soma`   | `1`   | `1`   | `4`  | `0`  | `6`     |
-| `Hajas Attila István`   | `1`   | `1`   | `4`  | `0`  | `6`     |
+| `Kele Dominik Norbert` | `1`   | `1`   | `4`  | `2`  | `8`     |
+| `Rózsa István` | `2`   | `1`   | `4`  | `2`  | `9`     |
+| `Horváth Krisztián`   | `1`   | `1` | `4` | `2` | `8`     |
+| `Hörömpö Márk`   | `1`   | `1`   | `4`  | `2`  | `8`     |
+| `Kvak Barnabás`   | `1`   | `1`   | `4`  | `2`  | `8`     |
+| `Horváth Richárd Soma`   | `1`   | `1`   | `4`  | `2`  | `8`     |
+| `Hajas Attila István`   | `1`   | `1`   | `4`  | `2`  | `8`     |
 
 ### 10.3. Részletes költségvetés
 
 | Név                                 | M1      | M2       | M3       | M4       | Összesen  |
 |-------------------------------------|---------|----------|----------|----------|-----------|
 | Maximálisan megszerezhető pontszám  |  (7)    | (20)     | (35)     |  (28)    | 100% (70) |
-| `Kele Dominik Norbert`                        | `0`     | `0`     | `0`     |  `0`    | 0        |
-| `Rózsa István`                        | `0`     | `0`     | `0`     |  `0`    | 0        |
-| `Horváth Krisztián`                          | `0`     | `0`     | `0`     |  `0`    | 0        |
-| `Hörömpö Márk`                          | `0`     | `0`     | `0`     |  `0`    | 0        |
-| `Kvak Barnabás`                          | `0`     | `0`     | `0`     |  `0`    | 0        |
-| `Horváth Richárd Soma`                          | `0`     | `0`     | `0`     |  `0`    | 0        |
-| `Hajas Attila István`                          | `0`     | `0`     | `0`     |  `0`    | 0        |
+| `Kele Dominik Norbert`                        | `6`     | `12`     | `30`     |  `22`    | 70        |
+| `Rózsa István`                        | `7`     | `10`     | `33`     |  `20`    | 70        |
+| `Horváth Krisztián`                          | `6`     | `9`     | `28`     |  `27`    | 70        |
+| `Hörömpö Márk`                          | `6`     | `9`     | `34`     |  `21`    | 70        |
+| `Kvak Barnabás`                          | `7`     | `16`     | `20`     |  `27`    | 70        |
+| `Horváth Richárd Soma`                          | `6`     | `8`     | `28`     |  `28`    | 70        |
+| `Hajas Attila István`                          | `6`     | `17`     | `30`     |  `17`    | 70        |
 
 Szeged, `2023-10-25`.
