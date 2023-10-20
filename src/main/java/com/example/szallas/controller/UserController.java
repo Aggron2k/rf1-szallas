@@ -32,4 +32,20 @@ public class UserController {
         userService.registerUser(registrationRequest);
         return "redirect:/register?success";
     }
+
+    @GetMapping("/login")
+    public String login(Model model){
+        model.addAttribute("user", new User());
+        return  "login";
+    }
+
+    @PostMapping("/loginRequest")
+    public String loginRequest(){
+        return "login";
+    }
+
+    @GetMapping("/user/profile")
+    public String profilePage(){
+        return "profile";
+    }
 }
