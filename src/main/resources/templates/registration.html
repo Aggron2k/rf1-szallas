@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{index}">
+<head>
+    <meta charset="UTF-8">
+    <title>Regisztráció</title>
+</head>
+<body>
+<div layout:fragment="content" class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card border-0 shadow rounded-3 my-5">
+                <div class="card-body p-4 p-sm-5">
+                    <h5 class="card-title text-center mb-5 fw-light fs-5">Regisztráció</h5>
+                    <form th:method="post" th:action="@{/registerRequest}" th:object="${user}">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" th:field="*{firstName}"  placeholder="name@example.com">
+                            <label>Vezetéknév</label>
+                            <p th:if="${#fields.hasErrors('firstName')}" th:errorclass="text-danger" th:errors="*{firstName}"></p>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control"  th:field="*{lastName}" placeholder="name@example.com">
+                            <label>Keresztnév</label>
+                            <p th:if="${#fields.hasErrors('lastName')}" th:errorclass="text-danger" th:errors="*{lastName}"></p>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control"  th:field="*{email}" placeholder="name@example.com">
+                            <label>Email</label>
+                            <p th:if="${#fields.hasErrors('email')}" th:errorclass="text-danger" th:errors="*{email}"></p>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" th:field="*{username}"  placeholder="name@example.com">
+                            <label>Felhasználónév</label>
+                            <p th:if="${#fields.hasErrors('username')}" th:errorclass="text-danger" th:errors="*{username}"></p>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control"  th:field="*{password}"id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Jelszó</label>
+                            <p th:if="${#fields.hasErrors('password')}" th:errorclass="text-danger" th:errors="*{password}"></p>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control"  th:field="*{role}" placeholder="Password">
+                            <label for="floatingPassword">Jogosultság</label>
+                            <p th:if="${#fields.hasErrors('role')}" th:errorclass="text-danger" th:errors="*{role}"></p>
+                        </div>
+                        <div class="d-grid mb-3">
+                            <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">Regisztráció</button>
+                        </div>
+                        <div th:if="${param.success}" class="alert alert-success" role="alert">
+                            Sikeres regisztráció.
+                        </div>
+                        <hr class="my-4">
+                        <div class="d-grid mb-2">
+                            <p>Van már fiókod? <a href="/login">Jelentkezz be!</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

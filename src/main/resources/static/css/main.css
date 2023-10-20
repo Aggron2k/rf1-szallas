@@ -1,0 +1,17 @@
+.header{
+    background-image: url("../images/header.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.search-card{
+    width: 400px;
+}
+
+.header h1{
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+}
