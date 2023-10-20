@@ -221,6 +221,8 @@ Tartam: `2 nap`
 
 Erőforrásigény: `0.5 személynap`
 
+Mérföldkő: [Első mérföldkő](https://git-okt.sed.inf.szte.hu/2023_ib153i-10_d/rf-szallas/-/milestones/1#tab-issues)
+
 ```
 A mérföldkőhöz tartozó feladatok bemutatása PPT keretében, pl. téma, tervezett funkciók, tagok, Gantt diagram.`
 ```
