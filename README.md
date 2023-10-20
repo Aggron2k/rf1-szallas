@@ -14,16 +14,27 @@
 
 ### 2.2. Funkcionális követelmények
 
-- `Felhasználók kezelése ( szállás adó, szállás foglaló) (CRUD)`
-- `Felhasználói munkamenet megvalósítása több jogosultsági szinttel `
-- `Szállás keresés`
-- `Szálláshelyek értékelése`
-- `Foglalás`
-- `Felkapott úti célok`
-- `Legolcsóbb szálláshelyek`
-- `Legutóbb keresett szálláshelyek`
-- `Szállás adó oldal (CRUD)`
-- `Szállás foglaló (CRUD)`
+- `Szállás foglaló:`
+  - `Regisztráció`
+  - `Bejelentkezés`
+  - `Személyes adatok módosítása`
+  - `Szállás keresés: `
+    - `Szállások megjelenítése`
+    - `Szűrés lehetősége hely, időpont, felnőtt/gyerek, szobák száma szerint`
+    - `Felkapott úticélok, legolcsóbb szálláshelyek gyors keresése`
+  - `Szállás helyek értékelése:`
+    - `Szöveges és csillagos értékelés`
+  - `Foglalás`
+    - `Szállás kiválasztása, Személyes adatok kitöltése, foglalás véglegesítése`
+    - `Saját foglalások kezelése`
+
+- `Szállás adó:`
+  - `Regisztráció`
+  - `Bejelentkezés`
+  - `Személyes adatok módosítása`
+  - `Kiadó szállás létrehozása, módosítása, törlése`
+  - `Kiadó szállás adatainak megadása`
+  - `Képfeltöltés a szálláshoz`
 
 ### 2.3. Nem funkcionális követelmények
 
@@ -85,6 +96,8 @@ A projekt a következő technológiákat/szoftvereket fogja használni a munka s
 
 - `Visual Studio Code kódszerkesztő`
 - `Git verziókövető (GitLab)`
+- `Java Spring`
+- `Thymeleaf`
 
 ### 5.2. Rizikómenedzsment
 
@@ -194,7 +207,7 @@ Részfeladatai a következők:
 
 #### 8.1.1. Projektterv kitöltése
 
-Felelős: `Mindenki`
+Felelős: `Rózsa István`
 
 Tartam: `4 nap`
 
