@@ -583,7 +583,7 @@ Működő végleges program, a frissített tesztelési dokumentációval. A 3. m
 
 ## 9. Részletes időbeosztás
 
-![image](./gantt-diagram.PNG)
+![image](diagrams/gantt-diagram.PNG/gantt-diagram.PNG)
 
 
 ## 10. Projekt költségvetés
