@@ -146,7 +146,12 @@ A munkát `Rózsa István` koordinálja. `Fő feladata, a csapat és munkájuk f
 - `Résztvevők: Rózsa István, Hörömpő Márk, Horváth Krisztián, Horváth Richárd, Kvak Barnabás, Attila hajas, Dominik Kele`
 - `Érintett témák: Első mérföldkő véglegesítése, PowerPoint bemutató áttekintése, egyéni jelentések létrehozása`
 
+`5. megbeszélés:`
 
+- `Időpont: 2023.10.20.`
+- `Hely: Discord`
+- `Résztvevők: Rózsa István, Hörömpő Márk, Horváth Krisztián, Horváth Richárd, Kvak Barnabás, Attila hajas, Dominik Kele`
+- `Érintett témák: Elkészült diagrammok megbeszélése, javítása(Squence diagram, Egyed-kapcsolat stb.)`
 
 ### 6.3. Minőségbiztosítás
 
