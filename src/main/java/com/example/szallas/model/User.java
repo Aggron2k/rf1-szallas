@@ -24,6 +24,8 @@ public class User {
 
     private String email;
 
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private Customer customer;
 
     @Builder.Default
     private Boolean accountNonExpired = true;

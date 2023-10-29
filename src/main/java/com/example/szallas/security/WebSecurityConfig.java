@@ -15,7 +15,7 @@ public class WebSecurityConfig  {
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(request ->
-                        request.requestMatchers("/", "/register", "/login", "/registerRequest", "/saveUser", "/css/**", "/images/**").permitAll().anyRequest().authenticated())
+                        request.requestMatchers("/", "/register", "/login", "/registerRequest", "/saveUser", "/css/**", "/images/**", "/search").permitAll().anyRequest().authenticated())
                 .formLogin(login -> login.loginPage("/login").loginProcessingUrl("/loginRequest").failureUrl("/login?error=true").usernameParameter("username").defaultSuccessUrl("/user/profile")
                         .permitAll())
                 .logout(logout -> logout.invalidateHttpSession(true).clearAuthentication(true)
