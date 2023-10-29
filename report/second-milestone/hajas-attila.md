@@ -14,6 +14,7 @@ ___
 
   ##### A feladat elvégzését alátámasztó commit(ok):
 
-    - [Első kommit](https://git-okt.sed.inf.szte.hu/2023_ib153i-10_d/rf-szallas/-/commit/183c36c9c17205db9cd241f33ca4fc5850dc4b09)
-    - [Második kommit](https://git-okt.sed.inf.szte.hu/2023_ib153i-10_d/rf-szallas/-/commit/1014081bc0e4ed639296d835de4264b5773cbf7c)
+    - [Első kommit](https://git-okt.sed.inf.szte.hu/2023_ib153i-10_d/rf-szallas/-/commit/d01fcef2c9847e0122d84f4f4e7da2b3e552b4d1)
+    - [Második kommit](https://git-okt.sed.inf.szte.hu/2023_ib153i-10_d/rf-szallas/-/commit/1f5ed2de1732c94463fd6ada80c0b203ba53c6e1)
+    - [Harmadik kommit](https://git-okt.sed.inf.szte.hu/2023_ib153i-10_d/rf-szallas/-/commit/c663345ba37a955fb1e59cd44912a299d15b9c97)
 
