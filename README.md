@@ -98,6 +98,7 @@ A projekt a következő technológiákat/szoftvereket fogja használni a munka s
 - `Git verziókövető (GitLab)`
 - `Java Spring`
 - `Thymeleaf`
+- `MySQL` 
 
 ### 5.2. Rizikómenedzsment
 
