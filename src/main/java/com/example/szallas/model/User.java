@@ -27,6 +27,9 @@ public class User {
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private Customer customer;
 
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private AccomodationHost accomodationHost;
+
     @Builder.Default
     private Boolean accountNonExpired = true;
     @Builder.Default

@@ -1,4 +1,4 @@
-package com.example.szallas.model.request;
+package com.example.szallas.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;
