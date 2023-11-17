@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" xmlns:th="http://www.thymeleaf.org/" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{index}">
+<head>
+    <meta charset="UTF-8">
+    <title>Szállás részletek</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <section class="ftco-section mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-12 ftco-animate">
+                            <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div th:each="img, iterStat : ${accommodation.getImages()}" class="carousel-item" th:classappend="${iterStat.index == 0} ? 'active' : ''">
+                                        <img th:src="@{'~/images/accomodation/' + ${img.getName()}}" class="d-block w-100" alt="..." style="object-fit: cover; height: 500px;">
+                                    </div>
+
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-12 room-single mt-4 mb-5 ftco-animate">
+                            <h2 class="mb-4" th:text="${accommodation.getName() + ' - (' + accommodation.getRooms().size() + ' Elérhető szoba)'}"></h2>
+                            <p th:text="${accommodation.getDescription()}"></p>
+                            <div class="row">
+                                <div class="col-md-4" th:each="room:${accommodation.getRooms()}">
+                                    <ul class="list">
+                                        <li th:text="${'Maximum: ' + room.getCapacity() + ' személy'}"></li>
+                                        <li th:text="${'Szoba típus: ' + room.getType().toString()}"></li>
+                                        <li th:text="${'Ár/fő/éj: ' + room.getPrice() + ' Ft'}"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 room-single ftco-animate mb-5 mt-4">
+                            <h3 class="mb-4">Jöjjön el hozzánk</h3>
+                            <div class="block-16">
+                                <img th:src="@{'~/images/accomodation/' + ${accommodation.getImages().get(0).getName()}}" alt="Image placeholder" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- .col-md-8 -->
+                <div class="col-lg-4 sidebar ftco-animate pl-md-5">
+                    <div class="sidebar-box ftco-animate">
+                        <div class="categories">
+                            <h3>Kategóriák</h3>
+                            <ul style="list-style-type: none">
+                                <li th:text="${accommodation.getType().toString()}"></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-box ftco-animate">
+                        <div class="categories">
+                            <h3>Elérhetőség</h3>
+                            <ul style="list-style-type: none">
+                            <li th:text="${'Cím: ' + accommodation.getIrsz() + ' ' + accommodation.getCity() + ', ' + accommodation.getStreet() + ' ' + accommodation.getHsz()}"></li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>
