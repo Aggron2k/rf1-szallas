@@ -12,8 +12,8 @@
             <form action="upload" enctype="multipart/form-data" method="post">
                 <div class="mb-3">
                     <label>Szállás</label>
-                    <select name="accomodation" class="form-select" th:each="acc:${accomodations}">
-                        <option th:value="${acc.getId()}" th:text="${acc.getName()}"></option>
+                    <select name="accomodation" class="form-select">
+                        <option th:each="acc:${accomodations}" th:value="${acc.getId()}" th:text="${acc.getName()}"></option>
                     </select>
                 </div>
                 <div class="mb-3">
