@@ -8,7 +8,9 @@ import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.time.temporal.ChronoUnit;
@@ -25,10 +27,8 @@ public class AccomodationController {
 
     @PostMapping("/search")
     public String searchAccomodation(@Valid @ModelAttribute("searchRequest") SearchRequest searchRequest, BindingResult result, Model model){
-        System.out.println(result.getAllErrors().toString());
         if(result.hasErrors()){
-            //Itt nem tudom hova kell irányítani. a header.html be van a form.
-            return "searchResult";
+            return "redirect:/";
         }
         List<Accomodation> szallasok = accomodationService.searchSzallas(searchRequest);
         System.out.println(szallasok);
@@ -46,5 +46,11 @@ public class AccomodationController {
         model.addAttribute("napokSzama", Integer.parseInt(String.valueOf(dasysBetween)));
         model.addAttribute("szallasok", szallasLegolcsobbSzobaval);
         return "searchResult";
+    }
+
+    @GetMapping("/accomodation/{accomodationId}")
+    public String accomodationDetail(@PathVariable Integer accomodationId, Model model){
+
+        return "accDetail";
     }
 }
