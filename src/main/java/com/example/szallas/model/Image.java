@@ -14,4 +14,7 @@ public class Image {
     private Integer id;
     private String name;
     private String path;
+
+    @ManyToOne
+    private Accomodation accomodation;
 }
