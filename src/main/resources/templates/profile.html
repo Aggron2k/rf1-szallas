@@ -5,12 +5,81 @@
   <title>Profil módosítás</title>
 </head>
 <body>
-<div layout:fragment="content">
+<div layout:fragment="content" class="row">
 <!--  <div sec:authorize="isAuthenticated()">Ez a tartalom csak akor látszódik ha be van lépve</div>-->
   <div sec:authorize="hasAuthority('GUEST') or hasAuthority('ACCOMODATION')">
+<!--    <div class="col-sm-3">-->
+<!--      <div class="card border-0 shadow rounded-3 my-5">-->
+<!--        <div class="card-body">-->
+<!--          <h6 class="mb-2 text-primary">Felhasználói adatok</h6>-->
+<!--          <p th:text="'Név: ' + ${currentUser.firstName} + ' ' + ${currentUser.lastName}" ></p>-->
+<!--          <p th:text="'Felhasználónév: ' + ${currentUser.username}"></p>-->
+<!--          <p th:text="'Email: ' + ${currentUser.email}"></p>-->
+<!--          <p th:text="'Jogosultsag: ' + ${currentUser.getRole()}"></p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+
     <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
       <div class="card border-0 shadow rounded-3 my-5">
         <div class="card-body">
+          <h6 class="mb-2 text-primary">Felhasználói adatok</h6>
+          <p th:text="'Név: ' + ${currentUser.firstName} + ' ' + ${currentUser.lastName}" ></p>
+          <p th:text="'Felhasználónév: ' + ${currentUser.username}"></p>
+          <p th:text="'Email: ' + ${currentUser.email}"></p>
+          <p th:text="'Jogosultsag: ' + ${currentUser.getRole()}"></p>
+
+          <form action="/user/updateName" method="post">
+            <div class="row gutters">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <h6 class="mb-2 text-primary">Név módosítás</h6>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="first_name" name="first_name" placeholder="">
+                  <label for="first_name">Vezetéknév módosítás</label>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="last_name" name="last_name" placeholder="">
+                  <label for="last_name">Keresztnév módosítás</label>
+                </div>
+              </div>
+            </div>
+            <div class="row gutters">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                <div class="text-right">
+                  <button type="submit" id="submit3" name="namesubmit" class="btn btn-primary btn-login text-uppercase fw-bold btn-form">Név frissítés</button>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <form action="/user/updateUsername" method="post">
+            <div class="row gutters">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <h6 class="mt-3 mb-2 text-primary">Felhasználónév módosítása</h6>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                <div class="form-floating mb-3">
+                  <input type="text" name="newUsername" required class="form-control" id="newUsername" placeholder="">
+                  <label for="newUsername">Új felhasználónév megadása</label>
+                </div>
+              </div>
+            </div>
+            <div class="row gutters">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="form-floating mb-3">
+                  <button type="submit" id="submit2" name="usernamesubmit" class="btn btn-primary btn-login text-uppercase fw-bold btn-form">Felhasználónév frissítés</button>
+                </div>
+              </div>
+            </div>
+          </form>
+
+
+
           <form action="/user/updatePassword" method="post">
           <div class="row gutters">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -19,13 +88,13 @@
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
               <div class="form-floating mb-3">
                 <input type="password" class="form-control" id="password" name="password" placeholder="">
-                <label for="password">Írd be az új jelszód</label>
+                <label for="password">Írd be az új jelszód (min 6 karakter)</label>
               </div>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
               <div class="form-floating mb-3">
                 <input type="password" class="form-control" id="passwordre" name="passwordre" placeholder="">
-                <label for="passwordre">Írd be az új jelszód újra</label>
+                <label for="passwordre">Írd be az új jelszód újra (min 6 karakter)</label>
               </div>
             </div>
           </div>
@@ -56,7 +125,7 @@
                 <button type="submit" id="submit1" name="emailsubmit" class="btn btn-primary btn-login text-uppercase fw-bold btn-form">Email frissítés</button>
               </div>
               <div th:if="${param.error}" class="alert alert-danger" role="alert">
-                A két jelszó nem egyezik meg!
+                Valami hiba keletkezett!
               </div>
               <div th:if="${param.success}" class="alert alert-success" role="alert">
                 Sikeres módosítás!
@@ -64,6 +133,14 @@
             </div>
           </div>
           </form>
+
+          <hr class="my-4">
+
+          <form action="/user/delete" method="post">
+            <button type="submit" class="btn btn-primary btn-login text-uppercase fw-bold btn btn-danger">Felhasználó törlése</button>
+          </form>
+
+
         </div>
       </div>
 <div sec:authorize="hasAuthority('ACCOMODATION')">Ez a tartalom csak szállás adónak</div>
