@@ -41,4 +41,8 @@ public class AccomodationService{
         }
         return new ArrayList<>();
     }
+
+    public Accomodation getAccomodationById(Integer accomodationId) {
+        return accomodationRepository.findById(accomodationId).orElse(null);
+    }
 }

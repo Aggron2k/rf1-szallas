@@ -50,7 +50,12 @@ public class AccomodationController {
 
     @GetMapping("/accomodation/{accomodationId}")
     public String accomodationDetail(@PathVariable Integer accomodationId, Model model){
-
+        Accomodation accomodation = accomodationService.getAccomodationById(accomodationId);
+        if(accomodation == null){
+            return "redirect:/";
+        }
+        System.out.println(accomodation.getImages());
+        model.addAttribute("accommodation", accomodation);
         return "accDetail";
     }
 }

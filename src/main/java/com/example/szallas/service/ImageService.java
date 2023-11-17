@@ -34,7 +34,7 @@ public class ImageService {
             if(accomodation1 != null){
                 String fileName = UUID.randomUUID() + "_" + img.getOriginalFilename();
                 byte[] bytes = img.getBytes();
-                Path path = Paths.get("src/accomodationImages/" + File.separator + fileName);
+                Path path = Paths.get("src/main/resources/static/images/accomodation/" + File.separator + fileName);
                 Files.write(path, bytes);
                 Image image = new Image();
                 image.setName(fileName);
