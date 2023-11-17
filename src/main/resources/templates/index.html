@@ -27,6 +27,9 @@
                 <li sec:authorize="isAuthenticated()" class="nav-item">
                     <a class="nav-link" href="/user/profile">Profil</a>
                 </li>
+                <li sec:authorize="isAuthenticated() && hasAuthority('ACCOMODATION')">
+                    <a class="nav-link" href="/uploadImage">Képfeltöltés</a>
+                </li>
                 <li sec:authorize="isAuthenticated()" class="nav-item">
                     <a class="nav-link" href="/logout">Kijelentkezés</a>
                 </li>
