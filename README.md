@@ -98,6 +98,7 @@ A projekt a következő technológiákat/szoftvereket fogja használni a munka s
 - `Git verziókövető (GitLab)`
 - `Java Spring`
 - `Thymeleaf`
+- `MySQL` 
 
 ### 5.2. Rizikómenedzsment
 
@@ -152,6 +153,13 @@ A munkát `Rózsa István` koordinálja. `Fő feladata, a csapat és munkájuk f
 - `Hely: Discord`
 - `Résztvevők: Rózsa István, Hörömpő Márk, Horváth Krisztián, Horváth Richárd, Kvak Barnabás, Attila hajas, Dominik Kele`
 - `Érintett témák: Elkészült diagrammok megbeszélése, javítása(Squence diagram, Egyed-kapcsolat stb.)`
+
+`6. megbeszélés:`
+
+- `Időpont: 2023.10.29.`
+- `Hely: Discord`
+- `Résztvevők: Rózsa István, Hörömpő Márk, Horváth Krisztián, Horváth Richárd, Kvak Barnabás, Attila hajas, Dominik Kele`
+- `Érintett témák: Minden Második Mérföldkővel kapcsolatos Issue lezárása, jövőbeli tervek átbeszélése`
 
 ### 6.3. Minőségbiztosítás
 
