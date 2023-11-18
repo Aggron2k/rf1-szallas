@@ -8,6 +8,8 @@ import com.example.szallas.repository.AccomodationHostRepository;
 import com.example.szallas.repository.CustomerRepository;
 import com.example.szallas.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -36,6 +38,19 @@ public class UserService {
         return user;
     }
 
+    public User getCurrentLoggedInUser() {
+        // Get the username of the currently logged-in user
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
+        if (principal instanceof UserDetails) {
+            String username = ((UserDetails) principal).getUsername();
+            return userRepository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("Nincs ilyen felhasználó: " + username));
+        }
 
+        throw new UsernameNotFoundException("User nem található");
+    }
+
+    public User updateUser(User currentUser) {
+        return userRepository.save(currentUser);
+    }
 }
