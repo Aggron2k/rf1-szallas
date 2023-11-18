@@ -22,4 +22,6 @@ public class AccomodationHost {
     @JoinColumn(name = "user_id")
     private User user;
 
+    @OneToMany(mappedBy = "accomodationHost")
+    private List<Accomodation> accomodations;
 }

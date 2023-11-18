@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{index}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div layout:fragment="content" class="container mt-5">
+    <div class="row">
+        <div class="col-lg-3">
+            <!-- SZÁLLÁS RÉSZLETES KERESÉS KÓDJA -->
+        </div>
+        <div class="col-lg-9">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p><span th:text="${#maps.size(szallasok)}"></span> keresési találat.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p th:text="${search.getHova() + ', ' + search.getCheck_in() + ' - ' + search.getCheck_out()}"></p>
+                </div>
+            </div>
+            <div th:each="szallas : ${szallasok}" class="card mb-3 search-result-card">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid p-3" style="border-radius: 24px;" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title" th:text="${szallas.getKey().getName()}"></h5>
+                            <p class="card-text" th:text="${szallas.getKey().getDescription()}"></p>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <p class="card-text" th:text="${szallas.getValue().getType() + ' szoba'}"></p>
+                                </div>
+                                <div class="col-lg-6 text-end">
+                                    <p class="card-text" th:text="${szallas.getValue().getPrice() + ' Ft'}"></p>
+                                    <!-- Itt kellene ezt felszorozni a fővel és az éjszakák számával csak String konverzió miatt nem működik -->
+                                    <p class="card-text" th:text="${napokSzama + ' éjszaka, ' + search.numberOfPerson + ' főre'}"></p>
+                                </div>
+                            </div>
+                            <a th:href="${'/accomodation/' + szallas.getKey().getId()}" class="btn btn-primary">Részletek</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

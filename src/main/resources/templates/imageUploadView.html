@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" xmlns:th="http://www.thymeleaf.org/" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{index}">
+<head>
+    <meta charset="UTF-8">
+    <title>Képfeltöltés</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 mt-4">
+            <h2 class="mb-5">Képfeltöltés</h2>
+            <form action="upload" enctype="multipart/form-data" method="post">
+                <div class="mb-3">
+                    <label>Szállás</label>
+                    <select name="accomodation" class="form-select">
+                        <option th:each="acc:${accomodations}" th:value="${acc.getId()}" th:text="${acc.getName()}"></option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <input type="file" name="img" class="form-control">
+                </div>
+                <div class="text-center mb-3">
+                    <button class="btn btn-primary">Feltöltés</button>
+                </div>
+                    <p  th:if="${param.success}" class="alert alert-success" th:text=" ${'Sikeres képfeltöltés: ' + param.success}"></p>
+            </form>
+        </div>
+
+    </div>
+</div>
+</div>
+</body>
+</html>

@@ -24,6 +24,11 @@ public class User {
 
     private String email;
 
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private Customer customer;
+
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private AccomodationHost accomodationHost;
 
     @Builder.Default
     private Boolean accountNonExpired = true;

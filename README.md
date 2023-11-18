@@ -14,16 +14,27 @@
 
 ### 2.2. Funkcionális követelmények
 
-- `Felhasználók kezelése ( szállás adó, szállás foglaló) (CRUD)`
-- `Felhasználói munkamenet megvalósítása több jogosultsági szinttel `
-- `Szállás keresés`
-- `Szálláshelyek értékelése`
-- `Foglalás`
-- `Felkapott úti célok`
-- `Legolcsóbb szálláshelyek`
-- `Legutóbb keresett szálláshelyek`
-- `Szállás adó oldal (CRUD)`
-- `Szállás foglaló (CRUD)`
+- `Szállás foglaló:`
+  - `Regisztráció`
+  - `Bejelentkezés`
+  - `Személyes adatok módosítása`
+  - `Szállás keresés: `
+    - `Szállások megjelenítése`
+    - `Szűrés lehetősége hely, időpont, felnőtt/gyerek, szobák száma szerint`
+    - `Felkapott úticélok, legolcsóbb szálláshelyek gyors keresése`
+  - `Szállás helyek értékelése:`
+    - `Szöveges és csillagos értékelés`
+  - `Foglalás`
+    - `Szállás kiválasztása, Személyes adatok kitöltése, foglalás véglegesítése`
+    - `Saját foglalások kezelése`
+
+- `Szállás adó:`
+  - `Regisztráció`
+  - `Bejelentkezés`
+  - `Személyes adatok módosítása`
+  - `Kiadó szállás létrehozása, módosítása, törlése`
+  - `Kiadó szállás adatainak megadása`
+  - `Képfeltöltés a szálláshoz`
 
 ### 2.3. Nem funkcionális követelmények
 
@@ -85,6 +96,9 @@ A projekt a következő technológiákat/szoftvereket fogja használni a munka s
 
 - `Visual Studio Code kódszerkesztő`
 - `Git verziókövető (GitLab)`
+- `Java Spring`
+- `Thymeleaf`
+- `MySQL` 
 
 ### 5.2. Rizikómenedzsment
 
@@ -107,24 +121,45 @@ A munkát `Rózsa István` koordinálja. `Fő feladata, a csapat és munkájuk f
 
 `1. megbeszélés:`
 
-- `Időpont: 2021.09.22.`
+- `Időpont: 2023.09.22.`
 - `Hely: Discord`
 - `Résztvevők: Rózsa István, Hörömpő Márk, Horváth Krisztián, Horváth Richárd, Kvak Barnabás, Attila hajas, Dominik Kele`
 - `Érintett témák: Ismerkedés, projekttéma kiválasztása, GitLab beüzemelése, kisebb feladatok kiosztása`
 
 `2. megbeszélés:`
 
-- `Időpont: 2021.09.29.`
+- `Időpont: 2023.09.29.`
 - `Hely: Discord`
 - `Résztvevők: Rózsa István, Hörömpő Márk, Horváth Krisztián, Horváth Richárd, Kvak Barnabás, Attila hajas, Dominik Kele`
 - `Érintett témák: Tovibbái mérföldkövek átbeszélése, feladatok és issuek kiosztása, keretrendszer megbeszélése`
 
 `3. megbeszélés:`
 
-- `Időpont: 2021.10.06.`
+- `Időpont: 2023.10.06.`
 - `Hely: Discord`
 - `Résztvevők: Rózsa István, Hörömpő Márk, Horváth Krisztián, Horváth Richárd, Kvak Barnabás, Attila hajas, Dominik Kele`
 - `Érintett témák: Projekt terv átbeszélése, módosítások, issuek rendezése, feladatok kiosztása`
+
+`4. megbeszélés:`
+
+- `Időpont: 2023.10.13.`
+- `Hely: Discord`
+- `Résztvevők: Rózsa István, Hörömpő Márk, Horváth Krisztián, Horváth Richárd, Kvak Barnabás, Attila hajas, Dominik Kele`
+- `Érintett témák: Első mérföldkő véglegesítése, PowerPoint bemutató áttekintése, egyéni jelentések létrehozása`
+
+`5. megbeszélés:`
+
+- `Időpont: 2023.10.20.`
+- `Hely: Discord`
+- `Résztvevők: Rózsa István, Hörömpő Márk, Horváth Krisztián, Horváth Richárd, Kvak Barnabás, Attila hajas, Dominik Kele`
+- `Érintett témák: Elkészült diagrammok megbeszélése, javítása(Squence diagram, Egyed-kapcsolat stb.)`
+
+`6. megbeszélés:`
+
+- `Időpont: 2023.10.29.`
+- `Hely: Discord`
+- `Résztvevők: Rózsa István, Hörömpő Márk, Horváth Krisztián, Horváth Richárd, Kvak Barnabás, Attila hajas, Dominik Kele`
+- `Érintett témák: Minden Második Mérföldkővel kapcsolatos Issue lezárása, jövőbeli tervek átbeszélése`
 
 ### 6.3. Minőségbiztosítás
 
@@ -185,7 +220,7 @@ Részfeladatai a következők:
 
 #### 8.1.1. Projektterv kitöltése
 
-Felelős: `Mindenki`
+Felelős: `Rózsa István`
 
 Tartam: `4 nap`
 
@@ -198,6 +233,8 @@ Felelős: `Kvak Barnabás Máté`
 Tartam: `2 nap`
 
 Erőforrásigény: `0.5 személynap`
+
+Mérföldkő: [Első mérföldkő](https://git-okt.sed.inf.szte.hu/2023_ib153i-10_d/rf-szallas/-/milestones/1#tab-issues)
 
 ```
 A mérföldkőhöz tartozó feladatok bemutatása PPT keretében, pl. téma, tervezett funkciók, tagok, Gantt diagram.`
@@ -435,97 +472,113 @@ Ennek a feladatnak az a célja, hogy `az előző mérföldkő hiányzó funkció
 
 Részfeladatai a következők:
 
-#### 8.4.1. Javított minőségű prototípus új funkciókkal
+#### 8.4.1. Regisztráció tesztelése
 
-Felelős: `Teszt Elek`
+Felelős: `Kele Dominik`
 
 Tartam: `5 nap`
 
 Erőforrásigény: `2.5 személynap`
 
-#### 8.4.2. Javított minőségű prototípus javított funkciókkal
+#### 8.4.2. Bejelentkezés tesztelése
 
-Felelős: `Lev Elek`
+Felelős: `Kele Dominik`
 
 Tartam: `5 nap`
 
 Erőforrásigény: `2 személynap`
 
-#### 8.4.3. Javított minőségű prototípus a korábbi hiányzó funkciókkal
+#### 8.4.3. Szállás (CRUD) tesztelése
 
-Felelős: `Remek Elek`
+Felelős: `Kvak Barnabás Máté`
 
 Tartam: `5 nap`
 
 Erőforrásigény: `1.5 személynap`
 
-#### `8.4.4. Felhasználói munkamenet tesztelése (TR)`
+#### `8.4.4. Képfeltöltés tesztelése`
 
-Felelős: `Teszt Elek`
-
-Tartam: `1 nap`
-
-Erőforrásigény: `1 személynap`
-
-#### `8.4.5. Raktárak kezelésének tesztelése (TR)`
-
-Felelős: `Remek Elek`
-
-Tartam: `1 nap`
-
-Erőforrásigény: `0.5 személynap`
-
-#### `8.4.6. Árukészletek kezelésének tesztelése (TR)`
-
-Felelős: `Teszt Elek`
+Felelős: `Rózsa István`
 
 Tartam: `1 nap`
 
 Erőforrásigény: `1 személynap`
 
-#### `8.4.7. Járművek kezelésének tesztelése (TR)`
+#### `8.4.5. Térképes szállásmegjelölés tesztelése`
 
-Felelős: `Remek Elek`
-
-Tartam: `1 nap`
-
-Erőforrásigény: `0.5 személynap`
-
-#### `8.4.8. Fuvarok kezelésének tesztelése (TR)`
-
-Felelős: `Lev Elek`
+Felelős: `Horváth Richárd`
 
 Tartam: `1 nap`
 
 Erőforrásigény: `0.5 személynap`
 
-#### `8.4.9. Email-es funkciók tesztelése (TR)`
+#### `8.4.6. Szállás leírás kezelésének tesztelése`
 
-Felelős: `Remek Elek`
+Felelős: `Kvak Barnabás Máté`
+
+Tartam: `1 nap`
+
+Erőforrásigény: `1 személynap`
+
+#### `8.4.7. Szállás keresés tesztelése
+
+Felelős: `Hörömpő Márk`
 
 Tartam: `1 nap`
 
 Erőforrásigény: `0.5 személynap`
 
-#### `8.4.10. Térképes funkciók tesztelése (TR)`
+#### `8.4.8. Szállás megjelenítés tesztelése`
 
-Felelős: `Lev Elek`
-
-Tartam: `1 nap`
-
-Erőforrásigény: `0.5 személynap`
-
-#### `8.4.11. Biztonsági mentés tesztelése (TR)`
-
-Felelős: `Lev Elek`
+Felelős: `Hörömpő Márk`
 
 Tartam: `1 nap`
 
 Erőforrásigény: `0.5 személynap`
 
-#### `8.4.12. A prototípus kitelepítésének frissítése`
+#### `8.4.9. Szállás részletes keresésének tesztelése`
 
-Felelős: `Teszt Elek`
+Felelős: `Horváth Richárd`
+
+Tartam: `1 nap`
+
+Erőforrásigény: `0.5 személynap`
+
+#### `8.4.10. Szállás adatainak tesztelése
+
+Felelős: `Rózsa István`
+
+Tartam: `1 nap`
+
+Erőforrásigény: `0.5 személynap`
+
+#### `8.4.11. Foglalás tesztelése
+
+Felelős: `Hajas Attila`
+
+Tartam: `1 nap`
+
+Erőforrásigény: `0.5 személynap`
+
+#### `8.4.12. Felhasználó foglalásainak kezelésének (CRUD) tesztelése
+
+Felelős: `Horvát Krisztián`
+
+Tartam:  `1 nap`
+
+Erőforrásigény:  `0.5 személynap`
+
+#### `8.4.13. Személyes adatok tesztelése
+
+Felelős: `Horváth Krisztián`
+
+Tartam:  `1 nap`
+
+Erőforrásigény:  `0.5 személynap`
+
+#### `8.4.14. Szálláshely értékelésének tesztelése
+
+Felelős: `Hajas Attila`
 
 Tartam: `1 nap`
 
@@ -538,7 +591,7 @@ Működő végleges program, a frissített tesztelési dokumentációval. A 3. m
 
 ## 9. Részletes időbeosztás
 
-![image](./gantt-diagram.PNG)
+![image](diagrams/gantt-diagram.PNG/gantt-diagram.PNG)
 
 
 ## 10. Projekt költségvetés
@@ -552,37 +605,37 @@ A projekt költségterv elkészítése során rögzítjük az egyes feladatokhoz
 
 | Név          |   M1  |   M2  |   M3 |   M4  | Összesen |
 |--------------|-------|-------|------|-------|----------|
-| `Kele Dominik Norbert` | `1` | `0` | `0` | `0`   | `0`     |
-| `Rózsa István` | `1.5`   | `0`   | `0` | `0`   | `0`     |
-| `Horváth Krisztián`   | `1`   | `0` | `0` | `0` | `0`     |
-| `Hörömpö Márk`   | `1`   | `0` | `0` | `0` | `0`     |
-| `Kvak Barnabás`   | `1`   | `0` | `0` | `0` | `0`     |
-| `Horváth Richárd Soma`   | `1`   | `0` | `0` | `0` | `0`     |
-| `Hajas Attila István`   | `1`   | `0` | `0` | `0` | `0`     |
+| `Kele Dominik Norbert` | `1` | `2` | `5` | `3.5`   | `11.5`     |
+| `Rózsa István` | `1.5`   | `2`   | `5` | `2`   | `10.5`     |
+| `Horváth Krisztián`   | `1`   | `1` | `6` | `2` | `10`     |
+| `Hörömpö Márk`   | `1`   | `1` | `6` | `2` | `10`     |
+| `Kvak Barnabás`   | `1.5`   | `2.5` | `6` | `2.5` | `12.5`     |
+| `Horváth Richárd Soma`   | `1`   | `1` | `6.5` | `1.5` | `10`     |s
+| `Hajas Attila István`   | `1`   | `1` | `6` | `2` | `10`     |
 
 ### 10.2. Részletes feladatszámok
 
 | Név          |   M1  |   M2  |   M3 |   M4 | Összesen |
 |--------------|-------|-------|------|------|----------|
-| `Kele Dominik Norbert` | `1`   | `0`   | `0`  | `0`  | `0`     |
-| `Rózsa István` | `2`   | `0`   | `0`  | `0`  | `0`     |
-| `Horváth Krisztián`   | `1`   | `0` | `0` | `0` | `0`     |
-| `Hörömpö Márk`   | `1`   | `0`   | `0`  | `0`  | `0`     |
-| `Kvak Barnabás`   | `1`   | `0`   | `0`  | `0`  | `0`     |
-| `Horváth Richárd Soma`   | `1`   | `0`   | `0`  | `0`  | `0`     |
-| `Hajas Attila István`   | `1`   | `0`   | `0`  | `0`  | `0`     |
+| `Kele Dominik Norbert` | `1`   | `1`   | `4`  | `2`  | `8`     |
+| `Rózsa István` | `2`   | `1`   | `4`  | `2`  | `9`     |
+| `Horváth Krisztián`   | `1`   | `1` | `4` | `2` | `8`     |
+| `Hörömpö Márk`   | `1`   | `1`   | `4`  | `2`  | `8`     |
+| `Kvak Barnabás`   | `1`   | `1`   | `4`  | `2`  | `8`     |
+| `Horváth Richárd Soma`   | `1`   | `1`   | `4`  | `2`  | `8`     |
+| `Hajas Attila István`   | `1`   | `1`   | `4`  | `2`  | `8`     |
 
 ### 10.3. Részletes költségvetés
 
 | Név                                 | M1      | M2       | M3       | M4       | Összesen  |
 |-------------------------------------|---------|----------|----------|----------|-----------|
 | Maximálisan megszerezhető pontszám  |  (7)    | (20)     | (35)     |  (28)    | 100% (70) |
-| `Kele Dominik Norbert`                        | `0`     | `0`     | `0`     |  `0`    | 0        |
-| `Rózsa István`                        | `0`     | `0`     | `0`     |  `0`    | 0        |
-| `Horváth Krisztián`                          | `0`     | `0`     | `0`     |  `0`    | 0        |
-| `Hörömpö Márk`                          | `0`     | `0`     | `0`     |  `0`    | 0        |
-| `Kvak Barnabás`                          | `0`     | `0`     | `0`     |  `0`    | 0        |
-| `Horváth Richárd Soma`                          | `0`     | `0`     | `0`     |  `0`    | 0        |
-| `Hajas Attila István`                          | `0`     | `0`     | `0`     |  `0`    | 0        |
+| `Kele Dominik Norbert`                        | `6`     | `12`     | `30`     |  `22`    | 70        |
+| `Rózsa István`                        | `7`     | `10`     | `33`     |  `20`    | 70        |
+| `Horváth Krisztián`                          | `6`     | `9`     | `28`     |  `27`    | 70        |
+| `Hörömpö Márk`                          | `6`     | `9`     | `34`     |  `21`    | 70        |
+| `Kvak Barnabás`                          | `7`     | `16`     | `20`     |  `27`    | 70        |
+| `Horváth Richárd Soma`                          | `6`     | `8`     | `28`     |  `28`    | 70        |
+| `Hajas Attila István`                          | `6`     | `17`     | `30`     |  `17`    | 70        |
 
 Szeged, `2023-10-25`.
