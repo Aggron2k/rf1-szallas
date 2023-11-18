@@ -8,7 +8,9 @@ import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.time.temporal.ChronoUnit;
@@ -46,5 +48,19 @@ public class AccomodationController {
         model.addAttribute("napokSzama", Integer.parseInt(String.valueOf(dasysBetween)));
         model.addAttribute("szallasok", szallasLegolcsobbSzobaval);
         return "searchResult";
+    }
+
+    @GetMapping("/szallasAdmin")
+    public String szallascrud(Model model){
+        List<Accomodation> accomodations = accomodationService.getOsszesSzallas();
+        model.addAttribute("accomodations", accomodations);
+        return "szallasAdmin";
+    }
+
+    @GetMapping("/deleteSzallas/{id}")
+    public String deleteSzallas(@PathVariable("id") int id) {
+        System.out.println(id);
+        accomodationService.deleteSzallasById(id);
+        return "redirect:/szallasAdmin";
     }
 }
