@@ -8,6 +8,80 @@
 <div layout:fragment="content" class="row">
     <div sec:authorize="hasAuthority('GUEST')">Foglalások megjelenítése GUEST számára</div>
 
+
+    <h2>Reservation Details</h2>
+
+    <!-- Foglalások listája -->
+    <div th:if="${not #strings.isEmpty(reservations)}" class="table-container">
+        <table class="table table-bordered">
+            <!-- Táblázat fejléce -->
+            <thead>
+            <tr>
+                <!-- Mezőnevek -->
+                <th>Személyek száma</th>
+                <th>Mettől</th>
+                <th>Meddig</th>
+                <th>Szállás</th>
+                <th>Módosítás/Törlés</th>
+            </tr>
+            </thead>
+            <!-- Táblázat tartalma -->
+            <tbody>
+            <!-- Minden foglalás megjelenítése -->
+            <tr th:each="reservation : ${reservations}">
+                <!-- Mezők kitöltése -->
+                <td th:text="${reservation.numberOfPerson}"></td>
+                <td th:text="${reservation.check_in_date}"></td>
+                <td th:text="${reservation.check_out_date}"></td>
+                <td th:text="${reservation.accomodation.name}"></td>
+                <td>
+                    <!-- Módosítás és törlés gombok -->
+                    <div class="btn-group">
+                        <a class="btn btn-sm btn-primary" th:href="@{'/reservation/edit/' + ${reservation.id}}">Edit</a>
+                        <a class="btn btn-sm btn-danger" th:href="@{'/reservation/delete/' + ${reservation.id}}">Delete</a>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
     </div>
+
+    <!-- Új foglalás hozzáadása gomb -->
+<!--    <a class="btn btn-success" th:href="@{'/reservation/add'}">Add Reservation</a>-->
+
+    <!-- Szerkesztési űrlap modal -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">Edit Reservation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Űrlap elemei -->
+                    <form th:action="@{/reservation/save}" method="post" th:object="${reservation}">
+                        <!-- Az űrlap csak akkor jelenik meg, ha van szerkesztendő foglalás -->
+                        <div th:if="${reservationToEdit != null}">
+                            <input type="hidden" th:field="*{id}" th:value="${reservationToEdit.id}" />
+                            <label for="numberOfPerson">Number of Persons:</label>
+                            <input type="text" id="numberOfPerson" th:field="*{numberOfPerson}" th:value="${reservationToEdit.numberOfPerson}" />
+
+                            <!-- További mezők -->
+
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+
 </body>
 </html>

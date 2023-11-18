@@ -16,6 +16,8 @@ public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @Getter
+    @Setter
     private Integer numberOfPerson;
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -30,4 +32,5 @@ public class Reservation {
 
     @ManyToOne
     private Customer customer;
+
 }
