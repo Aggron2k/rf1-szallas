@@ -1,8 +1,11 @@
 package com.example.szallas.model;
 
+import lombok.Getter;
+
+@Getter
 public enum ServiceOption {
     PARKOLAS("Parkolás"),
-    INGYENES_WIFI("Ingyenes WiFi"),
+    INGYENES_WIFI("WiFi"),
     ETTEREM("Étterem"),
     KISALLAT_BEVIHETO("Kisállat bevihető"),
     SZOBASZERVIZ("Szobaszerviz"),
@@ -22,7 +25,4 @@ public enum ServiceOption {
         this.serviceName = serviceName;
     }
 
-    public String getServiceName() {
-        return serviceName;
-    }
 }

@@ -103,10 +103,64 @@
                         </label>
                         <label class="form-check-label" th:for="szaunaCheckbox">Szauna</label>
                     </div>
+                    <hr>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="wifiCheckbox" th:field="*{services}" th:value="*{getServices().INGYENES_WIFI}">
+                        <input type="checkbox" class="form-check-input" id="wifiCheckbox" th:field="*{serviceOption}" th:value="*{getServiceOption().INGYENES_WIFI}">
                         <label class="form-check-label" th:for="wifiCheckbox">Ingyenes WiFi</label>
                     </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="parkolasCheckbox" th:field="*{serviceOption}" th:value="*{getServiceOption().PARKOLAS}">
+                        <label class="form-check-label" th:for="parkolasCheckbox">Parkolás</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="etteremCheckbox" th:field="*{serviceOption}" th:value="*{getServiceOption().ETTEREM}">
+                        <label class="form-check-label" th:for="etteremCheckbox">Étterem</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="kisallatCheckbox" th:field="*{serviceOption}" th:value="*{getServiceOption().KISALLAT_BEVIHETO}">
+                        <label class="form-check-label" th:for="kisallatCheckbox">Kisállat Bevihető</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="szobaszervizCheckbox" th:field="*{serviceOption}" th:value="*{getServiceOption().SZOBASZERVIZ}">
+                        <label class="form-check-label" th:for="szobaszervizCheckbox">Szobaszerviz</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="recepcioCheckbox" th:field="*{serviceOption}" th:value="*{getServiceOption().EJJELNAPPALI_RECEPCIO}">
+                        <label class="form-check-label" th:for="recepcioCheckbox">Éjjel-Nappali Recepció</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="fitnessCheckbox" th:field="*{serviceOption}" th:value="*{getServiceOption().FITNESZKOZPONT}">
+                        <label class="form-check-label" th:for="fitnessCheckbox">Fitnessközpont</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="nemdohanyzoCheckbox" th:field="*{serviceOption}" th:value="*{getServiceOption().NEMDOHANYZO_SZOBAK}">
+                        <label class="form-check-label" th:for="nemdohanyzoCheckbox">Nemdohányzó szobák</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="repteriTransferCheckbox" th:field="*{serviceOption}" th:value="*{getServiceOption().REPTERI_TRANSZFER}">
+                        <label class="form-check-label" th:for="repteriTransferCheckbox">Reptéri transzfer</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="akadalymentesitettCheckbox" th:field="*{serviceOption}" th:value="*{getServiceOption().AKADALYMENTESITETT}">
+                        <label class="form-check-label" th:for="akadalymentesitettCheckbox">Akadálymentesített</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="csaladiSzobakCheckbox" th:field="*{serviceOption}" th:value="*{getServiceOption().CSALADI_SZOBAK}">
+                        <label class="form-check-label" th:for="csaladiSzobakCheckbox">Családi szobák</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="wellnessCheckbox" th:field="*{serviceOption}" th:value="*{getServiceOption().WELLNESSKOZPONT}">
+                        <label class="form-check-label" th:for="wellnessCheckbox">Wellnessközpont</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="elektromosJarmuCheckbox" th:field="*{serviceOption}" th:value="*{getServiceOption().ELEKTROMOS_JARMU_TOLTOPONT}">
+                        <label class="form-check-label" th:for="elektromosJarmuCheckbox">Elektromos jármű töltőpont</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="uszomedenceCheckbox" th:field="*{serviceOption}" th:value="*{getServiceOption().USZOMEDENCE}">
+                        <label class="form-check-label" th:for="uszomedenceCheckbox">Úszómedence</label>
+                    </div>
+
                     <div class="d-grid">
                         <button class="btn btn-primary btn-login text-uppercase fw-bold" name="search" type="submit">Keresés</button>
                     </div>
