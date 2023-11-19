@@ -1,5 +1,6 @@
 package com.example.szallas.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -30,4 +31,9 @@ public class Accomodation {
 
     @OneToMany(mappedBy = "accomodation")
     private List<Reservation> reservations;
+
+    @ManyToOne
+    private AccomodationHost accomodationHost;
+    @OneToMany(mappedBy = "accomodation")
+    private List<Image> images;
 }
