@@ -18,6 +18,11 @@
       color: #007bff;
     }
 
+    .description {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
     .btn-success {
       background-color: #28a745;
       color: #fff;
@@ -64,6 +69,8 @@
 <!-- Main Content -->
 <div layout:fragment="content" class="container">
   <h2>Szállások Kezelése</h2>
+
+  <p class="description">Üdvözöllek az Accommodation-Admin felületen! Ezen az oldalon kezelheted a szállások adatait. A módosítás gombra kattintva tudod módosítani, a törlésre kattintva pedig törölni.</p>
 
   <a th:href="@{/addAccomodation}" class="btn btn-success">Szállás hozzáadása</a>
 
