@@ -5,7 +5,7 @@
   <title>Módosítás</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       background-color: #f4f4f4;
       padding: 20px;
     }
@@ -46,6 +46,7 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
 
     button:hover {
@@ -60,53 +61,52 @@
 <form th:action="@{/editAccomodation}" method="post">
   <input type="hidden" th:field="*{accommodation.id}" />
 
-
   <div class="mb-3">
-    <label for="name" class="form-label">Név</label>
-    <input type="text" class="form-control" id="name" name="name" th:value="${accommodation.name}" required />
+    <label for="name">Név</label>
+    <input type="text" id="name" name="name" th:value="${accommodation.name}" required />
   </div>
 
   <div class="mb-3">
-    <label for="city" class="form-label">Város</label>
-    <input type="text" class="form-control" id="city" name="city" th:value="${accommodation.city}" required />
+    <label for="city">Város</label>
+    <input type="text" id="city" name="city" th:value="${accommodation.city}" required />
   </div>
 
   <div class="mb-3">
-    <label for="street" class="form-label">Utca</label>
-    <input type="text" class="form-control" id="street" name="street" th:value="${accommodation.street}" required />
+    <label for="street">Utca</label>
+    <input type="text" id="street" name="street" th:value="${accommodation.street}" required />
   </div>
 
   <div class="mb-3">
-    <label for="description" class="form-label">Leírás</label>
-    <textarea class="form-control" id="description" name="description" th:text="${accommodation.description}" required></textarea>
+    <label for="description">Leírás</label>
+    <textarea id="description" name="description" th:text="${accommodation.description}" required></textarea>
   </div>
 
   <div class="mb-3">
-    <label for="hsz" class="form-label">Helyrajzi szám</label>
-    <input type="text" class="form-control" id="hsz" name="hsz" th:value="${accommodation.hsz}" required />
+    <label for="hsz">Helyrajzi szám</label>
+    <input type="text" id="hsz" name="hsz" th:value="${accommodation.hsz}" required />
   </div>
 
   <div class="mb-3">
-    <label for="irsz" class="form-label">Irányítószám</label>
-    <input type="text" class="form-control" id="irsz" name="irsz" th:value="${accommodation.irsz}" required />
+    <label for="irsz">Irányítószám</label>
+    <input type="text" id="irsz" name="irsz" th:value="${accommodation.irsz}" required />
   </div>
 
   <div class="mb-3">
-    <label for="longitude" class="form-label">Hosszúság</label>
-    <input type="text" class="form-control" id="longitude" name="longitude" th:value="${accommodation.longitude}" required />
+    <label for="longitude">Hosszúság</label>
+    <input type="text" id="longitude" name="longitude" th:value="${accommodation.longitude}" required />
   </div>
 
   <div class="mb-3">
-    <label for="langitude" class="form-label">Szélesség</label>
-    <input type="text" class="form-control" id="langitude" name="langitude" th:value="${accommodation.langitude}" required />
+    <label for="langitude">Szélesség</label>
+    <input type="text" id="langitude" name="langitude" th:value="${accommodation.langitude}" required />
   </div>
 
   <div class="mb-3">
-    <label for="type" class="form-label">Típus</label>
-    <input type="text" class="form-control" id="type" name="type" th:value="${accommodation.type}" required />
+    <label for="type">Típus</label>
+    <input type="text" id="type" name="type" th:value="${accommodation.type}" required />
   </div>
 
-  <button type="submit" class="btn btn-primary">Mentés</button>
+  <button type="submit">Mentés</button>
 </form>
 
 </body>
