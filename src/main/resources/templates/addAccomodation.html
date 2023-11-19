@@ -100,7 +100,10 @@
 
   <div class="mb-3">
     <label for="type" class="form-label">Típus</label>
-    <input type="text" class="form-control" id="type" name="type" th:value="${accommodation.type}" required />
+    <select class="form-control" id="type" name="type" th:value="${accommodation.type}" required>
+      <option value="APARTMAN" th:selected="${accommodation.type == 'APARTMAN'}">Apartman</option>
+      <option value="SZÁLLODA" th:selected="${accommodation.type == 'SZÁLLODA'}">Szálloda</option>
+    </select>
   </div>
 
   <button type="submit" class="btn btn-primary">Hozzáadás</button>
