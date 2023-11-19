@@ -42,13 +42,13 @@ public class ReservationController {
     @PostMapping("/reservation/new")
     public String processReservationForm(@ModelAttribute Reservation reservation) {
         reservationService.saveReservation(reservation);
-        return "redirect:/reservation";
+        return "redirect:/reservations";
     }
 
     @GetMapping("/reservation/delete/{id}")
     public String deleteReservation(@PathVariable Long id) {
         reservationService.deleteReservation(id);
-        return "redirect:/reservation";
+        return "redirect:/reservations";
     }
 
 
@@ -58,21 +58,22 @@ public class ReservationController {
         return "reservation/create";
     }
 
-    @GetMapping("/edit/{id}")
+    @GetMapping("/reservation/edit/{id}")
     public String showEditForm(@PathVariable Long id, Model model) {
         Optional<Reservation> reservation = reservationService.getReservationById(id);
         if (reservation.isPresent()) {
             model.addAttribute("reservationToEdit", reservation.get());
+            model.addAttribute("reservation", new Reservation()); // Üres objektum hozzáadása
             return "reservation";
         } else {
             return "redirect:/reservation"; // Visszairányítás, ha a foglalás nem található
         }
     }
 
-    @PostMapping("/save")
+    @PostMapping("/reservation/save")
     public String saveReservation(@ModelAttribute Reservation reservation) {
         reservationService.saveReservation(reservation);
-        return "redirect:/reservation"; // Az átirányítás a foglalások listájára
+        return "redirect:/reservations"; // Az átirányítás a foglalások listájára
     }
 
 }
