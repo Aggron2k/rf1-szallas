@@ -6,7 +6,10 @@ import com.example.szallas.model.User;
 import com.example.szallas.model.request.SearchRequest;
 import com.example.szallas.repository.AccomodationHostRepository;
 import com.example.szallas.repository.AccomodationRepository;
+import com.example.szallas.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -68,4 +71,20 @@ public class AccomodationService{
         // Módosítás mentése
         accomodationRepository.save(existingAccommodation);
     }
-}
+
+    public List<Accomodation> getSzallasok() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        User user = userRepository.findByUsername(authentication.getName()).orElse(null);
+        if (user != null) {
+            AccomodationHost accomodationHost = accomodationHostRepository.findByUserId(user.getId()).orElse(null);
+            if (accomodationHost != null) {
+                return accomodationRepository.findAllByAccomodationHostId(accomodationHost.getId());
+            }
+        }
+        return new ArrayList<>();
+    }
+
+    public Accomodation getAccomodationById(Integer accomodationId) {
+        return accomodationRepository.findById(accomodationId).orElse(null);
+    }
+    }
