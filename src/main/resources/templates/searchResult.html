@@ -8,7 +8,89 @@
 <div layout:fragment="content" class="container mt-5">
     <div class="row">
         <div class="col-lg-3">
-            <!-- SZÁLLÁS RÉSZLETES KERESÉS KÓDJA -->
+            <div class="card-header">Szállások részletes keresése</div>
+            <div class="card-body">
+                <form th:method="post" th:action="@{/search}" th:object="${search}">
+                    <div class="form-floating mb-3">
+                        <label>
+                            <input type="text" name="hova" th:field="*{hova}" th:value="*{getHova()}"  class="form-control" placeholder="Balaton">
+                        </label>
+                        <label>Hova</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <label>
+                            <input type="date" name="check_in" th:field="*{check_in}"  th:value="*{getCheck_in()}"  class="form-control" >
+                        </label>
+                        <label>Mettől</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <label>
+                            <input type="date" name="check_out" th:field="*{check_out}" th:value="*{getCheck_out()}"  class="form-control" >
+                        </label>
+                        <label>Meddig</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <label>Személyek száma</label>
+                        <label>
+                            <input type="number" name="numberOfPerson" th:field="*{numberOfPerson}" th:value="*{getNumberOfPerson()}"  class="form-control" placeholder="1">
+                        </label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <label for="StarsInput" class="form-label">Szállások besorolása</label>
+                        <input type="text" class="form-control" id="StarsInput" name="Stars" placeholder="Pl. 5 csillag">
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="checkbox" class="form-check-input" id="reggeliCheckbox" th:field="*{mealOption}" th:value="*{getMealOption().REGGELI}">
+                        <label class="form-check-label" for="reggeliCheckbox">Reggeli az árban</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="checkbox" class="form-check-input" id="vacsoraCheckbox" th:field="*{mealOption}" th:value="*{getMealOption().VACSORA}">
+                        <label class="form-check-label" for="vacsoraCheckbox">Vacsora az árban</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="checkbox" class="form-check-input" id="reggeliVacsoraCheckbox" th:field="*{mealOption}" th:value="*{getMealOption().REGGELI_ES_VACSORA}">
+                        <label class="form-check-label" for="reggeliVacsoraCheckbox">Reggeli + Vacsora az árban</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="checkbox" class="form-check-input" id="nincsMealCheckbox" th:field="*{mealOption}" th:value="*{getMealOption().NINCS_MEAL}">
+                        <label class="form-check-label" for="nincsMealCheckbox">Nincs étkezés az árban</label>
+                    </div>
+                    <hr>
+                    <div class="form-check">
+                        <label>
+                            <input type="checkbox" class="form-check-input" th:id="turazasCheckbox" th:field="*{leisureActivities}" th:value="*{getLeisureActivities().TURAZAS}">
+                        </label>
+                        <label class="form-check-label" th:for="turazasCheckbox">Túrázás</label>
+                    </div>
+                    <div class="form-check">
+                        <label>
+                            <input type="checkbox" class="form-check-input" th:id="viziparkCheckbox" th:field="*{leisureActivities}" th:value="*{getLeisureActivities().VIZIPARK}">
+                        </label>
+                        <label class="form-check-label" th:for="viziparkCheckbox">Vízipark</label>
+                    </div>
+                    <div class="form-check">
+                        <label>
+                            <input type="checkbox" class="form-check-input" th:id="varosnezoCheckbox" th:field="*{leisureActivities}" th:value="*{getLeisureActivities().VAROSNEZO_SETA}">
+                        </label>
+                        <label class="form-check-label" th:for="varosnezoCheckbox">Városnéző séta</label>
+                    </div>
+                    <div class="form-check">
+                        <label>
+                            <input type="checkbox" class="form-check-input" th:id="jatszoterCheckbox" th:field="*{leisureActivities}" th:value="*{getLeisureActivities().JATSZOTER}">
+                        </label>
+                        <label class="form-check-label" th:for="jatszoterCheckbox">Játszótér</label>
+                    </div>
+                    <div class="form-check">
+                        <label>
+                            <input type="checkbox" class="form-check-input" th:id="szaunaCheckbox" th:field="*{leisureActivities}" th:value="*{getLeisureActivities().SZAUNA}">
+                        </label>
+                        <label class="form-check-label" th:for="szaunaCheckbox">Szauna</label>
+                    </div>
+                    <div class="d-grid">
+                        <button class="btn btn-primary btn-login text-uppercase fw-bold" name="search" type="submit">Keresés</button>
+                    </div>
+                </form>
+            </div>
         </div>
         <div class="col-lg-9">
             <div class="row">
