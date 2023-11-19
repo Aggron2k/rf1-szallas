@@ -7,7 +7,7 @@
         .form-check {
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .form-check-input {
@@ -102,6 +102,10 @@
                             <input type="checkbox" class="form-check-input" th:id="szaunaCheckbox" th:field="*{leisureActivities}" th:value="*{getLeisureActivities().SZAUNA}">
                         </label>
                         <label class="form-check-label" th:for="szaunaCheckbox">Szauna</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="wifiCheckbox" th:field="*{services}" th:value="*{getServices().INGYENES_WIFI}">
+                        <label class="form-check-label" th:for="wifiCheckbox">Ingyenes WiFi</label>
                     </div>
                     <div class="d-grid">
                         <button class="btn btn-primary btn-login text-uppercase fw-bold" name="search" type="submit">Keresés</button>
