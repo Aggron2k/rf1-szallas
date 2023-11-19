@@ -2,15 +2,79 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{index}">
 <head>
   <title>Accommodation-Admin</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      margin: 20px;
+    }
+
+    h2 {
+      color: #007bff;
+    }
+
+    .description {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .btn-success {
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #dee2e6;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    tbody tr:hover {
+      background-color: #f0f0f0;
+    }
+
+    td a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    td a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 <!-- Main Content -->
 <div layout:fragment="content" class="container">
   <h2>Szállások Kezelése</h2>
 
+  <p class="description">Üdvözöllek az Accommodation-Admin felületen! Ezen az oldalon kezelheted a szállások adatait. A módosítás gombra kattintva tudod módosítani, a törlésre kattintva pedig törölni.</p>
+
   <a th:href="@{/addAccomodation}" class="btn btn-success">Szállás hozzáadása</a>
 
-  <table class="table">
+  <table>
     <thead>
     <tr>
       <th>Név</th>
@@ -34,7 +98,7 @@
       <td th:text="${accommodation.description}">Leírás</td>
       <td th:text="${accommodation.hsz}">Helyrajzi szám</td>
       <td th:text="${accommodation.irsz}">Irányítószám</td>
-      <td th:text="${accommodation.langitude}">Langitude</td>
+      <td th:text="${accommodation.langitude}">Latitude</td>
       <td th:text="${accommodation.longitude}">Longitude</td>
       <td th:text="${accommodation.street}">Utca</td>
       <td th:text="${accommodation.type}">Típus</td>
