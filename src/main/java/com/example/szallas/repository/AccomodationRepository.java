@@ -28,4 +28,6 @@ public interface AccomodationRepository extends JpaRepository<Accomodation, Inte
     void deleteById(int id);
     /*@Query("DELETE FROM Accomodation a WHERE a.id = :id")
     void deleteById(@Param("id") Long id);*/
+
+
 }

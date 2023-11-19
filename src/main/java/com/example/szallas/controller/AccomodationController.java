@@ -57,10 +57,37 @@ public class AccomodationController {
         return "szallasAdmin";
     }
 
+
     @GetMapping("/deleteSzallas/{id}")
     public String deleteSzallas(@PathVariable("id") int id) {
         System.out.println(id);
         accomodationService.deleteSzallasById(id);
+        return "redirect:/szallasAdmin";
+    }
+
+    @GetMapping("/addAccomodation")
+    public String showAddAccommodationForm(Model model) {
+        model.addAttribute("accommodation", new Accomodation());
+        return "addAccomodation";
+    }
+
+    @PostMapping("/addAccomodation")
+    public String addAccommodation(@ModelAttribute Accomodation accommodation) {
+        accomodationService.addAccommodation(accommodation);
+        return "redirect:/szallasAdmin";
+    }
+
+    @GetMapping("/editAccomodation/{id}")
+    public String showEditAccommodationForm(@PathVariable int id, Model model) {
+        Accomodation accommodation = accomodationService.getAccommodationById(id);
+        model.addAttribute("accommodation", accommodation);
+        return "editAccomodation";
+    }
+
+    @PostMapping("/editAccomodation")
+    public String modifyAccomodation(@ModelAttribute Accomodation accommodation) {
+        System.out.println("Modify Accomodation method is called!");
+        accomodationService.modifyAccomodation(accommodation);
         return "redirect:/szallasAdmin";
     }
 }
