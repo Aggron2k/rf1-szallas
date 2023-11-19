@@ -30,7 +30,7 @@
     }
 
     input,
-    textarea {
+    textarea, select {
       width: 100%;
       padding: 10px;
       margin-bottom: 15px;
@@ -102,8 +102,11 @@
   </div>
 
   <div class="mb-3">
-    <label for="type">Típus</label>
-    <input type="text" id="type" name="type" th:value="${accommodation.type}" required />
+    <label for="type" class="form-label">Típus</label>
+    <select class="form-control" id="type" name="type" th:value="${accommodation.type}" required>
+      <option value="APARTMAN" th:selected="${accommodation.type == 'APARTMAN'}">Apartman</option>
+      <option value="SZÁLLODA" th:selected="${accommodation.type == 'SZÁLLODA'}">Szálloda</option>
+    </select>
   </div>
 
   <button type="submit">Mentés</button>
