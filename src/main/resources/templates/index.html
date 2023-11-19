@@ -25,6 +25,9 @@
                     <a class="nav-link" href="/register">Regisztráció</a>
                 </li>
                 <li sec:authorize="isAuthenticated()" class="nav-item">
+                    <a class="nav-link" href="/reservations">Foglalások</a>
+                </li>
+                <li sec:authorize="isAuthenticated()" class="nav-item">
                     <a class="nav-link" href="/user/profile">Profil</a>
                 </li>
                 <li sec:authorize="isAuthenticated() && hasAuthority('ACCOMODATION')">
