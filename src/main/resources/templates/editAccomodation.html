@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Módosítás</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+    input,
+    textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Szállás módosítása</h2>
+
+<form th:action="@{/editAccomodation}" method="post">
+  <input type="hidden" th:field="*{accommodation.id}" />
+
+  <div class="mb-3">
+    <label for="name">Név</label>
+    <input type="text" id="name" name="name" th:value="${accommodation.name}" required />
+  </div>
+
+  <div class="mb-3">
+    <label for="city">Város</label>
+    <input type="text" id="city" name="city" th:value="${accommodation.city}" required />
+  </div>
+
+  <div class="mb-3">
+    <label for="street">Utca</label>
+    <input type="text" id="street" name="street" th:value="${accommodation.street}" required />
+  </div>
+
+  <div class="mb-3">
+    <label for="description">Leírás</label>
+    <textarea id="description" name="description" th:text="${accommodation.description}" required></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="hsz">Helyrajzi szám</label>
+    <input type="text" id="hsz" name="hsz" th:value="${accommodation.hsz}" required />
+  </div>
+
+  <div class="mb-3">
+    <label for="irsz">Irányítószám</label>
+    <input type="text" id="irsz" name="irsz" th:value="${accommodation.irsz}" required />
+  </div>
+
+  <div class="mb-3">
+    <label for="longitude">Hosszúság</label>
+    <input type="text" id="longitude" name="longitude" th:value="${accommodation.longitude}" required />
+  </div>
+
+  <div class="mb-3">
+    <label for="langitude">Szélesség</label>
+    <input type="text" id="langitude" name="langitude" th:value="${accommodation.langitude}" required />
+  </div>
+
+  <div class="mb-3">
+    <label for="type" class="form-label">Típus</label>
+    <select class="form-control" id="type" name="type" th:value="${accommodation.type}" required>
+      <option value="APARTMAN" th:selected="${accommodation.type == 'APARTMAN'}">Apartman</option>
+      <option value="SZÁLLODA" th:selected="${accommodation.type == 'SZÁLLODA'}">Szálloda</option>
+    </select>
+  </div>
+
+  <button type="submit">Mentés</button>
+</form>
+
+</body>
+</html>
