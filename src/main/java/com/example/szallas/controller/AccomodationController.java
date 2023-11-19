@@ -27,10 +27,8 @@ public class AccomodationController {
 
     @PostMapping("/search")
     public String searchAccomodation(@Valid @ModelAttribute("searchRequest") SearchRequest searchRequest, BindingResult result, Model model){
-        System.out.println(result.getAllErrors().toString());
         if(result.hasErrors()){
-            //Itt nem tudom hova kell irányítani. a header.html be van a form.
-            return "searchResult";
+            return "redirect:/";
         }
         List<Accomodation> szallasok = accomodationService.searchSzallas(searchRequest);
         System.out.println(szallasok);

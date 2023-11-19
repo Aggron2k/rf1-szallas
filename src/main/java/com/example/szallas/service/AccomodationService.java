@@ -1,22 +1,28 @@
 package com.example.szallas.service;
 
 import com.example.szallas.model.Accomodation;
+import com.example.szallas.model.AccomodationHost;
+import com.example.szallas.model.User;
 import com.example.szallas.model.request.SearchRequest;
+import com.example.szallas.repository.AccomodationHostRepository;
 import com.example.szallas.repository.AccomodationRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @Service
 public class AccomodationService{
     private final AccomodationRepository accomodationRepository;
+    private final AccomodationHostRepository accomodationHostRepository;
+    private final UserRepository userRepository;
 
-    public AccomodationService(AccomodationRepository accomodationRepository) {
+    public AccomodationService(AccomodationRepository accomodationRepository, AccomodationHostRepository accomodationHostRepository, UserRepository userRepository) {
         this.accomodationRepository = accomodationRepository;
+        this.accomodationHostRepository = accomodationHostRepository;
+        this.userRepository = userRepository;
     }
 
     public Accomodation getAccommodationById(int id) {
