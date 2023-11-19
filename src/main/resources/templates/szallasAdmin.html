@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{index}">
+<head>
+  <title>Accommodation-Admin</title>
+</head>
+<body>
+<!-- Main Content -->
+<div layout:fragment="content" class="container">
+  <h2>Szállások Kezelése</h2>
+
+  <a th:href="@{/addAccomodation}" class="btn btn-success">Szállás hozzáadása</a>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Név</th>
+      <th>Város</th>
+      <th>Leírás</th>
+      <th>Helyrajzi szám</th>
+      <th>Irányítószám</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Utca</th>
+      <th>Típus</th>
+      <th>Módosítás</th>
+      <th>Törlés</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Példa sor, itt kell majd dinamikusan generálni a szállásokat -->
+    <tr th:each="accommodation : ${accomodations}">
+      <td th:text="${accommodation.name}">Szállás neve</td>
+      <td th:text="${accommodation.city}">Város</td>
+      <td th:text="${accommodation.description}">Leírás</td>
+      <td th:text="${accommodation.hsz}">Helyrajzi szám</td>
+      <td th:text="${accommodation.irsz}">Irányítószám</td>
+      <td th:text="${accommodation.langitude}">Langitude</td>
+      <td th:text="${accommodation.longitude}">Longitude</td>
+      <td th:text="${accommodation.street}">Utca</td>
+      <td th:text="${accommodation.type}">Típus</td>
+      <td>
+        <a th:href="@{/editAccomodation/{id}(id=${accommodation.id})}">Módosítás</a>
+      </td>
+      <td><a th:href="@{/deleteSzallas/{id}(id=${accommodation.id})}">Törlés</a></td>
+    </tr>
+    <!-- Eddig a példa sor -->
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

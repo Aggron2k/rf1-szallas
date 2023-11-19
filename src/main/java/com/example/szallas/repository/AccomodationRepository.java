@@ -1,7 +1,7 @@
 package com.example.szallas.repository;
 
 import com.example.szallas.model.Accomodation;
-import com.example.szallas.model.AccomodationHost;
+import org.springframework.data.jdbc.repository.query.Modifying;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -21,5 +21,14 @@ public interface AccomodationRepository extends JpaRepository<Accomodation, Inte
                                                @Param("minCapacity") int minCapacity,
                                                @Param("hova") String hova);
 
-    List<Accomodation> findAllByAccomodationHostId(Integer accomodationHostId);
+    @Query("SELECT a FROM Accomodation a")
+    List<Accomodation> findAll();
+
+
+    @Modifying
+    void deleteById(int id);
+    /*@Query("DELETE FROM Accomodation a WHERE a.id = :id")
+    void deleteById(@Param("id") Long id);*/
+
+
 }
