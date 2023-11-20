@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:sec="http://www.thymeleaf.org/extras/spring-security" xmlns:th="http://www.thymeleaf.org/" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{index}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div layout:fragment="content">
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="mb-3">Új szoba</h2>
+        <form th:method="post" th:action="@{'/editRoomRequest/' + ${roomId} + '/' + ${accId}}" th:object="${room}">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" th:field="*{room_number}"  placeholder="name@example.com">
+            <label>Szobaszám</label>
+            <p th:if="${#fields.hasErrors('room_number')}" th:errorclass="text-danger" th:errors="*{room_number}"></p>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" th:field="*{capacity}"  placeholder="name@example.com">
+            <label>Férőhely</label>
+            <p th:if="${#fields.hasErrors('capacity')}" th:errorclass="text-danger" th:errors="*{capacity}"></p>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" th:field="*{price}" placeholder="name@example.com">
+            <label>Ár</label>
+            <p th:if="${#fields.hasErrors('price')}" th:errorclass="text-danger" th:errors="*{price}"></p>
+          </div>
+          <div class="form-floating mb-3">
+            <select class="form-select" th:field="*{type}">
+              <option value="ALAP">Alap</option>
+              <option value="CSALADI">Családi</option>
+              <option value="FRANCIAÁGYAS">Franciaágyas</option>
+              <option value="LUXUS">Luxus</option>
+              <option value="KÉTÁGYAS">Kétágyas</option>
+            </select>
+            <label>Szobatípus</label>
+          </div>
+          <div class="d-grid mb-3">
+            <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">Mentés</button>
+          </div>
+          <div th:if="${param.success}" class="alert alert-success" role="alert">
+            Sikeres szoba hozzáadása.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

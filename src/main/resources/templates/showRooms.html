@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" xmlns:th="http://www.thymeleaf.org/" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{index}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div layout:fragment="content">
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Szobák</h2>
+        <a class="btn btn-primary mb-3 mt-2" th:href="@{'/addRoom/' + ${accId}}">Új szoba</a>
+        <div th:if="${param.success}" class="alert alert-success" role="alert">
+          Sikeres szoba módosítás.
+        </div>
+        <div class="table-container">
+          <table class="table table-bordered">
+            <thead>
+            <tr>
+              <th>Szobaszám</th>
+              <th>Férőhelyek száma</th>
+              <th>Típus</th>
+              <th>Ár</th>
+              <th>Műveletek</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="room : ${rooms}">
+              <td th:text="${room.getRoom_number()}"></td>
+              <td th:text="${room.getCapacity()}"></td>
+              <td th:text="${room.getType().name()}"></td>
+              <td th:text="${room.getPrice()}"></td>
+              <td>
+                <div class="btn-group">
+                  <a class="btn btn-sm btn-primary me-3" th:href="@{'/room/edit/' + ${room.id} + '/' + ${accId}}">Szerkesztés</a>
+                  <a class="btn btn-sm btn-danger" th:href="@{'/room/delete/' + ${room.id} + '/' + ${accId}}">Törlés</a>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

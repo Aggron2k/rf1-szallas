@@ -9,7 +9,7 @@
 <body>
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container">
-        <a class="navbar-brand" href="/">Navbar</a>
+        <a class="navbar-brand" href="/"><img src="/images/map.png" alt="Szállás Logo" class="icon">Szállás</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -32,6 +32,9 @@
                 </li>
                 <li sec:authorize="isAuthenticated() && hasAuthority('ACCOMODATION')">
                     <a class="nav-link" href="/uploadImage">Képfeltöltés</a>
+                </li>
+                <li sec:authorize="isAuthenticated() && hasAuthority('ACCOMODATION')">
+                    <a class="nav-link" href="/szallasAdmin">Szállások kezelése</a>
                 </li>
                 <li sec:authorize="isAuthenticated()" class="nav-item">
                     <a class="nav-link" href="/logout">Kijelentkezés</a>
