@@ -1,0 +1,12 @@
+[Unit]
+Description=Rendszerfejlesztes szallas foglalo alkalmazas
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/usr/bin/java -jar /artifact/szallas-0.0.1-SNAPSHOT.jar
+[Install]
+WantedBy=multi-user.target

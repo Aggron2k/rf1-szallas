@@ -44,7 +44,7 @@
                         </div>
                         <div class="col-md-12 room-single ftco-animate mb-5 mt-4">
                             <h3 class="mb-4">Jöjjön el hozzánk</h3>
-                            <div class="block-16">
+                            <div class="block-16" th:if="${accommodation.getImages().size() > 0}">
                                 <img th:src="@{'~/images/accomodation/' + ${accommodation.getImages().get(0).getName()}}" alt="Image placeholder" class="img-fluid">
                             </div>
                         </div>
