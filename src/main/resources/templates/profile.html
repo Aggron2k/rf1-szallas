@@ -28,7 +28,7 @@
           <p th:text="'Név: ' + ${currentUser.firstName} + ' ' + ${currentUser.lastName}" ></p>
           <p th:text="'Felhasználónév: ' + ${currentUser.username}"></p>
           <p th:text="'Email: ' + ${currentUser.email}"></p>
-          <p th:text="'Jogosultsag: ' + ${currentUser.getRole()}"></p>
+          <p th:text="'Jogosultsag: ' + ${currentUser.getRole()=='GUEST' ? 'Szállás foglaló' : 'Szállás adó'}"></p>
 
           <form action="/user/updateName" method="post">
             <div class="row gutters">
@@ -128,6 +128,9 @@
                 Valami hiba keletkezett!
               </div>
               <div th:if="${param.success}" class="alert alert-success" role="alert">
+                Sikeres módosítás!
+              </div>
+              <div th:if="${param.successUpdateUsername}" class="alert alert-success" role="alert">
                 Sikeres módosítás!
               </div>
             </div>
