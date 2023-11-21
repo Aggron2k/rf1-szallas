@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{index}">
+<head>
+    <meta charset="UTF-8">
+    <title>Foglalás</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <h2>Foglalás űrlap</h2>
+
+    <form th:action="@{/reservation/request}" method="post">
+
+        <div class="form-group">
+            <label for="check_in_date">Érkezés dátuma:</label>
+            <input type="date" class="form-control" id="check_in_date" name="check_in_date" required/>
+        </div>
+
+        <div class="form-group">
+            <label for="check_out_date">Távozás dátuma:</label>
+            <input type="date" class="form-control" id="check_out_date" name="check_out_date" required/>
+        </div>
+
+        <div class="form-group">
+            <label for="number_of_person">Főszám:</label>
+            <input type="number" class="form-control" id="number_of_person" name="number_of_person" required/>
+        </div>
+
+        <div class="form-group">
+            <label for="accommodation_id">Szállás azonosítója:</label>
+            <input type="text" class="form-control" id="accommodation_id" name="accommodation_id" required/>
+        </div>
+
+        <div class="form-group">
+            <label for="customer_id">Vendég azonosítója:</label>
+            <input type="text" class="form-control" id="customer_id" name="customer_id" required/>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Foglalás küldése</button>
+
+    </form>
+
+</div>
+</body>
+</html>

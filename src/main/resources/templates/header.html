@@ -20,11 +20,11 @@
                             <label>Hova</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="date" name="check_in" class="form-control" >
+                            <input type="date" name="check_in" class="form-control" th:min="${#dates.format(#dates.createNow(), 'yyyy-MM-dd')}" max="2100-12-31" th:value="${#dates.format(#dates.createNow(), 'yyyy-MM-dd')}">
                             <label>Mettől</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="date" name="check_out" class="form-control" >
+                            <input type="date" name="check_out" class="form-control" th:min="${#dates.format(#dates.createNow(), 'yyyy-MM-dd')}" max="2100-12-31">
                             <label>Meddig</label>
                         </div>
                         <div class="form-floating mb-3">

@@ -35,12 +35,14 @@
                                     <p class="card-text" th:text="${szallas.getValue().getType() + ' szoba'}"></p>
                                 </div>
                                 <div class="col-lg-6 text-end">
-                                    <p class="card-text" th:text="${szallas.getValue().getPrice() + ' Ft'}"></p>
+                                    <p class="card-text" th:text="${szallas.getValue().getPrice()*napokSzama + ' Ft'}"></p>
                                     <!-- Itt kellene ezt felszorozni a fővel és az éjszakák számával csak String konverzió miatt nem működik -->
                                     <p class="card-text" th:text="${napokSzama + ' éjszaka, ' + search.numberOfPerson + ' főre'}"></p>
                                 </div>
                             </div>
                             <a th:href="${'/accomodation/' + szallas.getKey().getId()}" class="btn btn-primary">Részletek</a>
+                            <a th:href="${'/reservation/new/' + szallas.getKey().getId()}" class="btn btn-primary">Foglalás</a>
+
                         </div>
                     </div>
                 </div>
