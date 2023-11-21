@@ -6,39 +6,46 @@
 </head>
 <body>
 <div layout:fragment="content">
-    <h2>Foglalás űrlap</h2>
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card border-0 shadow rounded-3 my-5">
+                <div class="card-body p-4 p-sm-5">
+                    <h2>Foglalás űrlap</h2>
 
-    <form th:action="@{/reservation/request}" method="post">
+                    <form th:action="@{/reservation/request}" method="post" th:object="${reservationRequest}">
 
-        <div class="form-group">
-            <label for="check_in_date">Érkezés dátuma:</label>
-            <input type="date" class="form-control" id="check_in_date" name="check_in_date" required/>
+                        <div class="form-group">
+                            <label for="checkInDate">Érkezés dátuma:</label>
+                            <input type="date" class="form-control" id="checkInDate" name="checkInDate" th:value="${#dates.format(#dates.createNow(), 'yyyy-MM-dd')}" required/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="checkOutDate">Távozás dátuma:</label>
+                            <input type="date" class="form-control" id="checkOutDate" name="checkOutDate" th:min="${#dates.format(#dates.createNow(), 'yyyy-MM-dd')}" required/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="numberOfPerson">Főszám:</label>
+                            <input type="number" class="form-control" id="numberOfPerson" name="numberOfPerson" th:value="1" min="1" required/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="accommodationId">Szállás azonosítója:</label>
+                            <input type="text" class="form-control" id="accommodationId" name="accommodationId" th:value="${4}" required/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customerId">Vendég azonosítója:</label>
+                            <input type="text" class="form-control" id="customerId" name="customerId" th:value="${getCurrentLoggedInUser}" required/>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Foglalás küldése</button>
+
+                    </form>
+                </div>
+            </div>
         </div>
-
-        <div class="form-group">
-            <label for="check_out_date">Távozás dátuma:</label>
-            <input type="date" class="form-control" id="check_out_date" name="check_out_date" required/>
-        </div>
-
-        <div class="form-group">
-            <label for="number_of_person">Főszám:</label>
-            <input type="number" class="form-control" id="number_of_person" name="number_of_person" required/>
-        </div>
-
-        <div class="form-group">
-            <label for="accommodation_id">Szállás azonosítója:</label>
-            <input type="text" class="form-control" id="accommodation_id" name="accommodation_id" required/>
-        </div>
-
-        <div class="form-group">
-            <label for="customer_id">Vendég azonosítója:</label>
-            <input type="text" class="form-control" id="customer_id" name="customer_id" required/>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Foglalás küldése</button>
-
-    </form>
-
+    </div>
 </div>
 </body>
 </html>
