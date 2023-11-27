@@ -48,7 +48,13 @@ public class AccomodationService {
     }
 
     public void addAccommodation(Accomodation accommodation) {
-        accomodationRepository.save(accommodation);
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        User user = userRepository.findByUsername(authentication.getName()).orElse(null);
+        AccomodationHost accomodationHost = accomodationHostRepository.findByUserId(user.getId()).orElse(null);
+        if(accomodationHost != null){
+            accommodation.setAccomodationHost(accomodationHost);
+            accomodationRepository.save(accommodation);
+        }
     }
 
     public void modifyAccomodation(Accomodation accommodation) {
@@ -83,4 +89,8 @@ public class AccomodationService {
         }
         return new ArrayList<>();
     }
-}
+
+    public Accomodation getAccomodationById(Integer accomodationId) {
+        return accomodationRepository.findById(accomodationId).orElse(null);
+    }
+    }
