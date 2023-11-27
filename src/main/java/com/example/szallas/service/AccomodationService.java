@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class AccomodationService{
+public class AccomodationService {
     private final AccomodationRepository accomodationRepository;
     private final AccomodationHostRepository accomodationHostRepository;
     private final UserRepository userRepository;
@@ -35,7 +35,7 @@ public class AccomodationService{
 
 
     public List<Accomodation> searchSzallas(SearchRequest searchRequest) {
-        return accomodationRepository.findByElerhetoSzallasok(searchRequest.getCheck_in(),searchRequest.getCheck_out(), Integer.parseInt(searchRequest.getNumberOfPerson()), searchRequest.getHova());
+        return accomodationRepository.findByElerhetoSzallasok(searchRequest.getCheck_in(), searchRequest.getCheck_out(), Integer.parseInt(searchRequest.getNumberOfPerson()), searchRequest.getHova());
     }
 
     public List<Accomodation> getOsszesSzallas() {
