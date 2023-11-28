@@ -6,6 +6,7 @@ import com.example.szallas.model.User;
 import com.example.szallas.model.request.SearchRequest;
 import com.example.szallas.repository.AccomodationHostRepository;
 import com.example.szallas.repository.AccomodationRepository;
+import com.example.szallas.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 
