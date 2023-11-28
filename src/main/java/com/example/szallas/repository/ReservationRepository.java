@@ -6,8 +6,9 @@ import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface ReservationRepository extends CrudRepository<Reservation, Long> {
-
+    List<Reservation> findAllByCustomerUserUsername(String username);
 }

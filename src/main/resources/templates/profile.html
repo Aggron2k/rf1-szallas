@@ -140,7 +140,7 @@
           <hr class="my-4">
 
           <form action="/user/delete" method="post">
-            <button type="submit" class="btn btn-primary btn-login text-uppercase fw-bold btn btn-danger">Felhasználó törlése</button>
+            <button type="submit" class="btn btn-primary btn-login text-uppercase fw-bold btn btn-danger" th:onclick="'return confirm(\'Biztosan törölni szeretnéd?\')'">Felhasználó törlése</button>
           </form>
 
 

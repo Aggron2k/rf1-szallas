@@ -30,7 +30,7 @@ public class ImageController {
 
     @GetMapping("/uploadImage")
     public String uploadImagePage(Model model){
-        model.addAttribute("accomodations", accomodationService.getSzallasok());
+        model.addAttribute("accomodations", accomodationService.getOsszesSzallas());
         return "imageUploadView";
     }
 
