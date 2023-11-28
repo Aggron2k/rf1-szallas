@@ -51,12 +51,14 @@
                                                 <a class="btn btn-sm btn-primary"
                                                    th:href="@{'/reservation/edit/' + ${reservation.id}}">Edit</a>
                                                 <a class="btn btn-sm btn-danger"
-                                                   th:href="@{'/reservation/delete/' + ${reservation.id}}">Delete</a>
+                                                   th:href="@{'/reservation/delete/' + ${reservation.id}}"
+                                                   th:onclick="'return confirm(\'Biztosan törölni szeretnéd?\')'">Delete</a>
                                             </div>
                                         </td>
                                     </tr>
                                     </tbody>
                                 </table>
+
                             </div>
                         </div>
                     </div>
@@ -133,11 +135,14 @@
                                 </div>
                             </div>
                         </div>
+
+
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
 
 
 </div>
