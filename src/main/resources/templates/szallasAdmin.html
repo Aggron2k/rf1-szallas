@@ -2,79 +2,18 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{index}">
 <head>
   <title>Accommodation-Admin</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f8f9fa;
-      margin: 0;
-      padding: 0;
-    }
 
-    .container {
-      margin: 20px;
-    }
-
-    h2 {
-      color: #007bff;
-    }
-
-    .description {
-      margin-bottom: 20px;
-      color: #555;
-    }
-
-    .btn-success {
-      background-color: #28a745;
-      color: #fff;
-      border: none;
-      padding: 8px 16px;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin-top: 10px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-
-    th, td {
-      border: 1px solid #dee2e6;
-      padding: 8px;
-      text-align: center;
-    }
-
-    th {
-      background-color: #007bff;
-      color: #fff;
-    }
-
-    tbody tr:hover {
-      background-color: #f0f0f0;
-    }
-
-    td a {
-      color: #007bff;
-      text-decoration: none;
-    }
-
-    td a:hover {
-      text-decoration: underline;
-    }
-  </style>
 </head>
 <body>
 <!-- Main Content -->
 <div layout:fragment="content" class="container">
-  <h2>Szállások Kezelése</h2>
+  <h2 class="mt-3">Szállások Kezelése</h2>
 
   <p class="description">Üdvözöllek az Accommodation-Admin felületen! Ezen az oldalon kezelheted a szállások adatait. A módosítás gombra kattintva tudod módosítani, a törlésre kattintva pedig törölni.</p>
 
   <a th:href="@{/addAccomodation}" class="btn btn-success">Szállás hozzáadása</a>
 
-  <table>
+  <table class="table">
     <thead>
     <tr>
       <th>Név</th>
@@ -88,6 +27,7 @@
       <th>Típus</th>
       <th>Módosítás</th>
       <th>Törlés</th>
+      <th>Szobák kezelése</th>
     </tr>
     </thead>
     <tbody>
@@ -106,6 +46,7 @@
         <a th:href="@{/editAccomodation/{id}(id=${accommodation.id})}">Módosítás</a>
       </td>
       <td><a th:href="@{/deleteSzallas/{id}(id=${accommodation.id})}">Törlés</a></td>
+      <td><a th:href="@{/rooms/{id}(id=${accommodation.id})}">Szobák kezelése</a></td>
     </tr>
     <!-- Eddig a példa sor -->
     </tbody>

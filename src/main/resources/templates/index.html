@@ -9,7 +9,7 @@
 <body>
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container">
-        <a class="navbar-brand" href="/">Navbar</a>
+        <a class="navbar-brand" href="/"><img src="/images/map.png" alt="Szállás Logo" class="icon">Szállás</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -24,11 +24,17 @@
                 <li sec:authorize="!isAuthenticated()" class="nav-item">
                     <a class="nav-link" href="/register">Regisztráció</a>
                 </li>
+                <li sec:authorize="isAuthenticated() && hasAuthority('GUEST')" class="nav-item">
+                    <a class="nav-link" href="/reservations">Foglalások</a>
+                </li>
                 <li sec:authorize="isAuthenticated()" class="nav-item">
                     <a class="nav-link" href="/user/profile">Profil</a>
                 </li>
                 <li sec:authorize="isAuthenticated() && hasAuthority('ACCOMODATION')">
                     <a class="nav-link" href="/uploadImage">Képfeltöltés</a>
+                </li>
+                <li sec:authorize="isAuthenticated() && hasAuthority('ACCOMODATION')">
+                    <a class="nav-link" href="/szallasAdmin">Szállások kezelése</a>
                 </li>
                 <li sec:authorize="isAuthenticated()" class="nav-item">
                     <a class="nav-link" href="/logout">Kijelentkezés</a>
@@ -43,11 +49,27 @@
     </div>
     <footer class="py-3 my-4">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Kezdőlap</a>
+            </li>
+            <li sec:authorize="!isAuthenticated()" class="nav-item">
+                <a class="nav-link" href="/login">Bejelentkezés</a>
+            </li>
+            <li sec:authorize="!isAuthenticated()" class="nav-item">
+                <a class="nav-link" href="/register">Regisztráció</a>
+            </li>
+            <li sec:authorize="isAuthenticated() && hasAuthority('GUEST')" class="nav-item">
+                <a class="nav-link" href="/reservations">Foglalások</a>
+            </li>
+            <li sec:authorize="isAuthenticated()" class="nav-item">
+                <a class="nav-link" href="/user/profile">Profil</a>
+            </li>
+            <li sec:authorize="isAuthenticated() && hasAuthority('ACCOMODATION')">
+                <a class="nav-link" href="/uploadImage">Képfeltöltés</a>
+            </li>
+            <li sec:authorize="isAuthenticated()" class="nav-item">
+                <a class="nav-link" href="/logout">Kijelentkezés</a>
+            </li>
         </ul>
         <p class="text-center text-body-secondary">© 2023 RF1 - D csapat</p>
     </footer>

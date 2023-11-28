@@ -1,6 +1,7 @@
 package com.example.szallas.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,9 +17,11 @@ public class Room {
 
     @Enumerated(value = EnumType.STRING)
     private RoomType type;
-
+    @NotNull(message = "A férőhely megadása kötelező")
     private int capacity;
+    @NotNull(message = "Az ár megadása kötelező")
     private int price;
+    @NotNull(message = "A szobaszám megadása kötelező")
     private int room_number;
 
     @ManyToOne
