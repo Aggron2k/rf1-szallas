@@ -226,5 +226,3 @@ Az alábbi tesztdokumentum a `rf-szallas` projekthez tartozó `8.3.17. Személye
   1. lépés: broszki-t beírtam
   2. lépés: a gomb egyszeri megnyomás után frissít az oldal
   3. lépés: helyes eredményt kaptam (HIBA)
-  
-
