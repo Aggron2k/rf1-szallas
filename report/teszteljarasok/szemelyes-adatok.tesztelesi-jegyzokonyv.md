@@ -85,10 +85,34 @@ Az alábbi tesztdokumentum a `rf-szallas` projekthez tartozó `8.3.17. Személye
 - Elvárt kimenet:  Megjelenző Alert doboz: `Kérjük, töltse ki ezt a mezőt.`, Felhasználói adatok nem változnak
 
 ### 2.3. Jelszó módosítás funkció tesztesetei
-#### 2.2.1. TC-06
+
+#### 2.3.1. TC-06
+- TP: TP-03
+- Leírás: Jelszó módosításának tesztelése
+- Bemenet: `Írd be az új jelszód` = komod123 ; `Írd be az új jelszód újra` = komod123
+- Művelet: nyomjuk meg az `Jelszó frissítés` gombot
+- Elvárt kimenet: Megjelenő zöld üzenet doboz: `Sikeres módosítás!`, Felhasználói adatok megváltoznak: jelszó: komod123
+
 #### 2.3.2. TC-07
+- TP: TP-03
+- Leírás: Jelszó módosításának tesztelése
+- Bemenet: `Írd be az új jelszód` = komod123 ; `Írd be az új jelszód újra` = agyiko234
+- Művelet: nyomjuk meg az `Jelszó frissítés` gombot
+- Elvárt kimenet: Megjelenő Alert doboz: `Valami hiba keletkezett!`, Felhasználói adatok nem változnak, mivel nem egyezik meg a két jelszó
+
 #### 2.3.3. TC-08
+- TP: TP-03
+- Leírás: Jelszó módosításának tesztelése
+- Bemenet: `Írd be az új jelszód` = taska ; `Írd be az új jelszód újra` = taska
+- Művelet: nyomjuk meg az `Jelszó frissítés` gombot
+- Elvárt kimenet: Megjelenő Alert doboz: `Valami hiba keletkezett!`, Felhasználói adatok nem változnak, mivel kevesebb mint 6 karakter a jeleszó
+
 #### 2.3.4. TC-09
+- TP: TP-03
+- Leírás: Jelszó módosításának tesztelése
+- Bemenet: `Írd be az új jelszód` = borond ; `Írd be az új jelszód újra` = "Üresen hagyjuk"
+- Művelet: nyomjuk meg az `Jelszó frissítés` gombot
+- Elvárt kimenet:  Megjelenző Alert doboz: `Kérjük, töltse ki ezt a mezőt.`, Felhasználói adatok nem változnak
 
 ### 2.4. E-mail cím módosítás funkció tesztesetei
 
@@ -156,9 +180,32 @@ Az alábbi tesztdokumentum a `rf-szallas` projekthez tartozó `8.3.17. Személye
 ### 3.3. Jelszó módosítás funkció tesztriportjai
 
 #### 3.3.1. TR-01 (TC-06)
+- TP: TP-03
+  1. lépés: komod123-at beírtam
+  2. lépés: komod123-at beírtam
+  3. lépés: a gomb egyszeri megnyomás után frissít az oldal
+  4. lépés: helyes eredményt kaptam (Jelszó)
+  
 #### 3.3.2. TR-02 (TC-07)
+- TP: TP-03
+  1. lépés: komod123-at beírtam
+  2. lépés: agyiko234-et beírtam
+  3. lépés: a gomb egyszeri megnyomás után frissít az oldal
+  4. lépés: helyes eredményt kaptam (HIBA)
+  
 #### 3.3.3. TR-03 (TC-08)
+- TP: TP-03
+  1. lépés: taska-t beírtam
+  2. lépés: taska-t beírtam
+  3. lépés: a gomb egyszeri megnyomás után frissít az oldal
+  4. lépés: helyes eredményt kaptam (HIBA)
+  
 #### 3.3.4. TR-04 (TC-09)
+- TP: TP-03
+  1. lépés: borond-t beírtam
+  2. lépés: Üresen hagytam
+  3. lépés: a gomb egyszeri megnyomás után frissít az oldal
+  4. lépés: helyes eredményt kaptam (HIBA)
 
 ### 3.4. E-mail cím módosítás funkció tesztriportjai
 
