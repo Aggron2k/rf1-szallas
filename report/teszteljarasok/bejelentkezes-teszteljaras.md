@@ -36,3 +36,28 @@ Az alábbi tesztdokumentum a `rf-szallas` projekthez tartozó `Bejelentkezés` f
 - Bemenet: `Vezetéknév módosítás` =  KeleD ; `Jelszó` = 12345678
 - Művelet: nyomjuk meg az `Bejelentkezés` gombot
 - Elvárt kimenet: Átnavigáljon a felhasználó profil oldalára.
+
+## 3. Tesztriportok (TR)
+
+### Bejelentkezés funkció tesztriportjai
+
+#### 3.1. TR-01 (TC-01)
+- TP: TP-01
+  1. lépés: HibásNév-et beírtam
+  2. lépés: 12345678 beírtam
+  3. lépés: a gomb egyszeri megnyomás után frissít az oldal
+  4. lépés: helyes eredményt kaptam (Hibás felhasználónév vagy jelszó.)
+
+#### 3.2. TR-02 (TC-02)
+- TP: TP-01
+  1. lépés: KeleD-t beírtam
+  2. lépés: hibásjelszó-ot beírtam
+  3. lépés: a gomb egyszeri megnyomás után frissít az oldal
+  4. lépés: helyes eredményt kaptam (Hibás felhasználónév vagy jelszó.)
+
+#### 3.3. TR-03 (TC-03)
+- TP: TP-01
+  1. lépés: KeleD-t beírtam
+  2. lépés: 12345678 beírtam
+  3. lépés: a gomb egyszeri megnyomás után frissít az oldal
+  4. lépés: helyes eredményt kaptam (Átnavigáljon a felhasználó profil oldalára)
