@@ -76,3 +76,96 @@ Az alábbi tesztdokumentum a `rf-szallas` projekthez tartozó `Regisztráció` f
 - Művelet: nyomjuk meg az `Regisztráció` gombot
 - Elvárt kimenet: Egy hibaüzenet, ami : `A jogosultság vagy GUEST vagy ACCOMODATION lehet.`
 
+## 3. Tesztriportok (TR)
+
+### Regisztráció funkció tesztriportjai
+
+#### 3.1. TR-01 (TC-01)
+- TP: TP-01
+  1. lépés: "" beírtam
+  2. lépés: Dominik beírtam
+  3. lépés: teszt@gmail.com beírtam
+  4. lépés: KeleD beírtam
+  5. lépés: 123456 beírtam
+  6. lépés: GUEST beírtam
+  7. lépés: a gomb egyszeri megnyomás után frissít az oldal
+  8. lépés: helyes eredményt kaptam (A vezetéknév megadása kötelező.)
+
+#### 3.2. TR-02 (TC-02)
+- TP: TP-01
+  1. lépés: Kele beírtam
+  2. lépés: "" beírtam
+  3. lépés: teszt@gmail.com beírtam
+  4. lépés: KeleD beírtam
+  5. lépés: 123456 beírtam
+  6. lépés: GUEST beírtam
+  7. lépés: a gomb egyszeri megnyomás után frissít az oldal
+  8. lépés: helyes eredményt kaptam (A keresztnév megadása kötelező.)
+
+#### 3.3. TR-03 (TC-03)
+- TP: TP-01
+  1. lépés: Kele beírtam
+  2. lépés: Dominik beírtam
+  3. lépés: "" beírtam
+  4. lépés: KeleD beírtam
+  5. lépés: 123456 beírtam
+  6. lépés: GUEST beírtam
+  7. lépés: a gomb egyszeri megnyomás után frissít az oldal
+  8. lépés: helyes eredményt kaptam (A email cím megadása kötelező.)
+
+#### 3.4. TR-04 (TC-04)
+- TP: TP-01
+  1. lépés: Kele beírtam
+  2. lépés: Dominik beírtam
+  3. lépés: teszt@gmail.com beírtam
+  4. lépés: "" beírtam
+  5. lépés: 123456 beírtam
+  6. lépés: GUEST beírtam
+  7. lépés: a gomb egyszeri megnyomás után frissít az oldal
+  8. lépés: helyes eredményt kaptam (A felhasználónév megadása kötelező.)
+
+#### 3.5. TR-05 (TC-05)
+- TP: TP-01
+  1. lépés: Kele beírtam
+  2. lépés: Dominik beírtam
+  3. lépés: teszt@gmail.com beírtam
+  4. lépés: KeleD beírtam
+  5. lépés: "" beírtam
+  6. lépés: GUEST beírtam
+  7. lépés: a gomb egyszeri megnyomás után frissít az oldal
+  8. lépés: helyes eredményt kaptam (A jelszó megadása kötelező.)
+
+#### 3.6. TR-06 (TC-06)
+- TP: TP-01
+  1. lépés: Kele beírtam
+  2. lépés: Dominik beírtam
+  3. lépés: teszt@gmail.com beírtam
+  4. lépés: KeleD beírtam
+  5. lépés: 123 beírtam
+  6. lépés: GUEST beírtam
+  7. lépés: a gomb egyszeri megnyomás után frissít az oldal
+  8. lépés: helyes eredményt kaptam (A jelszó minimum 6 karakter hosszú kell, hogy legyen.)
+
+#### 3.7. TR-07 (TC-07)
+- TP: TP-01
+  1. lépés: Kele beírtam
+  2. lépés: Dominik beírtam
+  3. lépés: teszt@gmail.com beírtam
+  4. lépés: KeleD beírtam
+  5. lépés: 123456 beírtam
+  6. lépés: "" beírtam
+  7. lépés: a gomb egyszeri megnyomás után frissít az oldal
+  8. lépés: helyes eredményt kaptam (A jogosultság megadása kötelező.)
+
+#### 3.8. TR-08 (TC-08)
+- TP: TP-01
+  1. lépés: Kele beírtam
+  2. lépés: Dominik beírtam
+  3. lépés: teszt@gmail.com beírtam
+  4. lépés: KeleD beírtam
+  5. lépés: 123456 beírtam
+  6. lépés: valami beírtam
+  7. lépés: a gomb egyszeri megnyomás után frissít az oldal
+  8. lépés: helyes eredményt kaptam (A jogosultság vagy GUEST vagy ACCOMODATION lehet.)
+
+
