@@ -7,7 +7,7 @@ Az alábbi tesztdokumentum a `rf-szallas` projekthez tartozó `Bejelentkezés` f
 ### 1.1. Bejelentkezés tesztelése 
 - Azonosító: TP-01
 - Tesztesetek: TC-01, TC-02, TC-03
-- Leírás: összeadás funkció tesztelése
+- Leírás: bejelentkezés funkció tesztelése
     0. lépés: Nyissuk meg az alkalmazást, és lépjünk a bejelentkezés oldalra
     1. lépés: A `Felhasználónév` szövegbeviteli mezőbe írjunk be egy felhasználónevet
     2. lépés: A `Jelszó` szövegbeviteli mezőbe írjunk be egy jelszót
