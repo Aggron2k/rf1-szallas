@@ -26,3 +26,13 @@ Az alábbi tesztdokumentum a `rf-szallas` projekthez tartozó `Szállás kereses
 - Művelet: nyomjuk meg az `Keresés` gombot
 - Elvárt kimenet: `A keresési feltételeknek megfelelő szállások` = Megjelennek a keresési feltételeknek megfelelő szállások
 
+## 3. Tesztriportok (TR)
+
+### 3.1. Szállás keresés funkció tesztriportjai
+
+#### 3.1.1. TR-01 (TC-01)
+- TP: TP-01
+  1. lépés: Beírtam, hogy Szeged
+  2. lépés: Beírtam mettől és meddig
+  3. lépés: Megnyomtam a keresés gombot
+  4. lépés: helyes eredményt kaptam
