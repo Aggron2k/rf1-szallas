@@ -22,3 +22,12 @@ Az alábbi tesztdokumentum a `rf-szallas` projekthez tartozó `Szállás Megjele
 - Művelet: nyomjuk meg az `Keresés` gombot
 - Elvárt kimenet: `A keresési feltételeknek megfelelő szállások` = Megjelennek a keresési feltételeknek megfelelő szállások
 
+## 3. Tesztriportok (TR)
+
+### 3.1. Szállás keresés funkció tesztriportjai
+
+#### 3.1.1. TR-01 (TC-01)
+- TP: TP-01
+    1. lépés: A Keresési Funkcióban megadtam a feltételeket
+    2. Megnyomtam a Keresés Gombot
+    3. Megjelentek a kívánt szállások
