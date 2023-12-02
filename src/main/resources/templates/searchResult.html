@@ -36,7 +36,6 @@
                                 </div>
                                 <div class="col-lg-6 text-end">
                                     <p class="card-text" th:text="${szallas.getValue().getPrice()*napokSzama + ' Ft'}"></p>
-                                    <!-- Itt kellene ezt felszorozni a fővel és az éjszakák számával csak String konverzió miatt nem működik -->
                                     <p class="card-text" th:text="${napokSzama + ' éjszaka, ' + search.numberOfPerson + ' főre'}"></p>
                                 </div>
                             </div>
