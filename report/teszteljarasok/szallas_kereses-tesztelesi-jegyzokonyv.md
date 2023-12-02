@@ -17,7 +17,7 @@ Az alábbi tesztdokumentum a `rf-szallas` projekthez tartozó `Szállás kereses
     6. lépés: Ellenőrizzük az eredményt. Elvárt eredmény: `A keresési feltételeknek megfelelő szállások`
 ## 2. Teszesetek (TC)
 
-### 2.1. Szállás megjelenites funkció tesztesetei
+### 2.1. Szállás keresés funkció tesztesetei
 
 #### 2.1.1. TC-01
 - TP: TP-01
