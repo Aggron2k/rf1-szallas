@@ -1,0 +1,18 @@
+# Tesztjegyzőkönyv-`Szállás Keresés`
+
+Az alábbi tesztdokumentum a `rf-szallas` projekthez tartozó `Szállás kereses` funkcióihoz készült. Felelőse: `Hörömpő Márk`
+
+## 1. Teszteljárások (TP)
+
+### 1.1. Szállás keresés tesztelése
+- Azonosító: TP-01
+- Tesztesetek: TC-01
+- Leírás: Szallas keresés funkció tesztelése
+    0. lépés: Nyissuk meg az alkalmazást, és lépjünk a kezdőoldalra
+    1. lépés: A `Hova` szövegbeviteli mezőbe írjunk be egy város nevet
+    2. lépés: A `Mettől` dátum mezőbe válasszunk ki egy dátumot
+    3. lépés: A `Meddig` dátum mezőbe válasszunk ki egy dátumot
+    4. lépés: A `Személyek száma` szövegbeviteli mezőbe írjunk be egy számot
+    5. lépés: Nyomjuk meg az `Keresés` gombot
+    6. lépés: Ellenőrizzük az eredményt. Elvárt eredmény: `A keresési feltételeknek megfelelő szállások`
+## 2. Teszesetek (TC)
