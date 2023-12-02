@@ -123,6 +123,9 @@ public class UserController {
             if (!newPassword.equals(confirmNewPassword)) {
                 return "redirect:/user/profile?error=passwordMismatch";
             }
+            if (newPassword.length() < 6) {
+                return "redirect:/user/profile?error=passwordTooShort";
+            }
 
             User currentUser = userService.getCurrentLoggedInUser();
 
