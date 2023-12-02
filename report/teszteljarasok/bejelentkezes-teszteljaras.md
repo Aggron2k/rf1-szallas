@@ -33,7 +33,7 @@ Az alábbi tesztdokumentum a `rf-szallas` projekthez tartozó `Bejelentkezés` f
 #### 2.3. TC-03
 - TP: TP-01
 - Leírás: Helyes felhasználónév és jelszó megadás
-- Bemenet: `Vezetéknév módosítás` =  KeleD ; `Jelszó` = 12345678
+- Bemenet: `Felhasználónév` =  KeleD ; `Jelszó` = 12345678
 - Művelet: nyomjuk meg az `Bejelentkezés` gombot
 - Elvárt kimenet: Átnavigáljon a felhasználó profil oldalára.
 
