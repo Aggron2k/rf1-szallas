@@ -16,3 +16,13 @@ Az alábbi tesztdokumentum a `rf-szallas` projekthez tartozó `Szállás kereses
     5. lépés: Nyomjuk meg az `Keresés` gombot
     6. lépés: Ellenőrizzük az eredményt. Elvárt eredmény: `A keresési feltételeknek megfelelő szállások`
 ## 2. Teszesetek (TC)
+
+### 2.1. Szállás megjelenites funkció tesztesetei
+
+#### 2.1.1. TC-01
+- TP: TP-01
+- Leírás: Szállás keresés funkció tesztelése
+- Bemenet: `Hova` = Szeged ; `Mettől` = 2023-11-27 ; `Meddig` = 2023-11-28 ; `Személyek száma` = 2
+- Művelet: nyomjuk meg az `Keresés` gombot
+- Elvárt kimenet: `A keresési feltételeknek megfelelő szállások` = Megjelennek a keresési feltételeknek megfelelő szállások
+
