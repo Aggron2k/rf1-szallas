@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{index}">
+<head>
+    <meta charset="UTF-8">
+    <title>Foglalás</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card border-0 shadow rounded-3 my-5">
+                <div class="card-body p-4 p-sm-5">
+                    <h2>Foglalás űrlap</h2>
+
+                    <form th:action="@{/reservation/request}" method="post" th:object="${reservationRequest}">
+
+                        <div class="form-group">
+                            <label for="checkInDate">Érkezés dátuma:</label>
+                            <input type="date" class="form-control" id="checkInDate" name="checkInDate" th:value="${#dates.format(#dates.createNow(), 'yyyy-MM-dd')}" required/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="checkOutDate">Távozás dátuma:</label>
+                            <input type="date" class="form-control" id="checkOutDate" name="checkOutDate" th:min="${#dates.format(#dates.createNow(), 'yyyy-MM-dd')}" required/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="numberOfPerson">Főszám:</label>
+                            <input type="number" class="form-control" id="numberOfPerson" name="numberOfPerson" th:value="1" min="1" required/>
+                        </div>
+
+                        <!-- Hidden mezők, de a foglaláshoz kellenek -->
+                        <div class="form-group">
+                            <input type="hidden" class="form-control" id="accommodationId" name="accommodationId" th:value="${accId}" required/>
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" class="form-control" id="customerId" name="customerId" th:value="${userId}" required/>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Foglalás küldése</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

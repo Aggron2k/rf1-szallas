@@ -1,6 +1,9 @@
 package com.example.szallas.controller;
 
+import com.example.szallas.model.User;
+import com.example.szallas.model.request.ReservationRequest;
 import com.example.szallas.service.ReservationService;
+import com.example.szallas.service.UserService;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.example.szallas.model.Reservation;
@@ -19,6 +22,19 @@ public class ReservationController {
 
     @Autowired
     private ReservationService reservationService;
+    @Autowired
+    private UserService userService; // Inject UserService
+
+    @GetMapping("/reservation/new/{accId}")
+    public String processReservationForm(Model model, @PathVariable Integer accId) {
+        model.addAttribute("reservation", new ReservationRequest());
+        User currentUser = userService.getCurrentLoggedInUser();
+        model.addAttribute("userId", currentUser.getId());
+        model.addAttribute("accId", accId);
+        return "reservationForm";
+    }
+
+
 
     @GetMapping("/reservations")
     public String showAllReservations(Model model) {
@@ -39,15 +55,16 @@ public class ReservationController {
         return "reservation";
     }
 
-    @PostMapping("/reservation/new")
-    public String processReservationForm(@ModelAttribute Reservation reservation) {
-        reservationService.saveReservation(reservation);
-        return "redirect:/reservations";
-    }
 
     @GetMapping("/reservation/delete/{id}")
     public String deleteReservation(@PathVariable Long id) {
         reservationService.deleteReservation(id);
+        return "redirect:/reservations";
+    }
+
+    @PostMapping("reservation/request")
+    public String reservation(@ModelAttribute ReservationRequest reservation){
+        reservationService.saveReservation(reservation);
         return "redirect:/reservations";
     }
 
@@ -69,11 +86,4 @@ public class ReservationController {
             return "redirect:/reservation"; // Visszairányítás, ha a foglalás nem található
         }
     }
-
-    @PostMapping("/reservation/save")
-    public String saveReservation(@ModelAttribute Reservation reservation) {
-        reservationService.saveReservation(reservation);
-        return "redirect:/reservations"; // Az átirányítás a foglalások listájára
-    }
-
 }

@@ -1,5 +1,6 @@
 package com.example.szallas.service;
 import com.example.szallas.model.Reservation;
+import com.example.szallas.model.request.ReservationRequest;
 import com.example.szallas.repository.ReservationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -26,8 +27,7 @@ public class ReservationService {
         return reservationRepository.findById(id);
     }
 
-    public void saveReservation(Reservation reservation) {
-        reservationRepository.save(reservation);
+    public void saveReservation(ReservationRequest reservation) {
     }
 
     public void deleteReservation(Long id) {
