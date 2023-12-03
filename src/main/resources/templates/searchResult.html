@@ -3,6 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <!-- Stílusok az értékelési csillagokhoz -->
+    <style>
+        .rating {
+            display: inline-block;
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            text-align: center;
+        }
+        .rating input {
+            display: none;
+        }
+        .rating label {
+            cursor: pointer;
+            width: 1em;
+            font-size: 2em;
+            color: #ddd;
+            float: right;
+            transition: color 0.3s ease-in-out;
+        }
+        .rating label:before {
+            content: '★';
+        }
+        .rating input:checked ~ label,
+        .rating input:checked ~ label ~ label {
+            color: #f7d401;
+        }
+        .rating input:checked ~ label,
+        .rating input:checked ~ label ~ label,
+        .rating label:hover,
+        .rating label:hover ~ label {
+            color: #000;
+        }
+    </style>
 </head>
 <body>
 <div layout:fragment="content" class="container mt-5">
@@ -30,15 +63,31 @@
                         <div class="card-body">
                             <h5 class="card-title" th:text="${szallas.getKey().getName()}"></h5>
                             <p class="card-text" th:text="${szallas.getKey().getDescription()}"></p>
+
                             <div class="row">
                                 <div class="col-lg-6">
                                     <p class="card-text" th:text="${szallas.getValue().getType() + ' szoba'}"></p>
                                 </div>
                                 <div class="col-lg-6 text-end">
+                                    <!-- Értékelési csillagok -->
+                                    <div class="rating">
+                                        <input type="radio" th:id="'star1_' + ${szallas.getKey().getId()}" name="rating_${szallas.getKey().getId()}" value="1" />
+                                        <label th:for="'star1_' + ${szallas.getKey().getId()}"></label>
+                                        <input type="radio" th:id="'star2_' + ${szallas.getKey().getId()}" name="rating_${szallas.getKey().getId()}" value="2" />
+                                        <label th:for="'star2_' + ${szallas.getKey().getId()}"></label>
+                                        <input type="radio" th:id="'star3_' + ${szallas.getKey().getId()}" name="rating_${szallas.getKey().getId()}" value="3" />
+                                        <label th:for="'star3_' + ${szallas.getKey().getId()}"></label>
+                                        <input type="radio" th:id="'star4_' + ${szallas.getKey().getId()}" name="rating_${szallas.getKey().getId()}" value="4" />
+                                        <label th:for="'star4_' + ${szallas.getKey().getId()}"></label>
+                                        <input type="radio" th:id="'star5_' + ${szallas.getKey().getId()}" name="rating_${szallas.getKey().getId()}" value="5" />
+                                        <label th:for="'star5_' + ${szallas.getKey().getId()}"></label>
+                                        <!-- Az összes további csillagot hasonló módon add hozzá -->
+                                    </div>
                                     <p class="card-text" th:text="${szallas.getValue().getPrice()*napokSzama + ' Ft'}"></p>
                                     <p class="card-text" th:text="${napokSzama + ' éjszaka, ' + search.numberOfPerson + ' főre'}"></p>
                                 </div>
                             </div>
+
                             <a th:href="${'/accomodation/' + szallas.getKey().getId()}" class="btn btn-primary">Részletek</a>
                             <a th:href="${'/reservation/new/' + szallas.getKey().getId()}" class="btn btn-primary">Foglalás</a>
 

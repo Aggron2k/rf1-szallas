@@ -36,4 +36,6 @@ public class Accomodation {
     private AccomodationHost accomodationHost;
     @OneToMany(mappedBy = "accomodation")
     private List<Image> images;
+    @OneToMany(mappedBy = "accomodation")
+    private List<Rating> ratings;
 }
