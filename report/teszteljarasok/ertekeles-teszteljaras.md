@@ -30,3 +30,21 @@ Nyomjunk meg egy ⭐ gombot.
 - Bemenet: Látogatóként válasszuk ki a szállást.
 - Művelet: Próbáljuk megkeresni a csillagokat és rányomni.
 - Elvárt kimenet: Nem jelennek meg a ⭐ gombok.
+
+## 3. Tesztriportok (TR)
+### Értékelés Funkció Tesztriportjai
+#### 3.1. TR-01 (TC-01)
+- TP: TP-01 
+1. lépés: Regisztráltam az alkalmazásban és bejelentkeztem.
+2. lépés: Kiválasztottam egy szállást.
+3. lépés: Megnyomtam egy ⭐ gombot. 
+4. lépés: Az oldalt frissítettem. 
+5. lépés: Ellenőriztem a csillagok számát. 
+6. lépés: Helyes eredményt kaptam (Egyszer tudok szavazni, frissítés után látszik, hány csillagot adtam).
+#### 3.2. TR-02 (TC-02)
+- TP: TP-01
+1. lépés: Nem regisztráltam vagy bejelentkeztem, csak látogatóként böngészek az oldalon. 
+2. lépés: Kiválasztottam egy szállást. 
+3. lépés: Próbáltam megnyomni egy ⭐ gombot. 
+4. lépés: Ellenőriztem, hogy a ⭐ gombok nem jelennek meg. 
+5. lépés: Helyes eredményt kaptam (Nem lehet értékelni regisztráció és bejelentkezés nélkül).
