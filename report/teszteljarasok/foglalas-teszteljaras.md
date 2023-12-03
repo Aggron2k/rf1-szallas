@@ -60,3 +60,43 @@ Egy hibaüzenet, ami : `Töltse ki az összes mezőt!`
 - Művelet: nyomjuk meg a `Foglalás` gombot
 - Elvárt kimenet:  
   Egy hibaüzenet, ami : `Töltse ki a mezőket!`
+
+## 3. Tesztriportok (TR)
+
+### Foglalás funkció tesztriportjai
+
+#### 3.1. TR-01 (TC-01)
+- TP: TP-01
+  1. lépés: Szállás kiválasztva
+  2. lépés: Érkezési adat beírva
+  3. lépés: Távozási adat beírva
+  4. lépés: 1 fő beírva
+  5. lépés: a gomb egyszeri megnyomás után frissít az oldal
+  6. lépés: Helyes eredményt kaptam (Lefoglalódott az adott szállás a megfelelő időpontra és főre)
+
+#### 3.2. TR-02 (TC-02)
+- TP: TP-01
+  1. lépés: Szállás nincs kiválasztva
+  2. lépés: Érkezési adat NINCS beírva
+  3. lépés: Távozási adat NINCS beírva
+  4. lépés: 1 fő beírva
+  5. lépés: a gomb egyszeri megnyomás után frissít az oldal
+  6. lépés: Helyes eredményt kaptam (Hiba üzenet, NEM sikeres a foglalás, mivel nincs időpont)
+
+#### 3.3. TR-03 (TC-03)
+- TP: TP-01
+  1. lépés: Szállás kiválasztva
+  2. lépés: Érkezési adat beírva
+  3. lépés: Távozási adat beírva
+  4. lépés: 0 fő beírva
+  5. lépés: a gomb egyszeri megnyomás után frissít az oldal
+  6. lépés: Helyes eredményt kaptam (Hiba üzenet, NEM sikeres a foglalás, mivel nincs fő kiválasztva)
+
+#### 3.3. TR-03 (TC-03)
+- TP: TP-01
+  1. lépés: Szállás kiválasztva
+  2. lépés: Érkezési adat NINCS beírva
+  3. lépés: Távozási adat NINCS beírva
+  4. lépés: 0 fő beírva
+  5. lépés: a gomb egyszeri megnyomás után frissít az oldal
+  6. lépés: Helyes eredményt kaptam (Hiba üzenet, NEM sikeres a foglalás, mivel nincs semmilyen adat kitöltve)

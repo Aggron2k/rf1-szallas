@@ -16,7 +16,7 @@ ___
   ##### A feladat elvégzését alátámasztó commit(ok):
 
     - [Első kommit](https://git-okt.sed.inf.szte.hu/2023_ib153i-10_d/rf-szallas/-/commit/98144c7d7b61c1fc1ddf00caa9b4acf0786cb2a4)
-    - [Második kommit]()
+    - [Második kommit](https://git-okt.sed.inf.szte.hu/2023_ib153i-10_d/rf-szallas/-/commit/887b14d462d104de938048367514e672b3b85345)
     - [Harmadik kommit]()
     - [Negyedik kommit]()
     - [Ötödik kommit]()
