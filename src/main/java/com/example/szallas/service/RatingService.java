@@ -14,11 +14,11 @@ public class RatingService {
     @Autowired
     private RatingRepository ratingRepository;
 
-    public List<Rating> getRatingsByAccommodationId(Long accommodationId) {
+    public List<Rating> getRatingsByAccommodationId(Integer accommodationId) {
         return ratingRepository.findByAccommodationId(accommodationId);
     }
 
-    public void rateAccommodation(int accommodationId, int ratingValue) {
+    public void rateAccommodation(Integer accommodationId, int ratingValue) {
         Rating rating = new Rating();
         Accomodation accommodation = new Accomodation();
         accommodation.setId(accommodationId);

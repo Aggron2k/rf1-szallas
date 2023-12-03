@@ -20,6 +20,6 @@ public class Rating {
     @JsonIgnore
     private Accomodation accomodation;
 
-    private Integer accomodationId;
+    private Integer accommodationId;
     private int value;
 }
