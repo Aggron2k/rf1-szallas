@@ -20,6 +20,9 @@ public class Rating {
     @JsonIgnore
     private Accomodation accomodation;
 
-    private Integer accommodationId;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;  // Adjunk hozzá egy felhasználó mezőt a szavazások követéséhez
+
     private int value;
 }

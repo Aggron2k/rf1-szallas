@@ -35,6 +35,10 @@
         .rating label:hover ~ label {
             color: #000;
         }
+        .rating input:checked ~ label.rated,
+        .rating input:checked ~ label.rated ~ label {
+            color: #f7d401;
+        }
     </style>
 </head>
 <body>
@@ -69,24 +73,36 @@
                                     <p class="card-text" th:text="${szallas.getValue().getType() + ' szoba'}"></p>
                                 </div>
                                 <div class="col-lg-6 text-end">
-                                    <!-- Értékelési csillagok -->
-                                    <div class="rating">
-                                        <input type="radio" th:id="'star1_' + ${szallas.getKey().getId()}" name="rating_${szallas.getKey().getId()}" value="1" />
-                                        <label th:for="'star1_' + ${szallas.getKey().getId()}"></label>
-                                        <input type="radio" th:id="'star2_' + ${szallas.getKey().getId()}" name="rating_${szallas.getKey().getId()}" value="2" />
-                                        <label th:for="'star2_' + ${szallas.getKey().getId()}"></label>
-                                        <input type="radio" th:id="'star3_' + ${szallas.getKey().getId()}" name="rating_${szallas.getKey().getId()}" value="3" />
-                                        <label th:for="'star3_' + ${szallas.getKey().getId()}"></label>
-                                        <input type="radio" th:id="'star4_' + ${szallas.getKey().getId()}" name="rating_${szallas.getKey().getId()}" value="4" />
-                                        <label th:for="'star4_' + ${szallas.getKey().getId()}"></label>
-                                        <input type="radio" th:id="'star5_' + ${szallas.getKey().getId()}" name="rating_${szallas.getKey().getId()}" value="5" />
-                                        <label th:for="'star5_' + ${szallas.getKey().getId()}"></label>
-                                        <!-- Az összes további csillagot hasonló módon add hozzá -->
+                                    <!-- Értékelési csillagok, csak bejelentkezett felhasználónak. -->
+                                    <div th:if="${#authorization.expression('isAuthenticated')}"
+                                         th:attr="data-hotel-id=${szallas.getKey().getId()}">
+                                        <div th:unless="${hasRated}">
+                                            <div class="rating">
+                                                <input type="radio" th:id="'star1_' + ${szallas.getKey().getId()}" name="rating_${szallas.getKey().getId()}" value="1" />
+                                                <label th:for="'star1_' + ${szallas.getKey().getId()}"></label>
+                                                <input type="radio" th:id="'star2_' + ${szallas.getKey().getId()}" name="rating_${szallas.getKey().getId()}" value="2" />
+                                                <label th:for="'star2_' + ${szallas.getKey().getId()}"></label>
+                                                <input type="radio" th:id="'star3_' + ${szallas.getKey().getId()}" name="rating_${szallas.getKey().getId()}" value="3" />
+                                                <label th:for="'star3_' + ${szallas.getKey().getId()}"></label>
+                                                <input type="radio" th:id="'star4_' + ${szallas.getKey().getId()}" name="rating_${szallas.getKey().getId()}" value="4" />
+                                                <label th:for="'star4_' + ${szallas.getKey().getId()}"></label>
+                                                <input type="radio" th:id="'star5_' + ${szallas.getKey().getId()}" name="rating_${szallas.getKey().getId()}" value="5" />
+                                                <label th:for="'star5_' + ${szallas.getKey().getId()}"></label>
+                                            </div>
+                                        </div>
+                                        <div th:if="${hasRated}">
+                                            <p>Your previous rating: <span th:text="${existingRating.get().getValue()}"></span></p>
+                                        </div>
                                     </div>
-                                    <p class="card-text" th:text="${szallas.getValue().getPrice()*napokSzama + ' Ft'}"></p>
+                                </div>
+
+
+
+                                <p class="card-text" th:text="${szallas.getValue().getPrice()*napokSzama + ' Ft'}"></p>
                                     <p class="card-text" th:text="${napokSzama + ' éjszaka, ' + search.numberOfPerson + ' főre'}"></p>
                                 </div>
                             </div>
+
 
                             <a th:href="${'/accomodation/' + szallas.getKey().getId()}" class="btn btn-primary">Részletek</a>
                             <a th:href="${'/reservation/new/' + szallas.getKey().getId()}" class="btn btn-primary">Foglalás</a>
