@@ -1,6 +1,7 @@
 package com.example.szallas.controller;
 
 import com.example.szallas.model.Accomodation;
+import com.example.szallas.model.Rating;
 import com.example.szallas.model.Room;
 import com.example.szallas.model.request.SearchRequest;
 import com.example.szallas.service.AccomodationService;
@@ -99,4 +100,21 @@ public class AccomodationController {
         model.addAttribute("accommodation", accomodation);
         return "accDetail";
     }
+    @GetMapping("/rateAccomodation/{id}")
+    public String showRateAccommodationForm(@PathVariable int id, Model model) {
+        Accomodation accommodation = accomodationService.getAccommodationById(id);
+        model.addAttribute("accommodation", accommodation);
+        model.addAttribute("rating", new Rating()); // Új értékelés létrehozása
+        return "rateAccomodation";
     }
+
+    @PostMapping("/rateAccomodation/{id}")
+    public String rateAccommodation(@PathVariable int id, @ModelAttribute Rating rating) {
+        Accomodation accommodation = accomodationService.getAccommodationById(id);
+        rating.setAccomodation(accommodation);
+        accommodation.getRatings().add(rating);
+        accomodationService.modifyAccomodation(accommodation);
+        return "redirect:/accomodation/" + id;
+    }
+
+}
