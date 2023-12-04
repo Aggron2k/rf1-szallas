@@ -1,4 +1,4 @@
-﻿
+
 ### Összefoglaló az `4.` mérföldkőben végzett munkáról
 
   
