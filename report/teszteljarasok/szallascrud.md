@@ -1,4 +1,3 @@
-
 # Tesztjegyzőkönyv - Szállás CRUD
 
 Az alábbi tesztdokumentum a `rf-szallas` projekthez tartozó `Szállás CRUD` funkcióihoz készült. Felelőse: `Kvak Barnabás Máté`
