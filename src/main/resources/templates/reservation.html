@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" xmlns:th="http://www.thymeleaf.org/" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{index}">
+<html lang="en" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" xmlns:th="http://www.thymeleaf.org/"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{index}">
 <head>
     <meta charset="UTF-8">
     <title>Foglalások</title>
@@ -10,70 +11,140 @@
     <div class="container mt-3">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Foglalások</h2>
+                <h2 class="mt-3">Foglalások kezelése</h2>
+                <p class="description">Üdv a Foglalások kezelés felületén! A lefoglalát szállásaidat itt tudod
+                    módosítani. Lehetőséged van a dátumot és a személyeket módosítani.</p>
                 <div th:if="${not #strings.isEmpty(reservations)}" class="table-container">
-                    <table class="table table-bordered">
-                        <!-- Táblázat fejléce -->
-                        <thead>
-                        <tr>
-                            <!-- Mezőnevek -->
-                            <!--                <th>ID</th>-->
-                            <th>Szállás neve</th>
-                            <th>Személyek száma</th>
-                            <th>Mettől</th>
-                            <th>Meddig</th>
-                            <th>Módosítás/Törlés</th>
-                        </tr>
-                        </thead>
-                        <!-- Táblázat tartalma -->
-                        <tbody>
-                        <!-- Minden foglalás megjelenítése -->
-                        <tr th:each="reservation : ${reservations}">
-                            <!-- Mezők kitöltése -->
-                            <!--                <td th:if="${reservation.id != null}" th:text="${reservation.id}"></td>-->
-                            <td th:if="${reservation.accomodation != null}" th:text="${reservation.accomodation.name}"></td>
-                            <td th:if="${reservation.numberOfPerson != null}" th:text="${reservation.numberOfPerson}"></td>
-                            <td th:if="${reservation.check_in_date != null}" th:text="${reservation.check_in_date}"></td>
-                            <td th:if="${reservation.check_out_date != null}" th:text="${reservation.check_out_date}"></td>
-                            <td>
-                                <!-- Módosítás és törlés gombok -->
-                                <div class="btn-group">
-                                    <a class="btn btn-sm btn-primary" th:href="@{'/reservation/edit/' + ${reservation.id}}">Edit</a>
-                                    <a class="btn btn-sm btn-danger" th:href="@{'/reservation/delete/' + ${reservation.id}}">Delete</a>
-                                </div>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="col-sm-17 col-md-13 col-lg-9 mx-auto">
+                        <div class="card border-0 shadow rounded-3 my-5">
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <!-- Táblázat fejléce -->
+                                    <thead>
+                                    <tr>
+                                        <!-- Mezőnevek -->
+                                        <!--                <th>ID</th>-->
+                                        <th>Szállás neve</th>
+                                        <th>Személyek száma</th>
+                                        <th>Mettől</th>
+                                        <th>Meddig</th>
+                                        <th>Módosítás/Törlés</th>
+                                    </tr>
+                                    </thead>
+                                    <!-- Táblázat tartalma -->
+                                    <tbody>
+                                    <!-- Minden foglalás megjelenítése -->
+                                    <tr th:each="reservation : ${reservations}">
+                                        <!-- Mezők kitöltése -->
+                                        <!--<td th:if="${reservation.id != null}" th:text="${reservation.id}"></td>-->
+                                        <td th:if="${reservation.accomodation != null}"
+                                            th:text="${reservation.accomodation.name}"></td>
+                                        <td th:if="${reservation.numberOfPerson != null}"
+                                            th:text="${reservation.numberOfPerson}"></td>
+                                        <td th:if="${reservation.check_in_date != null}"
+                                            th:text="${reservation.check_in_date}"></td>
+                                        <td th:if="${reservation.check_out_date != null}"
+                                            th:text="${reservation.check_out_date}"></td>
+                                        <td>
+                                            <!-- Módosítás és törlés gombok -->
+                                            <div class="btn-group">
+                                                <a class="btn btn-sm btn-primary"
+                                                   th:href="@{'/reservation/edit/' + ${reservation.id}}">Edit</a>
+                                                <a class="btn btn-sm btn-danger"
+                                                   th:href="@{'/reservation/delete/' + ${reservation.id}}"
+                                                   th:onclick="'return confirm(\'Biztosan törölni szeretnéd?\')'">Delete</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Új foglalás hozzáadása gomb -->
-<!--    <a class="btn btn-success" th:href="@{'/reservation/add'}">Add Reservation</a>-->
     <!-- Szerkesztési űrlap modal -->
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div th:if="${reservationToEdit != null}">
-                        <!-- Űrlap elemei -->
-                        <form th:action="@{/reservation/save}" method="post" th:object="${reservationToEdit}">
-                            <input type="hidden" id="id" th:field="*{id}" />
-                            <label for="numberOfPerson">Number of Persons:</label>
-                            <input type="text" id="numberOfPerson" th:field="*{numberOfPerson}" />
-                            <label for="checkInDate">Check-In Date:</label>
-                            <input type="date" id="checkInDate" th:field="*{check_in_date}" />
-                            <label for="checkOutDate">Check-Out Date:</label>
-                            <input type="date" id="checkOutDate" th:field="*{check_out_date}" />
-                            <input type="hidden" id="accomodation" th:field="*{accomodation}" />
-                            <input type="hidden" id="customer" th:field="*{customer}" />
-                            <button type="submit" class="btn btn-primary">Save</button>
-                        </form>
-                    </div>
+    <div th:if="${reservationToEdit != null}">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card border-0 shadow rounded-3 my-5">
+                <div class="card-body">
+                    <!-- Űrlap elemei -->
+                    <form th:action="@{/reservation/save}" method="post" th:object="${reservationToEdit}">
+                        <input type="hidden" id="id" th:field="*{id}"/>
+
+                        <div class="row gutters">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <label for="acc" class="mt-3 mb-2 text-primary">Szállás neve:</label>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="acc" th:field="*{accomodation.name}"
+                                           disabled/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row gutters">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <label for="numberOfPerson" class="mt-3 mb-2 text-primary">Személyek száma:</label>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="numberOfPerson"
+                                           th:field="*{numberOfPerson}"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row gutters">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <label for="checkInDate" class="mt-3 mb-2 text-primary">Mettől:</label>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-floating mb-3">
+                                    <input type="date" class="form-control" id="checkInDate"
+                                           th:field="*{check_in_date}"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row gutters">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <label for="checkOutDate" class="mt-3 mb-2 text-primary">Meddig:</label>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-floating mb-3">
+                                    <input type="date" class="form-control" id="checkOutDate"
+                                           th:field="*{check_out_date}"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <input type="hidden" id="customer" th:field="*{customer}"/>
+                        <input type="hidden" id="accomodation" th:field="*{accomodation}"/>
+
+
+                        <div class="row gutters">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                                <div class="text-right">
+                                    <button type="submit" class="btn btn-primary">Mentés</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
+
+
+
 </div>
 </body>
 </html>

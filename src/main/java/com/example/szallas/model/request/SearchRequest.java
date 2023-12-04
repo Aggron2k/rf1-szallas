@@ -1,5 +1,8 @@
 package com.example.szallas.model.request;
 
+import com.example.szallas.model.LeisureActivity;
+import com.example.szallas.model.MealOption;
+import com.example.szallas.model.ServiceOption;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
@@ -20,4 +23,7 @@ public class SearchRequest {
     private LocalDate check_out;
     @NotEmpty(message = "A személyek száma megadása kötelező.")
     private String numberOfPerson;
+    private MealOption mealOption;
+    private LeisureActivity leisureActivities;
+    private ServiceOption serviceOption;
 }

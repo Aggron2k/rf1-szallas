@@ -4,6 +4,7 @@ import com.example.szallas.model.request.ReservationRequest;
 import com.example.szallas.repository.ReservationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,8 +19,8 @@ public class ReservationService {
     private ReservationRepository reservationRepository;
 
     public List<Reservation> getAllReservations() {
-        return StreamSupport.stream(reservationRepository.findAll().spliterator(), false)
-                .collect(Collectors.toList());
+        String username = SecurityContextHolder.getContext().getAuthentication().getName();
+        return reservationRepository.findAllByCustomerUserUsername(username);
     }
 
     public Optional<Reservation> getReservationById(Long id) {

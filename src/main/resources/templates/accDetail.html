@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Szállás részletek</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3KtawnJr6T1XkTsTiNmu59sPTtQ17gIk&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            // Inicializálás és térkép megjelenítése
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: accomodation.langitude, lng: accomodation.longitude},
+                zoom: 20
+            });
+        }
+    </script>
 </head>
 <body>
 <div layout:fragment="content">
@@ -40,11 +50,12 @@
                                         <li th:text="${'Ár/fő/éj: ' + room.getPrice() + ' Ft'}"></li>
                                     </ul>
                                 </div>
+                                <div id="map" style="height: 400px;"></div>
                             </div>
                         </div>
                         <div class="col-md-12 room-single ftco-animate mb-5 mt-4">
                             <h3 class="mb-4">Jöjjön el hozzánk</h3>
-                            <div class="block-16">
+                            <div class="block-16" th:if="${accommodation.getImages().size() > 0}">
                                 <img th:src="@{'~/images/accomodation/' + ${accommodation.getImages().get(0).getName()}}" alt="Image placeholder" class="img-fluid">
                             </div>
                         </div>
