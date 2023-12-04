@@ -23,7 +23,4 @@ public class SearchRequest {
     private LocalDate check_out;
     @NotEmpty(message = "A személyek száma megadása kötelező.")
     private String numberOfPerson;
-    private MealOption mealOption;
-    private LeisureActivity leisureActivities;
-    private ServiceOption serviceOption;
 }

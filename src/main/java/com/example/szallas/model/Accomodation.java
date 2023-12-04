@@ -25,6 +25,14 @@ public class Accomodation {
     private String description;
     private float langitude;
     private float longitude;
+    @Column(name = "teljesEllatas", columnDefinition = "TINYINT DEFAULT 0")
+    private boolean teljesEllatas;
+    @Column(name = "wifi", columnDefinition = "TINYINT DEFAULT 0")
+    private boolean wifi;
+    @Column(name = "parkolas", columnDefinition = "TINYINT DEFAULT 0")
+    private boolean parkolas;
+    @Column(name = "felpanzio", columnDefinition = "TINYINT DEFAULT 0")
+    private boolean felpanzio;
 
     @OneToMany(mappedBy = "accomodation", cascade = CascadeType.ALL)
     private List<Room> rooms;
@@ -35,6 +43,7 @@ public class Accomodation {
     @ManyToOne
     private AccomodationHost accomodationHost;
     @OneToMany(mappedBy = "accomodation")
+    @JsonIgnore
     private List<Image> images;
     @OneToMany(mappedBy = "accomodation")
     private List<Rating> ratings;

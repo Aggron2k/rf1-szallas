@@ -28,8 +28,6 @@ public class ReservationController {
     @GetMapping("/reservation/new/{accId}")
     public String processReservationForm(Model model, @PathVariable Integer accId) {
         model.addAttribute("reservation", new ReservationRequest());
-        User currentUser = userService.getCurrentLoggedInUser();
-        model.addAttribute("userId", currentUser.getId());
         model.addAttribute("accId", accId);
         return "reservationForm";
     }

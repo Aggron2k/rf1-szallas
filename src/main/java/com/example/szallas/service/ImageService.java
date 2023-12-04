@@ -32,13 +32,8 @@ public class ImageService {
         try {
             Accomodation accomodation1 = accomodationRepository.findById(accomodation).orElse(null);
             if(accomodation1 != null){
-                String fileName = UUID.randomUUID() + "_" + img.getOriginalFilename();
-                byte[] bytes = img.getBytes();
-                Path path = Paths.get("src/main/resources/static/images/accomodation/" + File.separator + fileName);
-                Files.write(path, bytes);
                 Image image = new Image();
-                image.setName(fileName);
-                image.setPath(String.valueOf(path));
+                image.setImage(img.getBytes());
                 image.setAccomodation(accomodation1);
                 imageRepository.save(image);
                 return img.getOriginalFilename();
@@ -47,5 +42,9 @@ public class ImageService {
             throw new RuntimeException(e);
         }
         return null;
+    }
+
+    public Image getImageById(Integer id) {
+        return imageRepository.findById(id).orElse(null);
     }
 }

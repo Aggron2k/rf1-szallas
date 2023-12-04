@@ -77,5 +77,18 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0KN7MX380UHS6l7F6tQ_HJDSx4iRbegY&callback=initMap" defer></script>
+<script>
+    let acc_lang = document.getElementById("acc_lang");
+    let acc_long = document.getElementById("acc_long");
+    console.log(acc_lang, acc_long);
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: acc_lang, lng: acc_long},
+            zoom: 20
+        });
+    }
+
+</script>
 </body>
 </html>

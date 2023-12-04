@@ -3,19 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Szállás részletek</title>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3KtawnJr6T1XkTsTiNmu59sPTtQ17gIk&callback=initMap" async defer></script>
-    <script>
-        function initMap() {
-            // Inicializálás és térkép megjelenítése
-            var map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: accomodation.langitude, lng: accomodation.longitude},
-                zoom: 20
-            });
-        }
-    </script>
 </head>
 <body>
 <div layout:fragment="content">
+    <input type="hidden" id="acc_lang" name="acc_lang" th:value="*{accommodation.getLangitude()}">
+    <input type="hidden" id="acc_long" name="acc_long" th:value="*{accommodation.getLongitude()}">
     <section class="ftco-section mt-5">
         <div class="container">
             <div class="row">
@@ -25,7 +17,7 @@
                             <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div th:each="img, iterStat : ${accommodation.getImages()}" class="carousel-item" th:classappend="${iterStat.index == 0} ? 'active' : ''">
-                                        <img th:src="@{'~/images/accomodation/' + ${img.getName()}}" class="d-block w-100" alt="..." style="object-fit: cover; height: 500px;">
+                                       <img th:src="@{${'/display?id=' + img.getId()}}" class="d-block w-100" alt="..." style="object-fit: cover; height: 500px;">
                                     </div>
 
                                 </div>
@@ -56,7 +48,7 @@
                         <div class="col-md-12 room-single ftco-animate mb-5 mt-4">
                             <h3 class="mb-4">Jöjjön el hozzánk</h3>
                             <div class="block-16" th:if="${accommodation.getImages().size() > 0}">
-                                <img th:src="@{'~/images/accomodation/' + ${accommodation.getImages().get(0).getName()}}" alt="Image placeholder" class="img-fluid">
+                                <img th:src="@{${'/display?id=' + accommodation.getImages().get(0).getId()}}" alt="Image placeholder" class="img-fluid">
                             </div>
                         </div>
                     </div>

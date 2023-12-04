@@ -12,8 +12,9 @@ public class Image {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String name;
-    private String path;
+    @Lob
+    @Column(length = Integer.MAX_VALUE)
+    private byte[] image;
 
     @ManyToOne
     private Accomodation accomodation;

@@ -2,10 +2,10 @@ package com.example.szallas.model;
 
 public enum RoomType {
     ALAP("Alap"),
-    FRANCIAÁGYAS("Franciaágyas"),
-    CSALÁDI("Családi"),
+    FRANCIAAGYAS("Franciaágyas"),
+    CSALADI("Családi"),
     LUXUS("Luxus"),
-    KÉTÁGYAS("Kétágyas");
+    KETAGYAS("Kétágyas");
 
     private final String displayName;
 
